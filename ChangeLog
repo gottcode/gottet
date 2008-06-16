@@ -1,0 +1,61 @@
+2008-05-24 Graeme Gott <graeme@gottcode.org>
+	* Tag version 1.0.1.
+	* FIXED: Falling pieces became jerky at higher levels.
+	* FIXED: Rotating pieces on left edge would get them stuck.
+
+2008-05-14 Graeme Gott <graeme@gottcode.org>
+	* Tag version 1.0.
+	* Add program name.
+
+2008-05-13 Graeme Gott <graeme@gottcode.org>
+	* Add icon.
+	* Add about menu items.
+	* Pause game when it loses focus.
+
+2008-05-12 Graeme Gott <graeme@gottcode.org>
+	* Add high score board.
+	* Show score.
+	* Show what level you are on.
+	* Show lines removed.
+	* Show next piece.
+
+2008-05-11 Graeme Gott <graeme@gottcode.org>
+	* Draw tiles on the fly.
+	* Remember window size and position.
+	* Add pause logic.
+	* Add new game logic.
+	* Add game over logic.
+	* Add window class.
+	* Scale board when resized.
+	* FIXED: Board didn't shift down when a line was removed.
+	* FIXED: Segfaulted when a piece was dropped.
+
+2008-05-10 Graeme Gott <graeme@gottcode.org>
+	* Remove timer class.
+	* Remove image class.
+	* Merge game class into board class.
+	* Convert to Qt 4.
+
+2007-04-16 Graeme Gott <graeme@gottcode.org>
+	* Render background image.
+
+2007-04-15 Graeme Gott <graeme@gottcode.org>
+	* Improve tile images.
+	* Add game logic.
+	* Add shifting board down.
+
+2007-04-14 Graeme Gott <graeme@gottcode.org>
+	* Remove full lines.
+	* Move logic into game class.
+	* Manage tile images in game class.
+	* Add game class.
+	* Add timer class.
+	* Add highlight images.
+	* Add piece rotation.
+	* Add collision detection.
+	* Add simple piece class.
+
+2007-04-13 Graeme Gott <graeme@gottcode.org>
+	* Add simple board class.
+	* Add simple image class.
+	* Add tile images.
