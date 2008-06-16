@@ -131,8 +131,9 @@ bool Piece::updatePosition(const Cell* cells)
 	}
 
 	// Move cells
-	for (int i = 0; i < 4; ++i)
-		m_board->removeCell(m_cells[i].x, m_cells[i].y);
+	if (m_cells[0].x != -1)
+		for (int i = 0; i < 4; ++i)
+			m_board->removeCell(m_cells[i].x, m_cells[i].y);
 	for (int i = 0; i < 4; ++i)
 		m_board->addCell(cells[i].x, cells[i].y, m_type);
 	for (int i = 0; i < 4; ++i)

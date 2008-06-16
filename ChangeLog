@@ -1,3 +1,6 @@
+2008-06-09 Graeme Gott <graeme@gottcode.org>
+	* FIXED: Top row was duplicated when other rows were removed.
+
 2008-05-31 Alessandro Briosi <tsdogs@briosix.org>
 	* Ported to Qtopia4.
 

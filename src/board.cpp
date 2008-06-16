@@ -68,7 +68,7 @@ Board::Board(QWidget* parent)
 	connect(m_flash_timer, SIGNAL(finished()), this, SLOT(removeLines()));
 
 	for (int i = 0; i < 4; ++i)
-		m_full_lines[i] = 0;
+		m_full_lines[i] = -1;
 
 	for (int col = 0; col < 10; ++col) {
 		for (int row = 0; row < 20; ++row) {
@@ -115,7 +115,7 @@ void Board::findFullLines()
 {
 	// Empty list of full lines
 	for (int i = 0; i < 4; ++i)
-		m_full_lines[i] = 0;
+		m_full_lines[i] = -1;
 	int pos = 0;
 
 	// Find full lines
@@ -151,7 +151,7 @@ void Board::newGame()
 	m_next_piece = (rand() % 7) + 1;
 
 	for (int i = 0; i < 4; ++i)
-		m_full_lines[i] = 0;
+		m_full_lines[i] = -1;
 
 	for (int col = 0; col < 10; ++col) {
 		for (int row = 0; row < 20; ++row) {
@@ -313,7 +313,7 @@ void Board::flashLines(int frame)
 
 		for (int i = 0; i < 4; ++i) {
 			int row = m_full_lines[i];
-			if (row == 0)
+			if (row == -1)
 				break;
 
 			for (int col = 0; col < 10; ++col) {
@@ -334,7 +334,7 @@ void Board::removeLines()
 	// Loop through full lines
 	for (int i = 0; i < 4; ++i) {
 		int row = m_full_lines[i];
-		if (row == 0)
+		if (row == -1)
 			break;
 
 		// Remove line
@@ -351,6 +351,14 @@ void Board::removeLines()
 			}
 		}
 	}
+
+	// Remove top line
+	if (m_full_lines[0] != -1) {
+		for (int col = 0; col < 10; ++col) {
+			removeCell(col, 0);
+		}
+	}
+
 	m_level = (m_removed_lines / 10) + 1;
 	m_shift_timer->setDuration(10000 / (m_removed_lines + 20));
 	m_score += score;
@@ -360,7 +368,7 @@ void Board::removeLines()
 
 	// Empty list of full lines
 	for (int i = 0; i < 4; ++i)
-		m_full_lines[i] = 0;
+		m_full_lines[i] = -1;
 
 	// Add new piece
 	createPiece();
@@ -399,7 +407,7 @@ void Board::landPiece()
 	m_piece = 0;
 
 	findFullLines();
-	if (m_full_lines[0] != 0) {
+	if (m_full_lines[0] != -1) {
 		m_flash_timer->start();
 	} else {
 		createPiece();

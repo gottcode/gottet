@@ -22,7 +22,7 @@
 
 struct Cell
 {
-	Cell(int x1 = 0, int y1 = 0)
+	Cell(int x1 = -1, int y1 = -1)
 	:	x(x1),
 		y(y1)
 	{
