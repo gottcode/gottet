@@ -50,8 +50,10 @@ Board::Board(QWidget* parent)
 	m_done(false),
 	m_paused(false)
 {
+#if !defined(QTOPIA_PHONE)
 	setMinimumSize(200, 400);
 	setFocusPolicy(Qt::StrongFocus);
+#endif
 	setFocus();
 
 	m_shift_timer = new QTimeLine(500, this);
@@ -451,6 +453,10 @@ QPixmap Board::renderPiece(int type) const
 			painter.drawRoundRect(piece[i].x * 20, piece[i].y * 20, 19, 19);
 		}
 	}
+
+#if defined(QTOPIA_PHONE)
+	result = result.scaled(30,50, Qt::KeepAspectRatio);
+#endif
 
 	return result;
 }

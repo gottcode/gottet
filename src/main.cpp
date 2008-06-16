@@ -17,11 +17,17 @@
  *
  ***********************************************************************/
 
+#include "window.h"
+
+#if defined(QTOPIA_PHONE)
+#include <QtopiaApplication>
+QTOPIA_ADD_APPLICATION(QTOPIA_TARGET,Window)
+QTOPIA_MAIN
+#else
+
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
-
-#include "window.h"
 
 int main(int argc, char** argv)
 {
@@ -43,3 +49,4 @@ int main(int argc, char** argv)
 
 	return app.exec();
 }
+#endif

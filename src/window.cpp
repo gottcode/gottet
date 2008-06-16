@@ -22,20 +22,28 @@
 #include "board.h"
 #include "score_board.h"
 
+#include <ctime>
+
 #include <QAction>
 #include <QApplication>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QMenu>
-#include <QMenuBar>
 #include <QMessageBox>
 #include <QPixmap>
 #include <QSettings>
 #include <QVBoxLayout>
 
+#if defined(QTOPIA_PHONE)
+#include <QSoftMenuBar>
+#else
+#include <QMenuBar>
+#endif
+
 /*****************************************************************************/
 
-Window::Window()
+Window::Window(QWidget *parent, Qt::WindowFlags wf)
+:	QMainWindow(parent, wf)
 {
 	setWindowTitle(tr("Gottet"));
 #if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
@@ -47,7 +55,11 @@ Window::Window()
 
 	// Create preview
 	m_preview = new QLabel(contents);
+#if !defined(QTOPIA_PHONE)
 	m_preview->setFixedSize(80, 100);
+#else
+	m_preview->setFixedSize(30, 40);
+#endif
 	m_preview->setAutoFillBackground(true);
 	{
 		QPalette palette = m_preview->palette();
@@ -88,6 +100,19 @@ Window::Window()
 	connect(m_board, SIGNAL(gameOver(int, int, int)), this, SLOT(gameOver()));
 
 	// Create menus
+#if defined(QTOPIA_PHONE)
+	QMenu* menu = QSoftMenuBar::menuFor(this);
+	menu->addAction(tr("&About"), this, SLOT(about()));
+	menu->addSeparator();
+	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
+	menu->addSeparator();
+	m_resume_action = menu->addAction(tr("&Resume"), m_board, SLOT(resumeGame()));
+	m_resume_action->setVisible(false);
+	m_pause_action = menu->addAction(tr("&Pause"), m_board, SLOT(pauseGame()));
+	m_pause_action->setEnabled(false);
+	QAction* action = menu->addAction(tr("&New Game"), m_board, SLOT(newGame()));
+	connect(action, SIGNAL(triggered(bool)), this, SLOT(newGame()));
+#else
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
 	QAction* action = menu->addAction(tr("&New"), m_board, SLOT(newGame()), tr("Ctrl+N"));
 	connect(action, SIGNAL(triggered(bool)), this, SLOT(newGame()));
@@ -99,10 +124,10 @@ Window::Window()
  	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
 	menu->addSeparator();
 	menu->addAction(tr("&Quit"), qApp, SLOT(quit()), tr("Ctrl+Q"));
-
 	menu = menuBar()->addMenu(tr("&Help"));
 	menu->addAction(tr("&About"), this, SLOT(about()));
 	menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
+#endif
 
 	// Layout window
 	QVBoxLayout* sidebar = new QVBoxLayout;

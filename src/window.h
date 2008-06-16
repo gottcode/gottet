@@ -30,7 +30,7 @@ class Window : public QMainWindow
 {
 	Q_OBJECT
 public:
-	Window();
+	Window(QWidget *parent = 0, Qt::WindowFlags wf = 0);
 
 protected:
 	virtual void closeEvent(QCloseEvent* event);
