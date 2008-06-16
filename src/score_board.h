@@ -35,6 +35,9 @@ public:
 public slots:
 	void addHighScore(int level, int lines, int score);
 
+protected:
+	virtual void hideEvent(QHideEvent* event);
+
 private:
 	QTreeWidgetItem* createItem(int level, int lines, int score) const;
 

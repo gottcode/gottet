@@ -28,11 +28,11 @@ SOURCES = src/board.cpp \
 	src/window.cpp
 
 macx {
-	ICON = gottet.icns
+	ICON = icons/gottet.icns
 } else:unix {
-	RESOURCES = icon.qrc
+	RESOURCES = icons/icon.qrc
 } else:win32 {
-	RC_FILE = icon.rc
+	RC_FILE = icons/icon.rc
 }
 
 unix: !macx {
@@ -44,10 +44,10 @@ unix: !macx {
 	binary.files = gottet
 
 	icon.path = $$PREFIX/share/icons/hicolor/48x48/apps
-	icon.files = gottet.png
+	icon.files = icons/gottet.png
 
 	desktop.path = $$PREFIX/share/applications/
-	desktop.files = gottet.desktop
+	desktop.files = icons/gottet.desktop
 
 	INSTALLS += binary icon desktop
 }

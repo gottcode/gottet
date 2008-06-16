@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP="Gottet"
-VERSION="1.0.1"
+VERSION="1.0.2"
 
 BUNDLE="$APP.app"
 BUNDLE_FW="$BUNDLE/Contents/Frameworks"
@@ -38,7 +38,7 @@ echo -n "Updating locations in frameworks... "
 install_name_tool -change $QTCORE $EXE_FW/$QTCORE $BUNDLE_FW/$QTGUI
 echo "Done"
 
-# Create second disk image
+# Create disk image
 echo -n "Creating disk image... "
 hdiutil create -quiet -ov -srcfolder $BUNDLE -format UDBZ -volname "$APP" "${APP}_$VERSION.dmg"
 hdiutil internet-enable -quiet -yes "${APP}_$VERSION.dmg"

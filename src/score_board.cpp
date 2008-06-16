@@ -30,7 +30,7 @@
 ScoreBoard::ScoreBoard(QWidget* parent)
 :	QDialog(parent)
 {
-	setWindowTitle(tr("High Scores"));
+	setWindowTitle(tr("Gottet Scores"));
 
 	// Create tree view
 	m_scores = new QTreeWidget(this);
@@ -57,6 +57,9 @@ ScoreBoard::ScoreBoard(QWidget* parent)
 	layout->setSpacing(24);
 	layout->addWidget(m_scores);
 	layout->addWidget(ok_button, 0, Qt::AlignRight);
+
+	// Resize window
+	resize(QSettings().value("ScoresSize", sizeHint()).toSize());
 }
 
 /*****************************************************************************/
@@ -102,6 +105,14 @@ void ScoreBoard::addHighScore(int level, int lines, int score)
 	QSettings().setValue("Scores", scores.join(";"));
 
 	show();
+}
+
+/*****************************************************************************/
+
+void ScoreBoard::hideEvent(QHideEvent* event)
+{
+	QSettings().setValue("ScoresSize", size());
+	QDialog::hideEvent(event);
 }
 
 /*****************************************************************************/
