@@ -44,21 +44,20 @@ unix: !macx {
 		PREFIX = /usr/local
 	}
 
-	binary.files = gottet
 	icon.files = icons/gottet.png
 	desktop.files = icons/gottet.desktop
 
 	qws {
-		binary.path = /bin/
+		target.path = /bin/
 		icon.path = /pics/gottet
 		icon.hint = pics
 		desktop.path = /apps/Games
 		desktop.hint = desktop
 	} else {
-		binary.path = $$PREFIX/bin/
+		target.path = $$PREFIX/bin/
 		icon.path = $$PREFIX/share/icons/hicolor/48x48/apps
 		desktop.path = $$PREFIX/share/applications/
 	}
 
-	INSTALLS += binary icon desktop
+	INSTALLS += target icon desktop
 }
