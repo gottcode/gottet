@@ -220,7 +220,7 @@ void Window::gameOver()
 
 void Window::about()
 {
-	QMessageBox::about(this, tr("About Gottet"), tr("<center><big><b>Gottet 1.0.2</b></big><br/>A tetris clone I made for my wife<br/><small>Copyright &copy; 2008 Graeme Gott</small></center>"));
+	QMessageBox::about(this, tr("About Gottet"), tr("<center><big><b>Gottet 1.0.3</b></big><br/>A tetris clone I made for my wife<br/><small>Copyright &copy; 2008 Graeme Gott</small></center>"));
 }
 
 /*****************************************************************************/
