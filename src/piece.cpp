@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007-2008 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2010 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -56,14 +56,17 @@ Piece::Piece(int type, Board* board)
 
 bool Piece::rotate()
 {
+	if (m_type == 7) {
+		return true;
+	}
+
 	Cell rotated[4];
 	for (int i = 0; i < 4; ++i) {
-		int x = static_cast<int>(m_cells[i].x) - m_pivot.x;
-		int y = static_cast<int>(m_cells[i].y) - m_pivot.y;
-		rotated[i].x = y + m_pivot.x;
-		rotated[i].y = -x + m_pivot.y;
-		if (rotated[i].x > 9 || rotated[i].x < 0 || rotated[i].y > 19 || rotated[i].y < 0)
+		rotated[i].x = m_pivot.x - m_pivot.y + m_cells[i].y;
+		rotated[i].y = m_pivot.x + m_pivot.y - m_cells[i].x;
+		if (rotated[i].x > 9 || rotated[i].x < 0 || rotated[i].y > 19 || rotated[i].y < 0) {
 			return false;
+		}
 	}
 
 	return updatePosition(rotated);
