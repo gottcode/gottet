@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007-2008 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2010 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -164,6 +164,7 @@ void Board::newGame()
 	emit linesRemovedUpdated(m_removed_lines);
 	emit scoreUpdated(m_score);
 
+	setCursor(Qt::BlankCursor);
 	createPiece();
 }
 
@@ -179,6 +180,7 @@ void Board::pauseGame()
 
 	update();
 
+	unsetCursor();
 	emit pauseAvailable(false);
 }
 
@@ -194,6 +196,7 @@ void Board::resumeGame()
 
 	update();
 
+	setCursor(Qt::BlankCursor);
 	emit pauseAvailable(true);
 }
 
@@ -386,6 +389,7 @@ void Board::createPiece()
 		m_piece = 0;
 		m_done = true;
 		update();
+		unsetCursor();
 		emit gameOver(m_level, m_removed_lines, m_score);
 		return;
 	}

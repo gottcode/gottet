@@ -1,4 +1,5 @@
 2010-09-23 Graeme Gott <graeme@gottcode.org>
+	* Hide cursor when playing a game.
 	* FIXED: Rotating a square piece shifted it.
 
 2008-06-18 Graeme Gott <graeme@gottcode.org>
