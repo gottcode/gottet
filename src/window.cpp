@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2008 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2008, 2010 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,6 +26,7 @@
 
 #include <QAction>
 #include <QApplication>
+#include <QCloseEvent>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QMenu>
@@ -98,6 +99,7 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	connect(m_board, SIGNAL(scoreUpdated(int)), this, SLOT(scoreUpdated(int)));
 	connect(m_board, SIGNAL(gameOver(int, int, int)), m_score_board, SLOT(addHighScore(int, int, int)));
 	connect(m_board, SIGNAL(gameOver(int, int, int)), this, SLOT(gameOver()));
+	connect(m_board, SIGNAL(gameStarted()), this, SLOT(newGame()));
 
 	// Create menus
 #if defined(QTOPIA_PHONE)
@@ -114,16 +116,15 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	connect(action, SIGNAL(triggered(bool)), this, SLOT(newGame()));
 #else
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
-	QAction* action = menu->addAction(tr("&New"), m_board, SLOT(newGame()), tr("Ctrl+N"));
-	connect(action, SIGNAL(triggered(bool)), this, SLOT(newGame()));
+	menu->addAction(tr("&New"), m_board, SLOT(newGame()), tr("Ctrl+N"));
 	m_pause_action = menu->addAction(tr("&Pause"), m_board, SLOT(pauseGame()), tr("P"));
 	m_pause_action->setEnabled(false);
 	m_resume_action = menu->addAction(tr("&Resume"), m_board, SLOT(resumeGame()), tr("P"));
 	m_resume_action->setVisible(false);
 	menu->addSeparator();
- 	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
+	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
 	menu->addSeparator();
-	menu->addAction(tr("&Quit"), qApp, SLOT(quit()), tr("Ctrl+Q"));
+	menu->addAction(tr("&Quit"), this, SLOT(close()), tr("Ctrl+Q"));
 	menu = menuBar()->addMenu(tr("&Help"));
 	menu->addAction(tr("&About"), this, SLOT(about()));
 	menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
@@ -161,7 +162,9 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 void Window::closeEvent(QCloseEvent* event)
 {
 	QSettings().setValue("Geometry", saveGeometry());
-	QMainWindow::closeEvent(event);
+	if (!m_board->endGame()) {
+		event->ignore();
+	}
 }
 
 /*****************************************************************************/

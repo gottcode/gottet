@@ -1,3 +1,6 @@
+2010-09-24 Graeme Gott <graeme@gottcode.org>
+	* Prompt before ending a game.
+
 2010-09-23 Graeme Gott <graeme@gottcode.org>
 	* Allow changing bindir during configuration.
 	* Hide cursor when playing a game.

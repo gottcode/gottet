@@ -22,6 +22,7 @@
 #include "piece.h"
 
 #include <QKeyEvent>
+#include <QMessageBox>
 #include <QPainter>
 #include <QPixmap>
 #include <QTimeLine>
@@ -47,6 +48,7 @@ Board::Board(QWidget* parent)
 	m_score(0),
 	m_piece(0),
 	m_next_piece((rand() % 7) + 1),
+	m_started(false),
 	m_done(false),
 	m_paused(false)
 {
@@ -111,6 +113,22 @@ void Board::removeCell(int x, int y)
 
 /*****************************************************************************/
 
+bool Board::endGame()
+{
+	if (m_done || !m_started) {
+		return true;
+	}
+
+	if (QMessageBox::question(this, tr("Question"), tr("End the current game?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
+		gameOver();
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/*****************************************************************************/
+
 void Board::findFullLines()
 {
 	// Empty list of full lines
@@ -137,11 +155,16 @@ void Board::findFullLines()
 
 void Board::newGame()
 {
+	if (!endGame()) {
+		return;
+	}
+
 	m_flash_timer->stop();
 	m_shift_timer->stop();
 	delete m_piece;
 	m_piece = 0;
 
+	m_started = true;
 	m_done = false;
 	m_paused = false;
 	m_removed_lines = 0;
@@ -163,6 +186,7 @@ void Board::newGame()
 	emit levelUpdated(m_level);
 	emit linesRemovedUpdated(m_removed_lines);
 	emit scoreUpdated(m_score);
+	emit gameStarted();
 
 	setCursor(Qt::BlankCursor);
 	createPiece();
@@ -379,25 +403,29 @@ void Board::removeLines()
 
 /*****************************************************************************/
 
+void Board::gameOver()
+{
+	delete m_piece;
+	m_piece = 0;
+	m_done = true;
+	unsetCursor();
+	emit gameOver(m_level, m_removed_lines, m_score);
+}
+
+/*****************************************************************************/
+
 void Board::createPiece()
 {
 	Q_ASSERT(m_piece == 0);
 
 	m_piece = new Piece(m_next_piece, this);
-	if (!m_piece->isValid()) {
-		delete m_piece;
-		m_piece = 0;
-		m_done = true;
-		update();
-		unsetCursor();
-		emit gameOver(m_level, m_removed_lines, m_score);
-		return;
+	if (m_piece->isValid()) {
+		m_next_piece = (rand() % 7) + 1;
+		emit nextPieceAvailable(renderPiece(m_next_piece));
+		m_shift_timer->start();
+	} else {
+		gameOver();
 	}
-	m_next_piece = (rand() % 7) + 1;
-	emit nextPieceAvailable(renderPiece(m_next_piece));
-
-	m_shift_timer->start();
-
 	update();
 }
 

@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2008 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2008, 2010 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -104,7 +104,7 @@ void ScoreBoard::addHighScore(int level, int lines, int score)
 	}
 	QSettings().setValue("Scores", scores.join(";"));
 
-	show();
+	exec();
 }
 
 /*****************************************************************************/

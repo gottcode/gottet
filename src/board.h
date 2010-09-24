@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007-2008 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2010 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,6 +34,7 @@ public:
 	bool cell(int x, int y) const;
 	void addCell(int x, int y, int type);
 	void removeCell(int x, int y);
+	bool endGame();
 	void findFullLines();
 
 public slots:
@@ -48,6 +49,7 @@ signals:
 	void linesRemovedUpdated(int lines);
 	void scoreUpdated(int score);
 	void gameOver(int level, int lines, int score);
+	void gameStarted();
 
 protected:
 	virtual void keyPressEvent(QKeyEvent* event);
@@ -61,6 +63,7 @@ private slots:
 	void removeLines();
 
 private:
+	void gameOver();
 	void createPiece();
 	void landPiece();
 	void renderText(QPainter& painter, const QString& message) const;
@@ -76,6 +79,7 @@ private:
 	int m_next_piece;
 	QTimeLine* m_shift_timer;
 	QTimeLine* m_flash_timer;
+	bool m_started;
 	bool m_done;
 	bool m_paused;
 };
