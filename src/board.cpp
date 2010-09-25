@@ -165,6 +165,7 @@ void Board::newGame()
 	delete m_piece;
 	m_piece = 0;
 
+	emit hideMessage();
 	m_started = true;
 	m_done = false;
 	m_paused = false;
@@ -198,12 +199,15 @@ void Board::newGame()
 void Board::pauseGame()
 {
 	m_paused = true;
-	if (m_shift_timer->state() == QTimeLine::Running)
+	if (m_shift_timer->state() == QTimeLine::Running) {
 		m_shift_timer->setPaused(true);
-	if (m_flash_timer->state() == QTimeLine::Running)
+	}
+	if (m_flash_timer->state() == QTimeLine::Running) {
 		m_flash_timer->setPaused(true);
+	}
 
 	update();
+	emit showMessage(tr("<big><b>Paused</b></big><br>Click to resume playing."));
 
 	unsetCursor();
 	emit pauseAvailable(false);
@@ -214,11 +218,14 @@ void Board::pauseGame()
 void Board::resumeGame()
 {
 	m_paused = false;
-	if (m_shift_timer->state() == QTimeLine::Paused)
+	if (m_shift_timer->state() == QTimeLine::Paused) {
 		m_shift_timer->setPaused(false);
-	if (m_flash_timer->state() == QTimeLine::Paused)
+	}
+	if (m_flash_timer->state() == QTimeLine::Paused) {
 		m_flash_timer->setPaused(false);
+	}
 
+	emit hideMessage();
 	update();
 
 	setCursor(Qt::BlankCursor);
@@ -255,6 +262,18 @@ void Board::keyPressEvent(QKeyEvent* event)
 
 /*****************************************************************************/
 
+void Board::mousePressEvent(QMouseEvent* event)
+{
+	if (m_paused) {
+		resumeGame();
+	} else if (m_done || !m_started) {
+		newGame();
+	}
+	QWidget::mousePressEvent(event);
+}
+
+/*****************************************************************************/
+
 void Board::paintEvent(QPaintEvent*)
 {
 	QPainter painter(this);
@@ -262,7 +281,6 @@ void Board::paintEvent(QPaintEvent*)
 	painter.fillRect(m_background, Qt::black);
 
 	if (m_paused) {
-		renderText(painter, tr("Paused"));
 		return;
 	}
 
@@ -273,10 +291,6 @@ void Board::paintEvent(QPaintEvent*)
 				painter.drawPixmap(col * m_piece_size + m_background.x(), row * m_piece_size + m_background.y(), m_images[cell]);
 			}
 		}
-	}
-
-	if (m_done) {
-		renderText(painter, tr("Game Over"));
 	}
 }
 
@@ -407,6 +421,7 @@ void Board::gameOver()
 	m_piece = 0;
 	m_done = true;
 	unsetCursor();
+	emit showMessage(tr("<big><b>Game Over!</b></big><br>Click to start a new game."));
 	emit gameOver(m_level, m_removed_lines, m_score);
 }
 
@@ -442,25 +457,6 @@ void Board::landPiece()
 	} else {
 		createPiece();
 	}
-}
-
-/*****************************************************************************/
-
-void Board::renderText(QPainter& painter, const QString& message) const
-{
-	painter.setFont(QFont("Sans", 24));
-	QRect rect = painter.fontMetrics().boundingRect(message);
-	int x1 = (width() - rect.width() - rect.height()) >> 1;
-	int y1 = (height() >> 1) - rect.height();
-
-	painter.setPen(Qt::NoPen);
-	painter.setBrush(QColor(255, 255, 255, 200));
-	painter.setRenderHint(QPainter::Antialiasing, true);
-	painter.drawRoundRect(x1, y1, rect.width() + rect.height(), rect.height() * 2, 10);
-
-	painter.setPen(Qt::black);
-	painter.setRenderHint(QPainter::TextAntialiasing, true);
-	painter.drawText((rect.height() >> 1) + x1, ((rect.height() * 5) >> 2) + y1, message);
 }
 
 /*****************************************************************************/

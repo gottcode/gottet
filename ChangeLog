@@ -1,3 +1,6 @@
+2010-09-25 Graeme Gott <graeme@gottcode.org>
+	* Add click to start or resume games.
+
 2010-09-24 Graeme Gott <graeme@gottcode.org>
 	* Cache board rectangle and piece size.
 	* Prompt before ending a game.

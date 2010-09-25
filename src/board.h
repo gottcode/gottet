@@ -50,9 +50,12 @@ signals:
 	void scoreUpdated(int score);
 	void gameOver(int level, int lines, int score);
 	void gameStarted();
+	void hideMessage();
+	void showMessage(const QString& message);
 
 protected:
 	virtual void keyPressEvent(QKeyEvent* event);
+	virtual void mousePressEvent(QMouseEvent* event);
 	virtual void paintEvent(QPaintEvent*);
 	virtual void focusOutEvent(QFocusEvent* event);
 	virtual void resizeEvent(QResizeEvent* event);
@@ -66,7 +69,6 @@ private:
 	void gameOver();
 	void createPiece();
 	void landPiece();
-	void renderText(QPainter& painter, const QString& message) const;
 	QPixmap renderPiece(int type) const;
 
 private:

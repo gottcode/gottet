@@ -27,13 +27,12 @@
 #include <QAction>
 #include <QApplication>
 #include <QCloseEvent>
-#include <QHBoxLayout>
+#include <QGridLayout>
 #include <QLabel>
 #include <QMenu>
 #include <QMessageBox>
 #include <QPixmap>
 #include <QSettings>
-#include <QVBoxLayout>
 
 #if defined(QTOPIA_PHONE)
 #include <QSoftMenuBar>
@@ -101,6 +100,24 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	connect(m_board, SIGNAL(gameOver(int, int, int)), this, SLOT(gameOver()));
 	connect(m_board, SIGNAL(gameStarted()), this, SLOT(newGame()));
 
+	// Create overlay message
+	QLabel* message = new QLabel(tr("Click to start a new game."), contents);
+	message->setAttribute(Qt::WA_TransparentForMouseEvents);
+	message->setAlignment(Qt::AlignCenter);
+	message->setStyleSheet(
+		"QLabel {"
+			"background-color: rgba(255, 255, 255, 200);"
+			"color: black;"
+			"margin: 0;"
+			"padding: 0.5em;"
+			"border-radius: 0.5em;"
+		"}");
+	message->setWordWrap(true);
+	connect(m_board, SIGNAL(showMessage(const QString&)), message, SLOT(show()));
+	connect(m_board, SIGNAL(showMessage(const QString&)), message, SLOT(setText(const QString&)));
+	connect(m_board, SIGNAL(hideMessage()), message, SLOT(hide()));
+	connect(m_board, SIGNAL(hideMessage()), message, SLOT(clear()));
+
 	// Create menus
 #if defined(QTOPIA_PHONE)
 	QMenu* menu = QSoftMenuBar::menuFor(this);
@@ -131,27 +148,25 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 #endif
 
 	// Layout window
-	QVBoxLayout* sidebar = new QVBoxLayout;
-	sidebar->setMargin(0);
-	sidebar->setSpacing(0);
-	sidebar->addWidget(new QLabel(tr("Next Piece"), contents), 0, Qt::AlignCenter);
-	sidebar->addWidget(m_preview, 0, Qt::AlignCenter);
-	sidebar->addSpacing(24);
-	sidebar->addWidget(new QLabel(tr("Level"), contents), 0, Qt::AlignCenter);
-	sidebar->addWidget(m_level);
-	sidebar->addSpacing(24);
-	sidebar->addWidget(new QLabel(tr("Removed Lines"), contents), 0, Qt::AlignCenter);
-	sidebar->addWidget(m_lines);
-	sidebar->addSpacing(24);
-	sidebar->addWidget(new QLabel(tr("Score"), contents), 0, Qt::AlignCenter);
-	sidebar->addWidget(m_score);
-	sidebar->addStretch();
-
-	QHBoxLayout* layout = new QHBoxLayout(contents);
+	QGridLayout* layout = new QGridLayout(contents);
 	layout->setMargin(12);
-	layout->setSpacing(12);
-	layout->addWidget(m_board, 1);
-	layout->addLayout(sidebar);
+	layout->setSpacing(0);
+	layout->setColumnStretch(0, 1);
+	layout->setColumnMinimumWidth(1, 12);
+	layout->setRowStretch(11, 1);
+	layout->setRowMinimumHeight(2, 24);
+	layout->setRowMinimumHeight(5, 24);
+	layout->setRowMinimumHeight(8, 24);
+	layout->addWidget(m_board, 0, 0, 12, 1);
+	layout->addWidget(message, 0, 0, 12, 1, Qt::AlignCenter);
+	layout->addWidget(new QLabel(tr("Next Piece"), contents), 0, 2, 1, 1, Qt::AlignCenter);
+	layout->addWidget(m_preview, 1, 2, Qt::AlignCenter);
+	layout->addWidget(new QLabel(tr("Level"), contents), 3, 2, 1, 1, Qt::AlignCenter);
+	layout->addWidget(m_level, 4, 2);
+	layout->addWidget(new QLabel(tr("Removed Lines"), contents), 6, 2, 1, 1, Qt::AlignCenter);
+	layout->addWidget(m_lines, 7, 2);
+	layout->addWidget(new QLabel(tr("Score"), contents), 9, 2, 1, 1, Qt::AlignCenter);
+	layout->addWidget(m_score, 10, 2);
 
 	// Restore window
 	restoreGeometry(QSettings().value("Geometry").toByteArray());
