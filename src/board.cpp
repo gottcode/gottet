@@ -48,12 +48,13 @@ Board::Board(QWidget* parent)
 	m_score(0),
 	m_piece(0),
 	m_next_piece((rand() % 7) + 1),
+	m_piece_size(0),
 	m_started(false),
 	m_done(false),
 	m_paused(false)
 {
 #if !defined(QTOPIA_PHONE)
-	setMinimumSize(200, 400);
+	setMinimumSize(201, 401);
 	setFocusPolicy(Qt::StrongFocus);
 #endif
 	setFocus();
@@ -256,19 +257,12 @@ void Board::keyPressEvent(QKeyEvent* event)
 
 void Board::paintEvent(QPaintEvent*)
 {
-	int size = qMin(width() / 10, height() / 20);
-
 	QPainter painter(this);
 	painter.setRenderHint(QPainter::Antialiasing, true);
-
-	int w = size * 10;
-	int h = size * 20;
-	int x = (width() - w) / 2;
-	int y = (height() - h) / 2;
-	painter.fillRect(x, y, w, h, Qt::black);
+	painter.fillRect(m_background, Qt::black);
 
 	if (m_paused) {
-		renderText(painter, "Paused");
+		renderText(painter, tr("Paused"));
 		return;
 	}
 
@@ -276,13 +270,14 @@ void Board::paintEvent(QPaintEvent*)
 		for (int row = 0; row < 20; ++row) {
 			int cell = m_cells[col][row] - 1;
 			if (cell >= 0) {
-				painter.drawPixmap(col * size + x, row * size + y, m_images[cell]);
+				painter.drawPixmap(col * m_piece_size + m_background.x(), row * m_piece_size + m_background.y(), m_images[cell]);
 			}
 		}
 	}
 
-	if (m_done)
-		renderText(painter, "Game Over");
+	if (m_done) {
+		renderText(painter, tr("Game Over"));
+	}
 }
 
 /*****************************************************************************/
@@ -297,19 +292,22 @@ void Board::focusOutEvent(QFocusEvent*)
 
 void Board::resizeEvent(QResizeEvent* event)
 {
-	int size = qMin(event->size().width() / 10, event->size().height() / 20);
+	m_piece_size = qMin(event->size().width() / 10, event->size().height() / 20);
+	int w = m_piece_size * 10 + 1;
+	int h = m_piece_size * 20 + 1;
+	m_background = QRect((width() - w) / 2, (height() - h) / 2, w, h);
 
 	QPainter painter;
 
 	for (int i = 0; i < 7; ++i) {
-		QPixmap pixmap(size + 1, size + 1);
+		QPixmap pixmap(m_piece_size + 1, m_piece_size + 1);
 		pixmap.fill(QColor(0, 0, 0, 0));
 
 		painter.begin(&pixmap);
 		painter.setRenderHint(QPainter::Antialiasing, true);
 		painter.setBrush(colors[i]);
 		painter.setPen(QPen(colors[i].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-		painter.drawRoundRect(1, 1, size - 1, size - 1);
+		painter.drawRoundRect(1, 1, m_piece_size - 1, m_piece_size - 1);
 		painter.end();
 
 		m_images[i] = pixmap;

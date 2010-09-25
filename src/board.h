@@ -69,6 +69,7 @@ private:
 	void renderText(QPainter& painter, const QString& message) const;
 	QPixmap renderPiece(int type) const;
 
+private:
 	QPixmap m_images[7];
 	int m_cells[10][20];
 	int m_full_lines[4];
@@ -79,6 +80,8 @@ private:
 	int m_next_piece;
 	QTimeLine* m_shift_timer;
 	QTimeLine* m_flash_timer;
+	int m_piece_size;
+	QRect m_background;
 	bool m_started;
 	bool m_done;
 	bool m_paused;
