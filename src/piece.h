@@ -67,6 +67,16 @@ public:
 	bool rotate();
 	void drop();
 
+	const Cell* cells() const
+	{
+		return m_cells;
+	}
+
+	int type() const
+	{
+		return m_type;
+	}
+
 	static void cells(Cell* cells, int type);
 
 private:

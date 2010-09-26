@@ -32,8 +32,6 @@ public:
 	Board(QWidget* parent = 0);
 
 	bool cell(int x, int y) const;
-	void addCell(int x, int y, int type);
-	void removeCell(int x, int y);
 	bool endGame();
 	void findFullLines();
 
@@ -67,6 +65,8 @@ private slots:
 
 private:
 	void gameOver();
+	void addCell(int x, int y, int type);
+	void removeCell(int x, int y);
 	void createPiece();
 	void landPiece();
 	QPixmap renderPiece(int type) const;
@@ -88,5 +88,12 @@ private:
 	bool m_done;
 	bool m_paused;
 };
+
+inline bool Board::cell(int x, int y) const
+{
+	Q_ASSERT(x >= 0 && x < 10);
+	Q_ASSERT(y >= 0 && y < 20);
+	return m_cells[x][y] != 0;
+}
 
 #endif // BOARD_H

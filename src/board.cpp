@@ -82,38 +82,6 @@ Board::Board(QWidget* parent)
 
 /*****************************************************************************/
 
-bool Board::cell(int x, int y) const
-{
-	Q_ASSERT(x >= 0 && x < 10);
-	Q_ASSERT(y >= 0 && y < 20);
-
-	return m_cells[x][y] != 0;
-}
-
-/*****************************************************************************/
-
-void Board::addCell(int x, int y, int type)
-{
-	Q_ASSERT(x >= 0 && x < 10);
-	Q_ASSERT(y >= 0 && y < 20);
-	Q_ASSERT(type > 0 && type < 8);
-	Q_ASSERT(m_cells[x][y] == 0);
-
-	m_cells[x][y] = type;
-}
-
-/*****************************************************************************/
-
-void Board::removeCell(int x, int y)
-{
-	Q_ASSERT(x >= 0 && x < 10);
-	Q_ASSERT(y >= 0 && y < 20);
-
-	m_cells[x][y] = 0;
-}
-
-/*****************************************************************************/
-
 bool Board::endGame()
 {
 	if (m_done || !m_started) {
@@ -284,12 +252,22 @@ void Board::paintEvent(QPaintEvent*)
 		return;
 	}
 
+	// Draw board
 	for (int col = 0; col < 10; ++col) {
 		for (int row = 0; row < 20; ++row) {
 			int cell = m_cells[col][row] - 1;
 			if (cell >= 0) {
 				painter.drawPixmap(col * m_piece_size + m_background.x(), row * m_piece_size + m_background.y(), m_images[cell]);
 			}
+		}
+	}
+
+	// Draw piece
+	if (m_piece) {
+		int type = m_piece->type() - 1;
+		const Cell* cells = m_piece->cells();
+		for (int i = 0; i < 4; ++i) {
+			painter.drawPixmap(cells[i].x * m_piece_size + m_background.x(), cells[i].y * m_piece_size + m_background.y(), m_images[type]);
 		}
 	}
 }
@@ -427,6 +405,28 @@ void Board::gameOver()
 
 /*****************************************************************************/
 
+void Board::addCell(int x, int y, int type)
+{
+	Q_ASSERT(x >= 0 && x < 10);
+	Q_ASSERT(y >= 0 && y < 20);
+	Q_ASSERT(type > 0 && type < 8);
+	Q_ASSERT(m_cells[x][y] == 0);
+
+	m_cells[x][y] = type;
+}
+
+/*****************************************************************************/
+
+void Board::removeCell(int x, int y)
+{
+	Q_ASSERT(x >= 0 && x < 10);
+	Q_ASSERT(y >= 0 && y < 20);
+
+	m_cells[x][y] = 0;
+}
+
+/*****************************************************************************/
+
 void Board::createPiece()
 {
 	Q_ASSERT(m_piece == 0);
@@ -448,6 +448,11 @@ void Board::landPiece()
 {
 	m_shift_timer->stop();
 
+	int type = m_piece->type();
+	const Cell* cells = m_piece->cells();
+	for (int i = 0; i < 4; ++i) {
+		addCell(cells[i].x, cells[i].y, type);
+	}
 	delete m_piece;
 	m_piece = 0;
 

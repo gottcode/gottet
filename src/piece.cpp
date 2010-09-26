@@ -119,28 +119,17 @@ bool Piece::updatePosition(const Cell* cells)
 {
 	// Check for collision of cells
 	const Cell* cell = 0;
-	bool solid = false;
 	for (int i = 0; i < 4; ++i) {
 		cell = &cells[i];
-		solid = m_board->cell(cell->x, cell->y);
-		if (solid) {
-			for (int j = 0; j < 4; ++j) {
-				if (*cell == m_cells[j])
-					solid = false;
-			}
-		}
-		if (solid)
+		if (m_board->cell(cell->x, cell->y)) {
 			return false;
+		}
 	}
 
 	// Move cells
-	if (m_cells[0].x != -1)
-		for (int i = 0; i < 4; ++i)
-			m_board->removeCell(m_cells[i].x, m_cells[i].y);
-	for (int i = 0; i < 4; ++i)
-		m_board->addCell(cells[i].x, cells[i].y, m_type);
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		m_cells[i] = cells[i];
+	}
 
 	return true;
 }

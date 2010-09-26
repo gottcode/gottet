@@ -1,3 +1,6 @@
+2010-09-26 Graeme Gott <graeme@gottcode.org>
+	* Draw piece separately from board.
+
 2010-09-25 Graeme Gott <graeme@gottcode.org>
 	* Add click to start or resume games.
 
