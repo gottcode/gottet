@@ -25,7 +25,7 @@
 #include <QMessageBox>
 #include <QPainter>
 #include <QPixmap>
-#include <QTimeLine>
+#include <QTimer>
 
 /*****************************************************************************/
 
@@ -48,6 +48,7 @@ Board::Board(QWidget* parent)
 	m_score(0),
 	m_piece(0),
 	m_next_piece((rand() % 7) + 1),
+	m_flash_frame(-1),
 	m_piece_size(0),
 	m_started(false),
 	m_done(false),
@@ -59,19 +60,18 @@ Board::Board(QWidget* parent)
 #endif
 	setFocus();
 
-	m_shift_timer = new QTimeLine(500, this);
-	m_shift_timer->setUpdateInterval(5);
-	m_shift_timer->setCurveShape(QTimeLine::LinearCurve);
-	connect(m_shift_timer, SIGNAL(finished()), this, SLOT(shiftPiece()));
+	m_shift_timer = new QTimer(this);
+	m_shift_timer->setInterval(500);
+	m_shift_timer->setSingleShot(true);
+	connect(m_shift_timer, SIGNAL(timeout()), this, SLOT(shiftPiece()));
 
-	m_flash_timer = new QTimeLine(480, this);
-	m_flash_timer->setCurveShape(QTimeLine::LinearCurve);
-	m_flash_timer->setFrameRange(0, 6);
-	connect(m_flash_timer, SIGNAL(frameChanged(int)), this, SLOT(flashLines(int)));
-	connect(m_flash_timer, SIGNAL(finished()), this, SLOT(removeLines()));
+	m_flash_timer = new QTimer(this);
+	m_flash_timer->setInterval(80);
+	connect(m_flash_timer, SIGNAL(timeout()), this, SLOT(flashLines()));
 
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		m_full_lines[i] = -1;
+	}
 
 	for (int col = 0; col < 10; ++col) {
 		for (int row = 0; row < 20; ++row) {
@@ -140,7 +140,7 @@ void Board::newGame()
 	m_removed_lines = 0;
 	m_level = 1;
 	m_score = 0;
-	m_shift_timer->setDuration(500);
+	m_shift_timer->setInterval(500);
 	m_next_piece = (rand() % 7) + 1;
 
 	for (int i = 0; i < 4; ++i)
@@ -167,11 +167,10 @@ void Board::newGame()
 void Board::pauseGame()
 {
 	m_paused = true;
-	if (m_shift_timer->state() == QTimeLine::Running) {
-		m_shift_timer->setPaused(true);
-	}
-	if (m_flash_timer->state() == QTimeLine::Running) {
-		m_flash_timer->setPaused(true);
+	if (m_flash_frame > -1) {
+		m_flash_timer->stop();
+	} else {
+		m_shift_timer->stop();
 	}
 
 	update();
@@ -186,11 +185,10 @@ void Board::pauseGame()
 void Board::resumeGame()
 {
 	m_paused = false;
-	if (m_shift_timer->state() == QTimeLine::Paused) {
-		m_shift_timer->setPaused(false);
-	}
-	if (m_flash_timer->state() == QTimeLine::Paused) {
-		m_flash_timer->setPaused(false);
+	if (m_flash_frame > -1) {
+		m_flash_timer->start();
+	} else {
+		m_shift_timer->start();
 	}
 
 	emit hideMessage();
@@ -322,16 +320,17 @@ void Board::shiftPiece()
 
 /*****************************************************************************/
 
-void Board::flashLines(int frame)
+void Board::flashLines()
 {
-	if (frame < 6) {
-		bool flash = m_cells[0][m_full_lines[0]] > 0;
-		int amount = flash ? -7 : 7;
+	m_flash_frame++;
+	if (m_flash_frame < 6) {
+		int amount = (m_flash_frame % 2) ? 7 : -7;
 
 		for (int i = 0; i < 4; ++i) {
 			int row = m_full_lines[i];
-			if (row == -1)
+			if (row == -1) {
 				break;
+			}
 
 			for (int col = 0; col < 10; ++col) {
 				m_cells[col][row] += amount;
@@ -339,6 +338,10 @@ void Board::flashLines(int frame)
 		}
 
 		update();
+	} else {
+		m_flash_timer->stop();
+		m_flash_frame = -1;
+		removeLines();
 	}
 }
 
@@ -377,7 +380,7 @@ void Board::removeLines()
 	}
 
 	m_level = (m_removed_lines / 10) + 1;
-	m_shift_timer->setDuration(10000 / (m_removed_lines + 20));
+	m_shift_timer->setInterval(10000 / (m_removed_lines + 20));
 	m_score += score;
 	emit levelUpdated(m_level);
 	emit linesRemovedUpdated(m_removed_lines);

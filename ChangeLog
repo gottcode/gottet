@@ -1,4 +1,5 @@
 2010-09-26 Graeme Gott <graeme@gottcode.org>
+	* Switch to using QTimers.
 	* Draw piece separately from board.
 
 2010-09-25 Graeme Gott <graeme@gottcode.org>

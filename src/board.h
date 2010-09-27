@@ -22,7 +22,7 @@
 
 #include <QWidget>
 class QPixmap;
-class QTimeLine;
+class QTimer;
 class Piece;
 
 class Board : public QWidget
@@ -60,7 +60,7 @@ protected:
 
 private slots:
 	void shiftPiece();
-	void flashLines(int frame);
+	void flashLines();
 	void removeLines();
 
 private:
@@ -80,8 +80,9 @@ private:
 	int m_score;
 	Piece* m_piece;
 	int m_next_piece;
-	QTimeLine* m_shift_timer;
-	QTimeLine* m_flash_timer;
+	QTimer* m_shift_timer;
+	QTimer* m_flash_timer;
+	int m_flash_frame;
 	int m_piece_size;
 	QRect m_background;
 	bool m_started;
