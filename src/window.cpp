@@ -46,9 +46,7 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 :	QMainWindow(parent, wf)
 {
 	setWindowTitle(tr("Gottet"));
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC)
 	setWindowIcon(QIcon(":/gottet.png"));
-#endif
 
 	QWidget* contents = new QWidget(this);
 	setCentralWidget(contents);
@@ -238,7 +236,12 @@ void Window::gameOver()
 
 void Window::about()
 {
-	QMessageBox::about(this, tr("About Gottet"), tr("<center><big><b>Gottet 1.0.3</b></big><br/>A tetris clone I made for my wife<br/><small>Copyright &copy; 2008 Graeme Gott</small></center>"));
+	QMessageBox::about(this, tr("About Gottet"), tr(
+		"<p align='center'><big><b>Gottet 1.0.4</b></big><br/>"
+		"A tetris clone I made for my wife<br/>"
+		"<small>Copyright &copy; 2008-2010 Graeme Gott.<br/>"
+		"Released under the <a href=\"http://www.gnu.org/licenses/gpl.html\">GPL 3</a> license.</small></p>"
+	));
 }
 
 /*****************************************************************************/

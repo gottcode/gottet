@@ -1,3 +1,6 @@
+2010-10-02 Graeme Gott <graeme@gottcode.org>
+	* Tag version 1.0.4.
+
 2010-09-26 Graeme Gott <graeme@gottcode.org>
 	* Switch to using QTimers.
 	* Draw piece separately from board.
