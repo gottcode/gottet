@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2008, 2010 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2008, 2010, 2012 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -237,11 +237,11 @@ void Window::gameOver()
 void Window::about()
 {
 	QMessageBox::about(this, tr("About Gottet"), tr(
-		"<p align='center'><big><b>Gottet 1.0.4</b></big><br/>"
+		"<p align='center'><big><b>Gottet %1</b></big><br/>"
 		"A tetris clone I made for my wife<br/>"
-		"<small>Copyright &copy; 2008-2010 Graeme Gott.<br/>"
+		"<small>Copyright &copy; 2008-%2 Graeme Gott.<br/>"
 		"Released under the <a href=\"http://www.gnu.org/licenses/gpl.html\">GPL 3</a> license.</small></p>"
-	));
+	).arg(QApplication::applicationVersion()).arg("2012"));
 }
 
 /*****************************************************************************/
