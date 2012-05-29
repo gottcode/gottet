@@ -218,12 +218,12 @@ void Window::gameOver()
 
 void Window::about()
 {
-	QMessageBox::about(this, tr("About Gottet"), tr(
-		"<p align='center'><big><b>Gottet %1</b></big><br/>"
-		"A tetris clone I made for my wife<br/>"
-		"<small>Copyright &copy; 2008-%2 Graeme Gott.<br/>"
-		"Released under the <a href=\"http://www.gnu.org/licenses/gpl.html\">GPL 3</a> license.</small></p>"
-	).arg(QApplication::applicationVersion()).arg("2012"));
+	QMessageBox::about(this, tr("About"), QString("<p align='center'><big><b>%1 %2</b></big><br/>%3<br/><small>%4<br/>%5</small></p>")
+		.arg(tr("Gottet"), QApplication::applicationVersion(),
+			tr("A tetris clone I made for my wife"),
+			tr("Copyright &copy; 2008-%1 Graeme Gott.").arg("2012"),
+			tr("Released under the <a href=%1>GPL 3</a> license").arg("\"http://www.gnu.org/licenses/gpl.html\""))
+	);
 }
 
 /*****************************************************************************/

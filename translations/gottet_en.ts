@@ -79,6 +79,7 @@
     <name>Window</name>
     <message>
         <location filename="../src/window.cpp" line="44"/>
+        <location filename="../src/window.cpp" line="222"/>
         <source>Gottet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -180,12 +181,22 @@
     </message>
     <message>
         <location filename="../src/window.cpp" line="221"/>
-        <source>About Gottet</source>
+        <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="221"/>
-        <source>&lt;p align=&apos;center&apos;&gt;&lt;big&gt;&lt;b&gt;Gottet %1&lt;/b&gt;&lt;/big&gt;&lt;br/&gt;A tetris clone I made for my wife&lt;br/&gt;&lt;small&gt;Copyright &amp;copy; 2008-%2 Graeme Gott.&lt;br/&gt;Released under the &lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;GPL 3&lt;/a&gt; license.&lt;/small&gt;&lt;/p&gt;</source>
+        <location filename="../src/window.cpp" line="223"/>
+        <source>A tetris clone I made for my wife</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="224"/>
+        <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="225"/>
+        <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
