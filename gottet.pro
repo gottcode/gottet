@@ -1,9 +1,7 @@
 TEMPLATE = app
-CONFIG += warn_on release
+CONFIG += warn_on
 macx {
-	# Uncomment the following line to compile on PowerPC Macs
-	# QMAKE_MAC_SDK = /Developer/SDKs/MacOSX10.4u.sdk
-	CONFIG += x86 ppc
+	CONFIG += x86_64
 }
 
 MOC_DIR = build
@@ -23,15 +21,19 @@ unix: !macx {
 }
 
 HEADERS = src/board.h \
+	src/locale_dialog.h \
 	src/piece.h \
 	src/score_board.h \
 	src/window.h
 
 SOURCES = src/board.cpp \
+	src/locale_dialog.cpp \
 	src/main.cpp \
 	src/piece.cpp \
 	src/score_board.cpp \
 	src/window.cpp
+
+TRANSLATIONS = translations/gottet_en.ts
 
 macx {
 	ICON = icons/gottet.icns
@@ -57,5 +59,8 @@ unix: !macx {
 	desktop.files = icons/gottet.desktop
 	desktop.path = $$PREFIX/share/applications/
 
-	INSTALLS += target icon desktop
+	qm.files = translations/*.qm
+	qm.path = $$PREFIX/share/gottet/translations
+
+	INSTALLS += target icon desktop qm
 }

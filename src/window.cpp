@@ -20,6 +20,7 @@
 #include "window.h"
 
 #include "board.h"
+#include "locale_dialog.h"
 #include "score_board.h"
 
 #include <ctime>
@@ -118,6 +119,10 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
 	menu->addSeparator();
 	menu->addAction(tr("&Quit"), this, SLOT(close()), tr("Ctrl+Q"));
+
+	menu = menuBar()->addMenu(tr("&Settings"));
+	menu->addAction(tr("Application &Language..."), this, SLOT(setLocale()));
+
 	menu = menuBar()->addMenu(tr("&Help"));
 	menu->addAction(tr("&About"), this, SLOT(about()));
 	menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
@@ -219,6 +224,14 @@ void Window::about()
 		"<small>Copyright &copy; 2008-%2 Graeme Gott.<br/>"
 		"Released under the <a href=\"http://www.gnu.org/licenses/gpl.html\">GPL 3</a> license.</small></p>"
 	).arg(QApplication::applicationVersion()).arg("2012"));
+}
+
+/*****************************************************************************/
+
+void Window::setLocale()
+{
+	LocaleDialog dialog;
+	dialog.exec();
 }
 
 /*****************************************************************************/
