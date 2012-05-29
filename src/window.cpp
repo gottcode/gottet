@@ -30,15 +30,10 @@
 #include <QGridLayout>
 #include <QLabel>
 #include <QMenu>
+#include <QMenuBar>
 #include <QMessageBox>
 #include <QPixmap>
 #include <QSettings>
-
-#if defined(QTOPIA_PHONE)
-#include <QSoftMenuBar>
-#else
-#include <QMenuBar>
-#endif
 
 /*****************************************************************************/
 
@@ -53,11 +48,7 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 
 	// Create preview
 	m_preview = new QLabel(contents);
-#if !defined(QTOPIA_PHONE)
 	m_preview->setFixedSize(80, 100);
-#else
-	m_preview->setFixedSize(30, 40);
-#endif
 	m_preview->setAutoFillBackground(true);
 	{
 		QPalette palette = m_preview->palette();
@@ -117,19 +108,6 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	connect(m_board, SIGNAL(hideMessage()), message, SLOT(clear()));
 
 	// Create menus
-#if defined(QTOPIA_PHONE)
-	QMenu* menu = QSoftMenuBar::menuFor(this);
-	menu->addAction(tr("&About"), this, SLOT(about()));
-	menu->addSeparator();
-	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
-	menu->addSeparator();
-	m_resume_action = menu->addAction(tr("&Resume"), m_board, SLOT(resumeGame()));
-	m_resume_action->setVisible(false);
-	m_pause_action = menu->addAction(tr("&Pause"), m_board, SLOT(pauseGame()));
-	m_pause_action->setEnabled(false);
-	QAction* action = menu->addAction(tr("&New Game"), m_board, SLOT(newGame()));
-	connect(action, SIGNAL(triggered(bool)), this, SLOT(newGame()));
-#else
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
 	menu->addAction(tr("&New"), m_board, SLOT(newGame()), tr("Ctrl+N"));
 	m_pause_action = menu->addAction(tr("&Pause"), m_board, SLOT(pauseGame()), tr("P"));
@@ -143,7 +121,6 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	menu = menuBar()->addMenu(tr("&Help"));
 	menu->addAction(tr("&About"), this, SLOT(about()));
 	menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
-#endif
 
 	// Layout window
 	QGridLayout* layout = new QGridLayout(contents);

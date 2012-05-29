@@ -6,10 +6,6 @@ macx {
 	CONFIG += x86 ppc
 }
 
-qws {
-	qtopia_project(qtopia app)
-}
-
 MOC_DIR = build
 OBJECTS_DIR = build
 RCC_DIR = build
@@ -53,20 +49,13 @@ unix: !macx {
 		BINDIR = bin
 	}
 
-	icon.files = icons/gottet.png
-	desktop.files = icons/gottet.desktop
+	target.path = $$PREFIX/$$BINDIR/
 
-	qws {
-		target.path = /bin/
-		icon.path = /pics/gottet
-		icon.hint = pics
-		desktop.path = /apps/Games
-		desktop.hint = desktop
-	} else {
-		target.path = $$PREFIX/$$BINDIR/
-		icon.path = $$PREFIX/share/icons/hicolor/48x48/apps
-		desktop.path = $$PREFIX/share/applications/
-	}
+	icon.files = icons/gottet.png
+	icon.path = $$PREFIX/share/icons/hicolor/48x48/apps
+
+	desktop.files = icons/gottet.desktop
+	desktop.path = $$PREFIX/share/applications/
 
 	INSTALLS += target icon desktop
 }
