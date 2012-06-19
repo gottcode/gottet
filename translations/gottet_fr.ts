@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="en_US">
+<TS version="2.0" language="fr">
 <context>
     <name>Board</name>
     <message>
         <location filename="../src/board.cpp" line="89"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Question</translation>
     </message>
     <message>
         <location filename="../src/board.cpp" line="89"/>
         <source>End the current game?</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminer la partie en cours ?</translation>
     </message>
     <message>
         <location filename="../src/board.cpp" line="175"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;big&gt;&lt;b&gt;En pause&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Cliquez pour continuer la partie.</translation>
     </message>
     <message>
         <location filename="../src/board.cpp" line="403"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;big&gt;&lt;b&gt;Partie terminée !&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Cliquez pour commencer une nouvelle partie.</translation>
     </message>
 </context>
 <context>
@@ -29,22 +29,22 @@
     <message>
         <location filename="../src/locale_dialog.cpp" line="50"/>
         <source>Select application language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner la langue de l&apos;application :</translation>
     </message>
     <message>
         <location filename="../src/locale_dialog.cpp" line="53"/>
         <source>&lt;System Language&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Langue du système&gt;</translation>
     </message>
     <message>
         <location filename="../src/locale_dialog.cpp" line="181"/>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Remarque</translation>
     </message>
     <message>
         <location filename="../src/locale_dialog.cpp" line="181"/>
         <source>Please restart this application for the change in language to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez relancer l&apos;application pour que la modification prenne effet. </translation>
     </message>
 </context>
 <context>
@@ -52,27 +52,27 @@
     <message>
         <location filename="../src/score_board.cpp" line="33"/>
         <source>Gottet Scores</source>
-        <translation type="unfinished"></translation>
+        <translation>Scores de Gottet</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Lignes</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Score</source>
-        <translation type="unfinished"></translation>
+        <translation>Score</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="52"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
@@ -81,123 +81,123 @@
         <location filename="../src/window.cpp" line="44"/>
         <location filename="../src/window.cpp" line="222"/>
         <source>Gottet</source>
-        <translation type="unfinished"></translation>
+        <translation>Gottet</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="94"/>
         <source>Click to start a new game.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cliquez pour commencer une nouvelle partie.</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="112"/>
         <source>&amp;Game</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Jeu</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nouveau</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="114"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pause</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="114"/>
         <location filename="../src/window.cpp" line="116"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation>P</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="116"/>
         <source>&amp;Resume</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Continuer</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="119"/>
         <source>&amp;Scores</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Scores</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="121"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Quitter</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="121"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="123"/>
         <source>&amp;Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Paramètres</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="124"/>
         <source>Application &amp;Language...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Langue de l&apos;application…</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="126"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aide</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="127"/>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>À &amp;propos de…</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="128"/>
         <source>About &amp;Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos de &amp;Qt</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="142"/>
         <source>Next Piece</source>
-        <translation type="unfinished"></translation>
+        <translation>Pièce suivante</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="144"/>
         <source>Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="146"/>
         <source>Removed Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Lignes supprimées</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="148"/>
         <source>Score</source>
-        <translation type="unfinished"></translation>
+        <translation>Score</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="221"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos de…</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="223"/>
         <source>A tetris clone I made for my wife</source>
-        <translation type="unfinished"></translation>
+        <translation>Un clone de Tetris que j&apos;ai créé pour ma femme</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="224"/>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
-        <translation type="unfinished"></translation>
+        <translation>Copyright &amp;copy; 2008-%1 Graeme Gott.</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="225"/>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
-        <translation type="unfinished"></translation>
+        <translation>Distribué sous licence GNU &lt;a href=%1&gt;GPL 3&lt;/a&gt;</translation>
     </message>
 </context>
 </TS>

@@ -33,7 +33,8 @@ SOURCES = src/board.cpp \
 	src/score_board.cpp \
 	src/window.cpp
 
-TRANSLATIONS = translations/gottet_en.ts
+TRANSLATIONS = translations/gottet_en.ts \
+	translations/gottet_fr.ts
 
 macx {
 	ICON = icons/gottet.icns
