@@ -28,11 +28,6 @@ struct Cell
 	{
 	}
 
-	bool operator==(const Cell& cell) const
-	{
-		return x == cell.x && y == cell.y;
-	}
-
 	int x;
 	int y;
 };
