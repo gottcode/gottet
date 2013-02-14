@@ -37,7 +37,9 @@ SOURCES = src/board.cpp \
 	src/window.cpp
 
 TRANSLATIONS = translations/gottet_en.ts \
-	translations/gottet_fr.ts
+	translations/gottet_fr.ts \
+	translations/gottet_he.ts \
+	translations/gottet_ro.ts
 
 macx {
 	ICON = icons/gottet.icns

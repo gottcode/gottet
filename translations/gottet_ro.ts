@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr">
+<TS version="2.0" language="ro">
 <context>
     <name>Board</name>
     <message>
         <location filename="../src/board.cpp" line="89"/>
         <source>Question</source>
-        <translation>Question</translation>
+        <translation>Întrebare</translation>
     </message>
     <message>
         <location filename="../src/board.cpp" line="89"/>
         <source>End the current game?</source>
-        <translation>Terminer la partie en cours ?</translation>
+        <translation>Termină jocul curent?</translation>
     </message>
     <message>
         <location filename="../src/board.cpp" line="175"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
-        <translation>&lt;big&gt;&lt;b&gt;En pause&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Cliquez pour continuer la partie.</translation>
+        <translation>&lt;big&gt;&lt;b&gt;În pauză&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Clic pentru a relua jocul.</translation>
     </message>
     <message>
         <location filename="../src/board.cpp" line="403"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
-        <translation>&lt;big&gt;&lt;b&gt;Partie terminée !&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Cliquez pour commencer une nouvelle partie.</translation>
+        <translation>&lt;big&gt;&lt;b&gt;Joc terminat!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Clic pentru a începe un joc nou.</translation>
     </message>
 </context>
 <context>
@@ -29,22 +29,22 @@
     <message>
         <location filename="../src/locale_dialog.cpp" line="50"/>
         <source>Select application language:</source>
-        <translation>Sélectionner la langue de l&apos;application :</translation>
+        <translation>Selectaţi limba aplicaţiei</translation>
     </message>
     <message>
         <location filename="../src/locale_dialog.cpp" line="53"/>
         <source>&lt;System Language&gt;</source>
-        <translation>&lt;Langue du système&gt;</translation>
+        <translation>&lt;Limbaj sistem&gt;</translation>
     </message>
     <message>
         <location filename="../src/locale_dialog.cpp" line="183"/>
         <source>Note</source>
-        <translation>Remarque</translation>
+        <translation>Notă</translation>
     </message>
     <message>
         <location filename="../src/locale_dialog.cpp" line="183"/>
         <source>Please restart this application for the change in language to take effect.</source>
-        <translation>Veuillez relancer l&apos;application pour que la modification prenne effet. </translation>
+        <translation>Vă rugăm reporniţi această aplicaţie pentru ca schimbarea limbii să aibă efect.</translation>
     </message>
 </context>
 <context>
@@ -52,27 +52,27 @@
     <message>
         <location filename="../src/score_board.cpp" line="33"/>
         <source>Gottet Scores</source>
-        <translation>Scores de Gottet</translation>
+        <translation>Scoruri Gottet</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Level</source>
-        <translation>Niveau</translation>
+        <translation>Nivel</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Lines</source>
-        <translation>Lignes</translation>
+        <translation>Linii</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Score</source>
-        <translation>Score</translation>
+        <translation>Scor</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="56"/>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>Bine</translation>
     </message>
 </context>
 <context>
@@ -86,17 +86,17 @@
     <message>
         <location filename="../src/window.cpp" line="94"/>
         <source>Click to start a new game.</source>
-        <translation>Cliquez pour commencer une nouvelle partie.</translation>
+        <translation>Clic pentru a începe joc nou.</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="112"/>
         <source>&amp;Game</source>
-        <translation>&amp;Jeu</translation>
+        <translation>&amp;Joc</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
         <source>&amp;New</source>
-        <translation>&amp;Nouveau</translation>
+        <translation>&amp;Nou</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
@@ -106,7 +106,7 @@
     <message>
         <location filename="../src/window.cpp" line="114"/>
         <source>&amp;Pause</source>
-        <translation>&amp;Pause</translation>
+        <translation>&amp;Pauză</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="114"/>
@@ -117,17 +117,17 @@
     <message>
         <location filename="../src/window.cpp" line="116"/>
         <source>&amp;Resume</source>
-        <translation>&amp;Continuer</translation>
+        <translation>&amp;Reluare</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="119"/>
         <source>&amp;Scores</source>
-        <translation>&amp;Scores</translation>
+        <translation>&amp;Scoruri</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="121"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Quitter</translation>
+        <translation>&amp;Ieşire</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="121"/>
@@ -137,67 +137,67 @@
     <message>
         <location filename="../src/window.cpp" line="123"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Paramètres</translation>
+        <translation>&amp;Setări</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="124"/>
         <source>Application &amp;Language...</source>
-        <translation>&amp;Langue de l&apos;application…</translation>
+        <translation>&amp;Limbă aplicaţie...</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="126"/>
         <source>&amp;Help</source>
-        <translation>&amp;Aide</translation>
+        <translation>&amp;Ajutor</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="127"/>
         <source>&amp;About</source>
-        <translation>À &amp;propos de…</translation>
+        <translation>&amp;Despre</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="128"/>
         <source>About &amp;Qt</source>
-        <translation>À propos de &amp;Qt</translation>
+        <translation>Despre &amp;Qt</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="142"/>
         <source>Next Piece</source>
-        <translation>Pièce suivante</translation>
+        <translation>Piesa următoare</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="144"/>
         <source>Level</source>
-        <translation>Niveau</translation>
+        <translation>Nivel</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="146"/>
         <source>Removed Lines</source>
-        <translation>Lignes supprimées</translation>
+        <translation>Linii eliminate</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="148"/>
         <source>Score</source>
-        <translation>Score</translation>
+        <translation>Scor</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="221"/>
         <source>About</source>
-        <translation>À propos de…</translation>
+        <translation>Despre</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="223"/>
         <source>A tetris clone I made for my wife</source>
-        <translation>Un clone de Tetris que j&apos;ai créé pour ma femme</translation>
+        <translation>O clonă Tetris pe care am făcut-o pentru soţia mea</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="224"/>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
-        <translation>Copyright &amp;copy; 2008-%1 Graeme Gott.</translation>
+        <translation>Toate drepturile rezervate &amp;copy; 2008-%1 Graeme Gott.</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="225"/>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
-        <translation>Distribué sous licence GNU &lt;a href=%1&gt;GPL 3&lt;/a&gt;</translation>
+        <translation>Lansat sub licenţă &lt;a href=%1&gt;GPL 3&lt;/a&gt;</translation>
     </message>
 </context>
 </TS>
