@@ -1,5 +1,5 @@
-lessThan(QT_VERSION, 4.4) {
-	error("Gottet requires Qt 4.4 or greater")
+lessThan(QT_VERSION, 4.5) {
+	error("Gottet requires Qt 4.5 or greater")
 }
 
 TEMPLATE = app
