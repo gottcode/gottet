@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007, 2008, 2010, 2012 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2010, 2012, 2013 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -295,7 +295,7 @@ void Board::resizeEvent(QResizeEvent* event)
 		painter.setRenderHint(QPainter::Antialiasing, true);
 		painter.setBrush(colors[i]);
 		painter.setPen(QPen(colors[i].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-		painter.drawRoundRect(1, 1, m_piece_size - 1, m_piece_size - 1);
+		painter.drawRoundedRect(QRectF(1.5, 1.5, m_piece_size - 2, m_piece_size - 2), 25, 25, Qt::RelativeSize);
 		painter.end();
 
 		m_images[i] = pixmap;
@@ -490,7 +490,7 @@ QPixmap Board::renderPiece(int type) const
 		for (int i = 0; i < 4; ++i) {
 			painter.setBrush(colors[type - 1]);
 			painter.setPen(QPen(colors[type - 1].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-			painter.drawRoundRect(piece[i].x * 20, piece[i].y * 20, 19, 19);
+			painter.drawRoundedRect(QRectF(piece[i].x * 20 + 0.5, piece[i].y * 20 + 0.5, 18, 18), 25, 25, Qt::RelativeSize);
 		}
 	}
 
