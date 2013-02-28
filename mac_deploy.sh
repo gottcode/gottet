@@ -2,7 +2,7 @@
 
 APP='Gottet'
 BUNDLE="$APP.app"
-VERSION=$(git rev-parse --short HEAD)
+VERSION='1.0.5'
 
 # Remove any previous disk folder or DMG
 echo -n 'Preparing... '

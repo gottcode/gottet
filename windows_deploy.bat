@@ -1,7 +1,7 @@
 @ECHO OFF
 
 SET APP=Gottet
-FOR /f %%i IN ('git rev-parse --short HEAD') DO SET VERSION=%%i
+SET VERSION=1.0.5
 
 ECHO Copying executable
 MKDIR %APP%
