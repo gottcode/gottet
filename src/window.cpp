@@ -42,7 +42,6 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 :	QMainWindow(parent, wf)
 {
 	setWindowTitle(tr("Gottet"));
-	setWindowIcon(QIcon(":/gottet.png"));
 
 	QWidget* contents = new QWidget(this);
 	setCentralWidget(contents);
