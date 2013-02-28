@@ -1,4 +1,5 @@
 2013-02-28 Graeme Gott <graeme@gottcode.org>
+	* Simplify build system file.
 	* Improve program icon.
 	* FIXED: Piece edges were blurry.
 

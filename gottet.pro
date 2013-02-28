@@ -1,15 +1,12 @@
+lessThan(QT_VERSION, 4.4) {
+	error("Gottet requires Qt 4.4 or greater")
+}
+
 TEMPLATE = app
 greaterThan(QT_MAJOR_VERSION, 4) {
 	QT += widgets
 }
 CONFIG += warn_on
-macx {
-	CONFIG += x86_64
-}
-
-MOC_DIR = build
-OBJECTS_DIR = build
-RCC_DIR = build
 
 VERSION = $$system(git rev-parse --short HEAD)
 isEmpty(VERSION) {
@@ -36,10 +33,7 @@ SOURCES = src/board.cpp \
 	src/score_board.cpp \
 	src/window.cpp
 
-TRANSLATIONS = translations/gottet_en.ts \
-	translations/gottet_fr.ts \
-	translations/gottet_he.ts \
-	translations/gottet_ro.ts
+TRANSLATIONS = $$files(translations/gottet_*.ts)
 
 macx {
 	ICON = icons/gottet.icns
@@ -59,8 +53,11 @@ unix: !macx {
 
 	target.path = $$PREFIX/$$BINDIR/
 
-	icon.files = icons/gottet.png
-	icon.path = $$PREFIX/share/icons/hicolor/48x48/apps
+	icon.files = icons/hicolor/*
+	icon.path = $$PREFIX/share/icons/hicolor/
+
+	pixmap.files = icons/gottet.xpm
+	pixmap.path = $$PREFIX/share/pixmaps/
 
 	desktop.files = icons/gottet.desktop
 	desktop.path = $$PREFIX/share/applications/
@@ -68,5 +65,5 @@ unix: !macx {
 	qm.files = translations/*.qm
 	qm.path = $$PREFIX/share/gottet/translations
 
-	INSTALLS += target icon desktop qm
+	INSTALLS += target icon pixmap desktop qm
 }
