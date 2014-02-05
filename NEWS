@@ -1,0 +1,25 @@
+1.0.5
+-----
+* New program icon.
+* Added support for Qt 5.
+* Translation updates: French, Romanian.
+
+1.0.4
+-----
+* Added click to start or resume games.
+* Added prompt before ending a game.
+* Optmized rendering.
+
+1.0.3
+-----
+* Fixed install bug.
+
+1.0.2
+-----
+* Ported by Alessandro Briosi to Qtopia4.
+* Stored size of scoreboard.
+* Minor bug fixes.
+
+1.0.1
+-----
+* Minor bug fixes.
