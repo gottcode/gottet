@@ -1,0 +1,8 @@
+About
+=====
+
+Gottet is a clone of Tetris I wrote for my wife. Pieces fall from the top
+of the play area and you can move them horizontally as well as rotate them
+before they reach the bottom of the play area. The goal is to create full
+lines of pieces, which are then removed. The game is over when the stack
+of pieces reaches the top of the play area.
