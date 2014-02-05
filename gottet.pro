@@ -8,7 +8,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 CONFIG += warn_on
 
-VERSION = 1.0.5
+VERSION = 1.0.6
 DEFINES += VERSIONSTR=\\\"$${VERSION}\\\"
 
 unix: !macx {
