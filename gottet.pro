@@ -32,15 +32,12 @@ SOURCES = src/board.cpp \
 
 TRANSLATIONS = $$files(translations/gottet_*.ts)
 
+RESOURCES = icons/icon.qrc
 macx {
 	ICON = icons/gottet.icns
-} else:unix {
-	RESOURCES = icons/icon.qrc
 } else:win32 {
 	RC_FILE = icons/icon.rc
-}
-
-unix: !macx {
+} else:unix {
 	isEmpty(PREFIX) {
 		PREFIX = /usr/local
 	}
@@ -62,5 +59,8 @@ unix: !macx {
 	qm.files = translations/*.qm
 	qm.path = $$PREFIX/share/gottet/translations
 
-	INSTALLS += target icon pixmap desktop qm
+	man.files = doc/gottet.6
+	man.path = $$PREFIX/share/man/man6
+
+	INSTALLS += target icon pixmap desktop qm man
 }
