@@ -79,7 +79,7 @@
     <name>Window</name>
     <message>
         <location filename="../src/window.cpp" line="44"/>
-        <location filename="../src/window.cpp" line="221"/>
+        <location filename="../src/window.cpp" line="224"/>
         <source>Gottet</source>
         <translation>고테트</translation>
     </message>
@@ -97,11 +97,6 @@
         <location filename="../src/window.cpp" line="112"/>
         <source>&amp;New</source>
         <translation>&amp;새 게임</translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="112"/>
-        <source>Ctrl+N</source>
-        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
@@ -130,72 +125,67 @@
         <translation>&amp;끝내기</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="120"/>
-        <source>Ctrl+Q</source>
-        <translation>Ctrl+Q</translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="122"/>
+        <location filename="../src/window.cpp" line="123"/>
         <source>&amp;Settings</source>
         <translation>&amp;설정</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="123"/>
+        <location filename="../src/window.cpp" line="124"/>
         <source>Application &amp;Language...</source>
         <translation>사용할 언어</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="125"/>
+        <location filename="../src/window.cpp" line="126"/>
         <source>&amp;Help</source>
         <translation>&amp;도움말</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="126"/>
+        <location filename="../src/window.cpp" line="127"/>
         <source>&amp;About</source>
         <translation>&amp;고테트란</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="127"/>
+        <location filename="../src/window.cpp" line="129"/>
         <source>About &amp;Qt</source>
         <translation>&amp;Qt에 관해</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="141"/>
+        <location filename="../src/window.cpp" line="144"/>
         <source>Next Piece</source>
         <translation>다음 블록</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="143"/>
+        <location filename="../src/window.cpp" line="146"/>
         <source>Level</source>
         <translation>레벨</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="145"/>
+        <location filename="../src/window.cpp" line="148"/>
         <source>Removed Lines</source>
         <translation>깬 줄 수</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="147"/>
+        <location filename="../src/window.cpp" line="150"/>
         <source>Score</source>
         <translation>점수</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="220"/>
+        <location filename="../src/window.cpp" line="223"/>
         <source>About</source>
         <translation>고테트란</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="222"/>
+        <location filename="../src/window.cpp" line="225"/>
         <source>A tetris clone I made for my wife</source>
         <translation>아내를 위해 만든 테트리스 복제 게임입니다.</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="223"/>
+        <location filename="../src/window.cpp" line="226"/>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
         <translation>Copyright &amp;copy; 2008-%1 Graeme Gott.</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="224"/>
+        <location filename="../src/window.cpp" line="227"/>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
         <translation>&lt;a href=%1&gt;GPL 3&lt;/a&gt; 라이선스에 따라 배포됩니다.</translation>
     </message>

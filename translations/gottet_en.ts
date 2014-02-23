@@ -79,7 +79,7 @@
     <name>Window</name>
     <message>
         <location filename="../src/window.cpp" line="44"/>
-        <location filename="../src/window.cpp" line="221"/>
+        <location filename="../src/window.cpp" line="224"/>
         <source>Gottet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -96,11 +96,6 @@
     <message>
         <location filename="../src/window.cpp" line="112"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="112"/>
-        <source>Ctrl+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -130,72 +125,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="120"/>
-        <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="122"/>
+        <location filename="../src/window.cpp" line="123"/>
         <source>&amp;Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="123"/>
+        <location filename="../src/window.cpp" line="124"/>
         <source>Application &amp;Language...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="125"/>
+        <location filename="../src/window.cpp" line="126"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="126"/>
+        <location filename="../src/window.cpp" line="127"/>
         <source>&amp;About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="127"/>
+        <location filename="../src/window.cpp" line="129"/>
         <source>About &amp;Qt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="141"/>
+        <location filename="../src/window.cpp" line="144"/>
         <source>Next Piece</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="143"/>
+        <location filename="../src/window.cpp" line="146"/>
         <source>Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="145"/>
+        <location filename="../src/window.cpp" line="148"/>
         <source>Removed Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="147"/>
+        <location filename="../src/window.cpp" line="150"/>
         <source>Score</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="220"/>
+        <location filename="../src/window.cpp" line="223"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="222"/>
+        <location filename="../src/window.cpp" line="225"/>
         <source>A tetris clone I made for my wife</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="223"/>
+        <location filename="../src/window.cpp" line="226"/>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="224"/>
+        <location filename="../src/window.cpp" line="227"/>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
         <translation type="unfinished"></translation>
     </message>

@@ -79,7 +79,7 @@
     <name>Window</name>
     <message>
         <location filename="../src/window.cpp" line="44"/>
-        <location filename="../src/window.cpp" line="221"/>
+        <location filename="../src/window.cpp" line="224"/>
         <source>Gottet</source>
         <translation>Gottet</translation>
     </message>
@@ -97,11 +97,6 @@
         <location filename="../src/window.cpp" line="112"/>
         <source>&amp;New</source>
         <translation>&amp;Yeni</translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="112"/>
-        <source>Ctrl+N</source>
-        <translation>Ctrl+N</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
@@ -130,72 +125,67 @@
         <translation>&amp;Çık</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="120"/>
-        <source>Ctrl+Q</source>
-        <translation>Ctrl+Q</translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="122"/>
+        <location filename="../src/window.cpp" line="123"/>
         <source>&amp;Settings</source>
         <translation>&amp;Ayarlar</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="123"/>
+        <location filename="../src/window.cpp" line="124"/>
         <source>Application &amp;Language...</source>
         <translation>Uydulama &amp;Dili...</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="125"/>
+        <location filename="../src/window.cpp" line="126"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="126"/>
+        <location filename="../src/window.cpp" line="127"/>
         <source>&amp;About</source>
         <translation>&amp;Hakkında</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="127"/>
+        <location filename="../src/window.cpp" line="129"/>
         <source>About &amp;Qt</source>
         <translation>&amp;Qt Hakkında</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="141"/>
+        <location filename="../src/window.cpp" line="144"/>
         <source>Next Piece</source>
         <translation>Sonraki Parça</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="143"/>
+        <location filename="../src/window.cpp" line="146"/>
         <source>Level</source>
         <translation>Seviye</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="145"/>
+        <location filename="../src/window.cpp" line="148"/>
         <source>Removed Lines</source>
         <translation>Yok Edilen Çizgiler</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="147"/>
+        <location filename="../src/window.cpp" line="150"/>
         <source>Score</source>
         <translation>Skor</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="220"/>
+        <location filename="../src/window.cpp" line="223"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="222"/>
+        <location filename="../src/window.cpp" line="225"/>
         <source>A tetris clone I made for my wife</source>
         <translation>Karım için yaptığım bir Tetris klonu</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="223"/>
+        <location filename="../src/window.cpp" line="226"/>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
         <translation>Telif hakları saklıdır &amp;copy; 2008-%1 Graeme Gott</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="224"/>
+        <location filename="../src/window.cpp" line="227"/>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
         <translation>&lt;a href=%1&gt;GPL 3&lt;/a&gt; lisansı altında yayınlanmıştır</translation>
     </message>

@@ -109,7 +109,7 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 
 	// Create menus
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
-	menu->addAction(tr("&New"), m_board, SLOT(newGame()), tr("Ctrl+N"));
+	menu->addAction(tr("&New"), m_board, SLOT(newGame()), QKeySequence::New);
 	m_pause_action = menu->addAction(tr("&Pause"), m_board, SLOT(pauseGame()), tr("P"));
 	m_pause_action->setEnabled(false);
 	m_resume_action = menu->addAction(tr("&Resume"), m_board, SLOT(resumeGame()), tr("P"));
@@ -117,14 +117,17 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	menu->addSeparator();
 	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
 	menu->addSeparator();
-	menu->addAction(tr("&Quit"), this, SLOT(close()), tr("Ctrl+Q"));
+	QAction* action = menu->addAction(tr("&Quit"), this, SLOT(close()), QKeySequence::Quit);
+	action->setMenuRole(QAction::QuitRole);
 
 	menu = menuBar()->addMenu(tr("&Settings"));
 	menu->addAction(tr("Application &Language..."), this, SLOT(setLocale()));
 
 	menu = menuBar()->addMenu(tr("&Help"));
-	menu->addAction(tr("&About"), this, SLOT(about()));
-	menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
+	action = menu->addAction(tr("&About"), this, SLOT(about()));
+	action->setMenuRole(QAction::AboutRole);
+	action = menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
+	action->setMenuRole(QAction::AboutQtRole);
 
 	// Layout window
 	QGridLayout* layout = new QGridLayout(contents);
