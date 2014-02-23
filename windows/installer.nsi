@@ -4,7 +4,7 @@
 !define APPNAME "Gottet"
 !define VERSIONMAJOR 1
 !define VERSIONMINOR 0
-!define VERSIONPATCH 5
+!define VERSIONPATCH 6
 !define APPVERSION "${VERSIONMAJOR}.${VERSIONMINOR}.${VERSIONPATCH}"
 !define ABOUTURL "http://gottcode.org/gottet/"
 

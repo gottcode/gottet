@@ -8,11 +8,8 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 CONFIG += warn_on
 
-VERSION = $$system(git rev-parse --short HEAD)
-isEmpty(VERSION) {
-	VERSION = 0
-}
-DEFINES += VERSIONSTR=\\\"git.$${VERSION}\\\"
+VERSION = 1.0.6
+DEFINES += VERSIONSTR=\\\"$${VERSION}\\\"
 
 unix: !macx {
 	TARGET = gottet
