@@ -36,6 +36,7 @@ protected:
 
 private slots:
 	void pauseAvailable(bool available);
+	void togglePaused(bool paused);
 	void scoreUpdated(int score);
 	void showScores();
 	void newGame();
@@ -46,7 +47,6 @@ private slots:
 private:
 	Board* m_board;
 	QAction* m_pause_action;
-	QAction* m_resume_action;
 	QLabel* m_preview;
 	QLabel* m_level;
 	QLabel* m_lines;

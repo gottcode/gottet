@@ -101,10 +101,11 @@ Window::Window(QWidget *parent)
 	// Create menus
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
 	menu->addAction(tr("&New"), m_board, SLOT(newGame()), QKeySequence::New);
-	m_pause_action = menu->addAction(tr("&Pause"), m_board, SLOT(pauseGame()), tr("P"));
+	m_pause_action = menu->addAction(tr("&Pause"));
+	m_pause_action->setCheckable(true);
 	m_pause_action->setEnabled(false);
-	m_resume_action = menu->addAction(tr("&Resume"), m_board, SLOT(resumeGame()), tr("P"));
-	m_resume_action->setVisible(false);
+	m_pause_action->setShortcut(tr("P"));
+	connect(m_pause_action, &QAction::triggered, this, &Window::togglePaused);
 	menu->addSeparator();
 	menu->addAction(tr("&Scores"), this, &Window::showScores, tr("Ctrl+H"));
 	menu->addSeparator();
@@ -162,18 +163,27 @@ void Window::pauseAvailable(bool available)
 	static QPixmap preview;
 
 	if (available) {
-		m_pause_action->setVisible(true);
-		m_resume_action->setVisible(false);
 		m_preview->setPixmap(preview);
 	} else {
-		m_resume_action->setVisible(true);
-		m_pause_action->setVisible(false);
 #if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
 		preview = m_preview->pixmap(Qt::ReturnByValue);
 #else
 		preview = *m_preview->pixmap();
 #endif
 		m_preview->clear();
+	}
+
+	m_pause_action->setChecked(!available);
+}
+
+/*****************************************************************************/
+
+void Window::togglePaused(bool paused)
+{
+	if (paused) {
+		m_board->pauseGame();
+	} else {
+		m_board->resumeGame();
 	}
 }
 
