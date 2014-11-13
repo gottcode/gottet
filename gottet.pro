@@ -56,11 +56,14 @@ macx {
 	desktop.files = icons/gottet.desktop
 	desktop.path = $$PREFIX/share/applications/
 
+	appdata.files = icons/gottet.appdata.xml
+	appdata.path = $$PREFIX/share/appdata/
+
 	qm.files = translations/*.qm
 	qm.path = $$PREFIX/share/gottet/translations
 
 	man.files = doc/gottet.6
 	man.path = $$PREFIX/share/man/man6
 
-	INSTALLS += target icon pixmap desktop qm man
+	INSTALLS += target icon pixmap desktop appdata qm man
 }
