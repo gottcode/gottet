@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">gottet.desktop</id>
+  <licence>CC0</licence>
+  <summary>Clear the board of falling blocks</summary>
+  <description>
+    <p>Gottet is a falling blocks game. Pieces fall from the top of the play area and you can move them horizontally as well as rotate them before they reach the bottom of the play area. The goal is to create full lines of pieces, which are then removed. The game is over when the stack of pieces reaches the top of the play area.</p>
+  </description>
+  <screenshots>
+    <screenshot width="752" type="default" height="453">http://gottcode.org/gottet/screenshots/appdata.png</screenshot>
+  </screenshots>
+  <url type="homepage">http://gottcode.org/gottet/</url>
+</application>
