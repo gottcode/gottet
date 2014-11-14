@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"POT-Creation-Date: 2014-11-14 20:46+0000\n"
 "PO-Revision-Date: 2014-11-13 18:45+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Catalan (http://www.transifex.com/projects/p/gottet/language/"
@@ -18,11 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "Gottet"
+
+#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr ""
 
-#: ../gottet.appdata.xml.in.h:2
+#: ../gottet.appdata.xml.in.h:3
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
@@ -30,10 +34,6 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
-
-#: ../gottet.desktop.in.h:1
-msgid "Gottet"
-msgstr "Gottet"
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
