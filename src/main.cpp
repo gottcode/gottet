@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007, 2008, 2012, 2013 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,21 +29,9 @@ int main(int argc, char** argv)
 	app.setApplicationVersion(VERSIONSTR);
 	app.setOrganizationDomain("gottcode.org");
 	app.setOrganizationName("GottCode");
-	{
-		QIcon fallback(":/hicolor/256x256/apps/gottet.png");
-		fallback.addFile(":/hicolor/128x128/apps/gottet.png");
-		fallback.addFile(":/hicolor/64x64/apps/gottet.png");
-		fallback.addFile(":/hicolor/48x48/apps/gottet.png");
-		fallback.addFile(":/hicolor/32x32/apps/gottet.png");
-		fallback.addFile(":/hicolor/24x24/apps/gottet.png");
-		fallback.addFile(":/hicolor/22x22/apps/gottet.png");
-		fallback.addFile(":/hicolor/16x16/apps/gottet.png");
-#if (QT_VERSION >= (QT_VERSION_CHECK(4,6,0)))
-		app.setWindowIcon(QIcon::fromTheme("gottet", fallback));
-#else
-		app.setWindowIcon(fallback);
+#if !defined(Q_OS_WIN) && !defined(Q_OS_MAC)
+	app.setWindowIcon(QIcon::fromTheme("gottet", QIcon(":/gottet.png")));
 #endif
-	}
 
 	LocaleDialog::loadTranslator("gottet_");
 

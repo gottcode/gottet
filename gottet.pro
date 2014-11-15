@@ -32,12 +32,13 @@ SOURCES = src/board.cpp \
 
 TRANSLATIONS = $$files(translations/gottet_*.ts)
 
-RESOURCES = icons/icon.qrc
 macx {
 	ICON = icons/gottet.icns
 } else:win32 {
 	RC_FILE = icons/icon.rc
 } else:unix {
+	RESOURCES = icons/icon.qrc
+
 	isEmpty(PREFIX) {
 		PREFIX = /usr/local
 	}
