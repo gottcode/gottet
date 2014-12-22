@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007, 2008, 2010, 2012, 2013 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2010, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,6 +26,8 @@
 #include <QPainter>
 #include <QPixmap>
 #include <QTimer>
+
+#include <algorithm>
 
 /*****************************************************************************/
 
@@ -280,7 +282,7 @@ void Board::focusOutEvent(QFocusEvent*)
 
 void Board::resizeEvent(QResizeEvent* event)
 {
-	m_piece_size = qMin(event->size().width() / 10, event->size().height() / 20);
+	m_piece_size = std::min(event->size().width() / 10, event->size().height() / 20);
 	int w = m_piece_size * 10 + 1;
 	int h = m_piece_size * 20 + 1;
 	m_background = QRect((width() - w) / 2, (height() - h) / 2, w, h);

@@ -45,7 +45,7 @@ ScoreBoard::ScoreBoard(QWidget* parent)
 	// Load scores
 	QStringList scores = QSettings().value("Scores").toString().split(";", QString::SkipEmptyParts);
 	QStringList values;
-	foreach (const QString& score, scores) {
+	for (const QString& score : scores) {
 		values = score.split(",", QString::SkipEmptyParts);
 		if (values.count() != 3)
 			continue;

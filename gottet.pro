@@ -7,6 +7,7 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 	QT += widgets
 }
 CONFIG += warn_on
+QMAKE_CXXFLAGS += -std=c++11
 
 VERSION = 1.0.6
 DEFINES += VERSIONSTR=\\\"$${VERSION}\\\"
