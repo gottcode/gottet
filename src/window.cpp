@@ -23,8 +23,6 @@
 #include "locale_dialog.h"
 #include "score_board.h"
 
-#include <ctime>
-
 #include <QAction>
 #include <QApplication>
 #include <QCloseEvent>
@@ -78,7 +76,6 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 	m_score_board = new ScoreBoard(this);
 
 	// Create board
-	srand(time(0));
 	m_board = new Board(contents);
 	connect(m_board, SIGNAL(pauseAvailable(bool)), this, SLOT(pauseAvailable(bool)));
 	connect(m_board, SIGNAL(nextPieceAvailable(QPixmap)), m_preview, SLOT(setPixmap(QPixmap)));

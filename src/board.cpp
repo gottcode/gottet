@@ -49,12 +49,13 @@ Board::Board(QWidget* parent)
 	m_level(1),
 	m_score(0),
 	m_piece(0),
-	m_next_piece((rand() % 7) + 1),
+	m_next_piece(1),
 	m_flash_frame(-1),
 	m_piece_size(0),
 	m_started(false),
 	m_done(false),
-	m_paused(false)
+	m_paused(false),
+	m_random_distribution(1, 7)
 {
 	setMinimumSize(201, 401);
 	setFocusPolicy(Qt::StrongFocus);
@@ -78,6 +79,10 @@ Board::Board(QWidget* parent)
 			m_cells[col][row] = 0;
 		}
 	}
+
+	std::random_device rd;
+	m_random_generator.seed(rd());
+	m_next_piece = nextPiece();
 }
 
 /*****************************************************************************/
@@ -141,7 +146,7 @@ void Board::newGame()
 	m_level = 1;
 	m_score = 0;
 	m_shift_timer->setInterval(500);
-	m_next_piece = (rand() % 7) + 1;
+	m_next_piece = nextPiece();
 
 	for (int i = 0; i < 4; ++i)
 		m_full_lines[i] = -1;
@@ -436,7 +441,7 @@ void Board::createPiece()
 
 	m_piece = new Piece(m_next_piece, this);
 	if (m_piece->isValid()) {
-		m_next_piece = (rand() % 7) + 1;
+		m_next_piece = nextPiece();
 		emit nextPieceAvailable(renderPiece(m_next_piece));
 		m_shift_timer->start();
 	} else {

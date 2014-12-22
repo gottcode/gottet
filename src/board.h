@@ -25,6 +25,8 @@ class QPixmap;
 class QTimer;
 class Piece;
 
+#include <random>
+
 class Board : public QWidget
 {
 	Q_OBJECT
@@ -69,6 +71,7 @@ private:
 	void removeCell(int x, int y);
 	void createPiece();
 	void landPiece();
+	int nextPiece();
 	QPixmap renderPiece(int type) const;
 
 private:
@@ -88,6 +91,9 @@ private:
 	bool m_started;
 	bool m_done;
 	bool m_paused;
+
+	std::mt19937 m_random_generator;
+	std::uniform_int_distribution<int> m_random_distribution;
 };
 
 inline bool Board::cell(int x, int y) const
@@ -95,6 +101,11 @@ inline bool Board::cell(int x, int y) const
 	Q_ASSERT(x >= 0 && x < 10);
 	Q_ASSERT(y >= 0 && y < 20);
 	return m_cells[x][y] != 0;
+}
+
+inline int Board::nextPiece()
+{
+	return m_random_distribution(m_random_generator);
 }
 
 #endif // BOARD_H
