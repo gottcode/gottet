@@ -77,14 +77,14 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 
 	// Create board
 	m_board = new Board(contents);
-	connect(m_board, SIGNAL(pauseAvailable(bool)), this, SLOT(pauseAvailable(bool)));
-	connect(m_board, SIGNAL(nextPieceAvailable(QPixmap)), m_preview, SLOT(setPixmap(QPixmap)));
-	connect(m_board, SIGNAL(levelUpdated(int)), m_level, SLOT(setNum(int)));
-	connect(m_board, SIGNAL(linesRemovedUpdated(int)), m_lines, SLOT(setNum(int)));
-	connect(m_board, SIGNAL(scoreUpdated(int)), this, SLOT(scoreUpdated(int)));
-	connect(m_board, SIGNAL(gameOver(int, int, int)), m_score_board, SLOT(addHighScore(int, int, int)));
-	connect(m_board, SIGNAL(gameOver(int, int, int)), this, SLOT(gameOver()));
-	connect(m_board, SIGNAL(gameStarted()), this, SLOT(newGame()));
+	connect(m_board, &Board::pauseAvailable, this, &Window::pauseAvailable);
+	connect(m_board, &Board::nextPieceAvailable, m_preview, &QLabel::setPixmap);
+	connect(m_board, &Board::levelUpdated, m_level, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
+	connect(m_board, &Board::linesRemovedUpdated, m_lines, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
+	connect(m_board, &Board::scoreUpdated, this, &Window::scoreUpdated);
+	connect(m_board, static_cast<void (Board::*)(int,int,int)>(&Board::gameOver), m_score_board, &ScoreBoard::addHighScore);
+	connect(m_board, static_cast<void (Board::*)(int,int,int)>(&Board::gameOver), this, &Window::gameOver);
+	connect(m_board, &Board::gameStarted, this, &Window::newGame);
 
 	// Create overlay message
 	QLabel* message = new QLabel(tr("Click to start a new game."), contents);
@@ -99,10 +99,10 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 			"border-radius: 0.5em;"
 		"}");
 	message->setWordWrap(true);
-	connect(m_board, SIGNAL(showMessage(const QString&)), message, SLOT(show()));
-	connect(m_board, SIGNAL(showMessage(const QString&)), message, SLOT(setText(const QString&)));
-	connect(m_board, SIGNAL(hideMessage()), message, SLOT(hide()));
-	connect(m_board, SIGNAL(hideMessage()), message, SLOT(clear()));
+	connect(m_board, &Board::showMessage, message, &QLabel::show);
+	connect(m_board, &Board::showMessage, message, &QLabel::setText);
+	connect(m_board, &Board::hideMessage, message, &QLabel::hide);
+	connect(m_board, &Board::hideMessage, message, &QLabel::clear);
 
 	// Create menus
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));

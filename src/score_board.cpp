@@ -35,11 +35,7 @@ ScoreBoard::ScoreBoard(QWidget* parent)
 	// Create tree view
 	m_scores = new QTreeWidget(this);
 	m_scores->setHeaderLabels(QStringList() << tr("Level") << tr("Lines") << tr("Score"));
-#if (QT_VERSION >= QT_VERSION_CHECK(5,0,0))
 	m_scores->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
-#else
-	m_scores->header()->setResizeMode(QHeaderView::ResizeToContents);
-#endif
 	m_scores->setRootIsDecorated(false);
 
 	// Load scores
@@ -54,7 +50,7 @@ ScoreBoard::ScoreBoard(QWidget* parent)
 
 	// Create OK button
 	QPushButton* ok_button = new QPushButton(tr("OK"), this);
-	connect(ok_button, SIGNAL(clicked()), this, SLOT(accept()));
+	connect(ok_button, &QPushButton::clicked, this, &ScoreBoard::accept);
 
 	// Layout window
 	QVBoxLayout* layout = new QVBoxLayout(this);

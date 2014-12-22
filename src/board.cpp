@@ -64,11 +64,11 @@ Board::Board(QWidget* parent)
 	m_shift_timer = new QTimer(this);
 	m_shift_timer->setInterval(500);
 	m_shift_timer->setSingleShot(true);
-	connect(m_shift_timer, SIGNAL(timeout()), this, SLOT(shiftPiece()));
+	connect(m_shift_timer, &QTimer::timeout, this, &Board::shiftPiece);
 
 	m_flash_timer = new QTimer(this);
 	m_flash_timer->setInterval(80);
-	connect(m_flash_timer, SIGNAL(timeout()), this, SLOT(flashLines()));
+	connect(m_flash_timer, &QTimer::timeout, this, &Board::flashLines);
 
 	for (int i = 0; i < 4; ++i) {
 		m_full_lines[i] = -1;
