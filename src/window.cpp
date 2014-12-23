@@ -39,8 +39,6 @@
 Window::Window(QWidget *parent, Qt::WindowFlags wf)
 :	QMainWindow(parent, wf)
 {
-	setWindowTitle(tr("Gottet"));
-
 	QWidget* contents = new QWidget(this);
 	setCentralWidget(contents);
 

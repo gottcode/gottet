@@ -27,6 +27,7 @@ int main(int argc, char** argv)
 	QApplication app(argc, argv);
 	app.setApplicationName("Gottet");
 	app.setApplicationVersion(VERSIONSTR);
+	app.setApplicationDisplayName(Window::tr("Gottet"));
 	app.setOrganizationDomain("gottcode.org");
 	app.setOrganizationName("GottCode");
 #if !defined(Q_OS_WIN) && !defined(Q_OS_MAC)
