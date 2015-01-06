@@ -6,15 +6,25 @@ TEMPLATE = app
 QT += widgets
 CONFIG += warn_on c++11
 
+# Allow in-tree builds
+!win32 {
+	MOC_DIR = build
+	OBJECTS_DIR = build
+	RCC_DIR = build
+}
+
+# Set program version
 VERSION = 1.0.6
 DEFINES += VERSIONSTR=\\\"$${VERSION}\\\"
 
+# Set program name
 unix: !macx {
 	TARGET = gottet
 } else {
 	TARGET = Gottet
 }
 
+# Specify program sources
 HEADERS = src/board.h \
 	src/locale_dialog.h \
 	src/piece.h \
@@ -28,8 +38,10 @@ SOURCES = src/board.cpp \
 	src/score_board.cpp \
 	src/window.cpp
 
+# Allow for updating translations
 TRANSLATIONS = $$files(translations/gottet_*.ts)
 
+# Install program data
 macx {
 	ICON = icons/gottet.icns
 } else:win32 {
