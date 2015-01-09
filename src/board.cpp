@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007, 2008, 2010, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2010, 2012, 2013, 2014, 2015 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -294,8 +294,10 @@ void Board::resizeEvent(QResizeEvent* event)
 
 	QPainter painter;
 
+	int ratio = devicePixelRatio();
 	for (int i = 0; i < 7; ++i) {
-		QPixmap pixmap(m_piece_size + 1, m_piece_size + 1);
+		QPixmap pixmap((m_piece_size + 1) * ratio, (m_piece_size + 1) * ratio);
+		pixmap.setDevicePixelRatio(ratio);
 		pixmap.fill(QColor(0, 0, 0, 0));
 
 		painter.begin(&pixmap);
@@ -481,7 +483,9 @@ QPixmap Board::renderPiece(int type) const
 	Cell piece[4];
 	Piece::cells(piece, type);
 
-	QPixmap result(80, 100);
+	int ratio = devicePixelRatio();
+	QPixmap result(80 * ratio, 100 * ratio);
+	result.setDevicePixelRatio(ratio);
 	result.fill(Qt::black);
 	{
 		QPainter painter(&result);

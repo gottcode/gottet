@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007, 2008, 2012, 2013, 2014 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007, 2008, 2012, 2013, 2014, 2015 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,6 +33,7 @@ int main(int argc, char** argv)
 #if !defined(Q_OS_WIN) && !defined(Q_OS_MAC)
 	app.setWindowIcon(QIcon::fromTheme("gottet", QIcon(":/gottet.png")));
 #endif
+	app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
 	LocaleDialog::loadTranslator("gottet_");
 
