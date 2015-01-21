@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Oprea Nicolae <jaff2002@yahoo.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-11-14 13:48+0000\n"
+"Last-Translator: Oprea Nicolae <jaff2002@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/gottet/language/"
 "ro/)\n"
 "Language: ro\n"
@@ -25,7 +26,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Curăţaţi tabela de piesele căzătoare"
 
 #: ../gottet.appdata.xml.in.h:3
 msgid ""
@@ -35,6 +36,11 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet este un joc de blocuri căzătoare. Piesele cad din partea de sus a "
+"zonei de joc şi le puteţi muta pe orizontală cît şi roti înainte de a ajunge "
+"în partea de jos a zonei de joc. Scopul este de a crea linii complete de "
+"piese, care sînt apoi eliminate. Jocul se termină cînd stiva de piese ajunge "
+"la partea de sus a zonei joc."
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"

@@ -4,47 +4,47 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../src/board.cpp" line="89"/>
+        <location filename="../src/board.cpp" line="96"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Otázka</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="89"/>
+        <location filename="../src/board.cpp" line="96"/>
         <source>End the current game?</source>
-        <translation type="unfinished"></translation>
+        <translation>končit nynější hru?</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="175"/>
+        <location filename="../src/board.cpp" line="182"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;big&gt;&lt;b&gt;Pozastaveno&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klepněte pro pokračování ve hře.</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="403"/>
+        <location filename="../src/board.cpp" line="412"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;big&gt;&lt;b&gt;Konec hry&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klepněte pro spuštění nové hry.</translation>
     </message>
 </context>
 <context>
     <name>LocaleDialog</name>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="50"/>
+        <location filename="../src/locale_dialog.cpp" line="52"/>
         <source>Select application language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrat jazyk programu:</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="53"/>
+        <location filename="../src/locale_dialog.cpp" line="55"/>
         <source>&lt;System Language&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Jazyk systému&gt;</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="183"/>
+        <location filename="../src/locale_dialog.cpp" line="172"/>
         <source>Note</source>
-        <translation type="unfinished"></translation>
+        <translation>Poznámka</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="183"/>
+        <location filename="../src/locale_dialog.cpp" line="172"/>
         <source>Please restart this application for the change in language to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spusťte, prosím, tento program znovu, aby se změna jazyka projevila.</translation>
     </message>
 </context>
 <context>
@@ -52,142 +52,142 @@
     <message>
         <location filename="../src/score_board.cpp" line="33"/>
         <source>Gottet Scores</source>
-        <translation type="unfinished"></translation>
+        <translation>Výsledky</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Úroveň</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Řádky</translation>
     </message>
     <message>
         <location filename="../src/score_board.cpp" line="37"/>
         <source>Score</source>
-        <translation type="unfinished"></translation>
+        <translation>Výsledek</translation>
     </message>
     <message>
-        <location filename="../src/score_board.cpp" line="56"/>
+        <location filename="../src/score_board.cpp" line="52"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
 </context>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../src/window.cpp" line="44"/>
-        <location filename="../src/window.cpp" line="224"/>
+        <location filename="../src/main.cpp" line="30"/>
+        <location filename="../src/window.cpp" line="219"/>
         <source>Gottet</source>
-        <translation type="unfinished"></translation>
+        <translation>Gottet</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="93"/>
+        <location filename="../src/window.cpp" line="88"/>
         <source>Click to start a new game.</source>
-        <translation type="unfinished"></translation>
+        <translation>Klepněte pro spuštění nové hry.</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="111"/>
+        <location filename="../src/window.cpp" line="106"/>
         <source>&amp;Game</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hra</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="112"/>
+        <location filename="../src/window.cpp" line="107"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nová</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="113"/>
+        <location filename="../src/window.cpp" line="108"/>
         <source>&amp;Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pozastavit</translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="108"/>
+        <location filename="../src/window.cpp" line="110"/>
+        <source>P</source>
+        <translation>P</translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="110"/>
+        <source>&amp;Resume</source>
+        <translation>P&amp;okračovat</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="113"/>
-        <location filename="../src/window.cpp" line="115"/>
-        <source>P</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Scores</source>
+        <translation>&amp;Výsledky</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="115"/>
-        <source>&amp;Resume</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Quit</source>
+        <translation>&amp;Ukončit</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="118"/>
-        <source>&amp;Scores</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="120"/>
-        <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="123"/>
         <source>&amp;Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nastavení</translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="119"/>
+        <source>Application &amp;Language...</source>
+        <translation>J&amp;azyk programu...</translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="121"/>
+        <source>&amp;Help</source>
+        <translation>&amp;Nápověda</translation>
+    </message>
+    <message>
+        <location filename="../src/window.cpp" line="122"/>
+        <source>&amp;About</source>
+        <translation>O &amp;programu</translation>
     </message>
     <message>
         <location filename="../src/window.cpp" line="124"/>
-        <source>Application &amp;Language...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="126"/>
-        <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="127"/>
-        <source>&amp;About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/window.cpp" line="129"/>
         <source>About &amp;Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>O &amp;Qt</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="144"/>
+        <location filename="../src/window.cpp" line="139"/>
         <source>Next Piece</source>
-        <translation type="unfinished"></translation>
+        <translation>Další kousek</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="146"/>
+        <location filename="../src/window.cpp" line="141"/>
         <source>Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Úroveň</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="148"/>
+        <location filename="../src/window.cpp" line="143"/>
         <source>Removed Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstraněné řádky</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="150"/>
+        <location filename="../src/window.cpp" line="145"/>
         <source>Score</source>
-        <translation type="unfinished"></translation>
+        <translation>Výsledek</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="223"/>
+        <location filename="../src/window.cpp" line="218"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O hře</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="225"/>
+        <location filename="../src/window.cpp" line="220"/>
         <source>A tetris clone I made for my wife</source>
-        <translation type="unfinished"></translation>
+        <translation>Klon tetrisu, který Graeme udělal pro svou ženu</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="226"/>
+        <location filename="../src/window.cpp" line="221"/>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorské právo &amp;copy; 2008-%1 Graeme Gott.</translation>
     </message>
     <message>
-        <location filename="../src/window.cpp" line="227"/>
+        <location filename="../src/window.cpp" line="222"/>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
-        <translation type="unfinished"></translation>
+        <translation>Vydáno pod licencí &lt;a href=%1&gt;GPL 3&lt;/a&gt;</translation>
     </message>
 </context>
 </TS>

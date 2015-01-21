@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# abuyop <abuyop@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-12-29 01:46+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/projects/p/gottet/"
 "language/ms_MY/)\n"
 "Language: ms\n"
@@ -24,7 +25,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Koosngkan papan yang mengandungi blok-blok yang turun"
 
 #: ../gottet.appdata.xml.in.h:3
 msgid ""
@@ -34,6 +35,12 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet merupakan permainan jatuhan blok. Cebisan akan jatuh dari atas "
+"kawasan permainan dan anda boleh gerak ia secara mengufuk dan juga boleh "
+"memutar ia sebelum ia jatuh ke dasar kawasan permainan. Matlamat permainan "
+"adalah untuk membentuk satu barisan cebisan, yang mana ia akan dikeluarkan "
+"dari kawasan permainan jika terbentuk. Permainan tamat bila tindanan cebisan "
+"mencapai bahagian teratas kawasan permainan."
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"

@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Moo, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-11-17 10:58+0000\n"
+"Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/projects/p/gottet/"
 "language/lt/)\n"
 "Language: lt\n"
@@ -25,7 +26,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Išvalykite krentančių blokų plokštę"
 
 #: ../gottet.appdata.xml.in.h:3
 msgid ""
@@ -35,6 +36,11 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet yra krentančių blokų žaidimas. Į žaidimo plotą iš viršaus krenta "
+"figūros. Prieš figūroms pasiekiant žaidimo ploto apačią, galite keisti "
+"horizontalią figūrų padėtį, o taip pat jas pasukti. Pagrindinis tikslas yra "
+"sukurti pilnas figūrų eilutes, kurios paskui pašalinamos. Žaidimas "
+"užbaigiamas, jeigu figūrų krūva pasiekia žaidimo ploto viršų."
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"

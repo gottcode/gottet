@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Jeff Huang <s8321414@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-11-15 12:22+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/gottet/"
 "language/zh_TW/)\n"
 "Language: zh_TW\n"
@@ -24,7 +25,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "清除不斷在版面上落下的方塊"
 
 #: ../gottet.appdata.xml.in.h:3
 msgid ""
@@ -34,6 +35,9 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet 是一個不斷掉落方塊的遊戲。許多方塊不停的從頂部掉進遊戲區域內，而您只能"
+"在它們掉到遊戲區域的底部前水平移動以及旋轉那些方塊。您的目標是完成一行完整的"
+"方塊，這樣它們就會被消除。遊戲在方塊堆疊到遊戲區域頂部時結束。"
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"

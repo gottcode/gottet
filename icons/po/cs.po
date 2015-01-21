@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# fri, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-12-28 08:57+0000\n"
+"Last-Translator: fri\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/gottet/language/"
 "cs/)\n"
 "Language: cs\n"
@@ -20,11 +21,11 @@ msgstr ""
 
 #: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
 msgid "Gottet"
-msgstr ""
+msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Vyprázdněte desku od padajících kostek"
 
 #: ../gottet.appdata.xml.in.h:3
 msgid ""
@@ -34,7 +35,12 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet je hra s padajícími kostkami. Kousky padají s horní části herní "
+"oblasti a vy jimi můžete pohybovat vodorovně a také je můžete otáčet, než "
+"dosáhnou dna v dolní části herní oblasti. Cílem je z kousků vytvořit úplné "
+"řádky, které jsou potom odstraněny. Hra končí, když sloupec kousků dosáhne "
+"stropu herní oblasti."
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
-msgstr ""
+msgstr "Hra s padajícími kostkami"
