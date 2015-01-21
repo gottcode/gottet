@@ -1,3 +1,11 @@
+1.1.0
+-----
+* Added support for high DPI displays.
+* Switched to C++11 random classes.
+* Removed support for Qt 4.
+* Translation updates: Chinese (Taiwan), Czech, Dutch, Hebrew, Korean,
+  Lithuanian, Malay, Romanian.
+
 1.0.6
 -----
 * Added README file.
