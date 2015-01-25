@@ -4,22 +4,22 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>Question</source>
         <translation>Otázka</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>End the current game?</source>
         <translation>končit nynější hru?</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="182"/>
+        <location filename="../src/board.cpp" line="189"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
         <translation>&lt;big&gt;&lt;b&gt;Pozastaveno&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klepněte pro pokračování ve hře.</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="412"/>
+        <location filename="../src/board.cpp" line="419"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
         <translation>&lt;big&gt;&lt;b&gt;Konec hry&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klepněte pro spuštění nové hry.</translation>
     </message>
@@ -37,12 +37,12 @@
         <translation>&lt;Jazyk systému&gt;</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Note</source>
         <translation>Poznámka</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Please restart this application for the change in language to take effect.</source>
         <translation>Spusťte, prosím, tento program znovu, aby se změna jazyka projevila.</translation>
     </message>

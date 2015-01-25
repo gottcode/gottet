@@ -4,22 +4,22 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>Question</source>
         <translation>Pytanie</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>End the current game?</source>
         <translation>Czy chcesz zakończyć bieżącą grę?</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="182"/>
+        <location filename="../src/board.cpp" line="189"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
         <translation>&lt;big&gt;&lt;b&gt;Wstrzymane&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Kliknij, aby wznowić grę.</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="412"/>
+        <location filename="../src/board.cpp" line="419"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
         <translation>&lt;big&gt;&lt;b&gt;Koniec gry!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Kliknij, aby rozpocząć nową grę.</translation>
     </message>
@@ -37,12 +37,12 @@
         <translation>&lt;Język systemowy&gt;</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Note</source>
         <translation>Uwaga</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Please restart this application for the change in language to take effect.</source>
         <translation>Proszę ponownie uruchomić ten program, aby zastosować zmianę języka.</translation>
     </message>

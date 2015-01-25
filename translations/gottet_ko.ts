@@ -4,22 +4,22 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>Question</source>
         <translation>질문 있습니다</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>End the current game?</source>
         <translation>하고 계신 게임을 끝내실 건가요?</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="182"/>
+        <location filename="../src/board.cpp" line="189"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
         <translation>&lt;big&gt;&lt;b&gt;잠시멈춤&lt;/b&gt;&lt;/big&gt;&lt;br&gt;계속하시려면 화면을 클릭하세요.</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="412"/>
+        <location filename="../src/board.cpp" line="419"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
         <translation>&lt;big&gt;&lt;b&gt;게임 오버!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;화면을 클릭하시면 새 게임을 시작합니다.</translation>
     </message>
@@ -37,12 +37,12 @@
         <translation>시스템 언어</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Note</source>
         <translation>노트</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Please restart this application for the change in language to take effect.</source>
         <translation>바꾸신 언어 설정을 적용하시려면 프로그램을 다시 시작해 주세요</translation>
     </message>

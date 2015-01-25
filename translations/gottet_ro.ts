@@ -4,22 +4,22 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>Question</source>
         <translation>Întrebare</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>End the current game?</source>
         <translation>Termină jocul curent?</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="182"/>
+        <location filename="../src/board.cpp" line="189"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
         <translation>&lt;big&gt;&lt;b&gt;În pauză&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Clic pentru a relua jocul.</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="412"/>
+        <location filename="../src/board.cpp" line="419"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
         <translation>&lt;big&gt;&lt;b&gt;Joc terminat!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Clic pentru a începe un joc nou.</translation>
     </message>
@@ -37,12 +37,12 @@
         <translation>&lt;Limbaj sistem&gt;</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Note</source>
         <translation>Notă</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Please restart this application for the change in language to take effect.</source>
         <translation>Vă rugăm reporniţi această aplicaţie pentru ca schimbarea limbii să aibă efect.</translation>
     </message>

@@ -4,22 +4,22 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>Question</source>
         <translation>Pregunta</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="96"/>
+        <location filename="../src/board.cpp" line="103"/>
         <source>End the current game?</source>
         <translation>Voleu finalitzar la partida actual?</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="182"/>
+        <location filename="../src/board.cpp" line="189"/>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
         <translation>&lt;big&gt;&lt;b&gt;En pausa&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Feu clic per continuar la partida..</translation>
     </message>
     <message>
-        <location filename="../src/board.cpp" line="412"/>
+        <location filename="../src/board.cpp" line="419"/>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
         <translation>&lt;big&gt;&lt;b&gt;Partida finalitzada&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Feu clic per començar una partida nova.</translation>
     </message>
@@ -37,12 +37,12 @@
         <translation>&lt;Idioma del sistema&gt;</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Note</source>
         <translation>Nota</translation>
     </message>
     <message>
-        <location filename="../src/locale_dialog.cpp" line="172"/>
+        <location filename="../src/locale_dialog.cpp" line="175"/>
         <source>Please restart this application for the change in language to take effect.</source>
         <translation>Reinicieu l‘aplicació perquè el canvi d’idioma tingui efecte.</translation>
     </message>
