@@ -20,10 +20,10 @@
 #include "locale_dialog.h"
 
 #include <QComboBox>
-#include <QCoreApplication>
 #include <QDialogButtonBox>
 #include <QDir>
 #include <QFile>
+#include <QGuiApplication>
 #include <QHash>
 #include <QLabel>
 #include <QLibraryInfo>
@@ -124,6 +124,9 @@ void LocaleDialog::loadTranslator(const QString& name, const QStringList& datadi
 	static QTranslator translator;
 	translator.load(m_appname + current, m_path);
 	QCoreApplication::installTranslator(&translator);
+
+	// Work around bug in Qt 5 where text direction is not loaded
+	QGuiApplication::setLayoutDirection(QLocale(current).textDirection());
 }
 
 //-----------------------------------------------------------------------------
