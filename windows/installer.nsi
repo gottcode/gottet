@@ -6,7 +6,7 @@
 !define VERSIONMINOR 1
 !define VERSIONPATCH 1
 !define APPVERSION "${VERSIONMAJOR}.${VERSIONMINOR}.${VERSIONPATCH}"
-!define ABOUTURL "http://gottcode.org/gottet/"
+!define ABOUTURL "https://gottcode.org/gottet/"
 
 ;--------------------------------
 ;Includes
@@ -162,8 +162,22 @@ Section "install"
 	;Copy files
 	SetOutPath $INSTDIR
 	File ..\release\Gottet.exe
+	File $%QTDIR%\bin\libgcc_s_dw2-1.dll
+	File $%QTDIR%\bin\libstdc++-6.dll
+	File $%QTDIR%\bin\libwinpthread-1.dll
+	File $%QTDIR%\bin\Qt5Core.dll
+	File $%QTDIR%\bin\Qt5Gui.dll
+	File $%QTDIR%\bin\Qt5Widgets.dll
+
+	SetOutPath $INSTDIR\platforms
+	File $%QTDIR%\plugins\platforms\qwindows.dll
+
+	SetOutPath $INSTDIR\translations
+	File ..\translations\*.qm
+	File $%QTDIR%\translations\qtbase_*.qm
 
 	;Create ReadMe file
+	SetOutPath $INSTDIR
 	File /oname=ReadMe.txt ..\README
 	FileOpen $4 "ReadMe.txt" a
 	FileSeek $4 0 END
@@ -179,10 +193,6 @@ Section "install"
 	File ..\NEWS
 	${FileJoin} "ReadMe.txt" "NEWS" "ReadMe.txt"
 	Delete $INSTDIR\NEWS
-
-	SetOutPath $INSTDIR\translations
-	File ..\translations\*.qm
-	File $%QTDIR%\translations\qtbase_*.qm
 
 	;Registry information for add/remove programs
 	WriteRegStr HKLM "Software\${APPNAME}" "" "$INSTDIR"
@@ -234,10 +244,13 @@ Section "Uninstall"
 	;Remove files
 	Delete $INSTDIR\Gottet.exe
 	Delete $INSTDIR\ReadMe.txt
+	Delete $INSTDIR\*.dll
+	Delete $INSTDIR\platforms\*.dll
 	Delete $INSTDIR\translations\*.qm
 	Delete $INSTDIR\Uninstall.exe
 
 	;Remove directories
+	RMDir $INSTDIR\platforms
 	RMDir $INSTDIR\translations
 	RMDir $INSTDIR
 
