@@ -2,7 +2,7 @@
 
 APP='Gottet'
 BUNDLE="$APP.app"
-VERSION='1.1.2'
+VERSION='1.1.3'
 
 # Remove any previous disk folder or DMG
 echo -n 'Preparing... '
