@@ -14,7 +14,7 @@ CONFIG += warn_on c++11
 }
 
 # Set program version
-VERSION = 1.1.1
+VERSION = 1.1.2
 DEFINES += VERSIONSTR=\\\"$${VERSION}\\\"
 
 # Set program name

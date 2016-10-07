@@ -1,3 +1,9 @@
+1.1.2
+-----
+* Generate binary translations at build time.
+* FIXED: Was not properly loading Qt translations.
+* Translation updates: Dutch, German, Greek, Hebrew, Lithuanian, Polish.
+
 1.1.1
 -----
 * FIXED: Application layout did not respect RTL languages.
