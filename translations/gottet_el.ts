@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<TS version="2.1" language="el">
 <context>
     <name>Board</name>
     <message>
         <source>Question</source>
-        <translation>Vraag</translation>
+        <translation>Ερώτηση</translation>
     </message>
     <message>
         <source>End the current game?</source>
-        <translation>Stop het huidige spel</translation>
+        <translation>Τέλος του τρέχοντος παιχνιδιού;</translation>
     </message>
     <message>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
-        <translation>&lt;big&gt;&lt;b&gt;Gepauzeerd&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klik om door te gaan met spelen.</translation>
+        <translation>&lt;big&gt;&lt;b&gt; Παύση&lt;/ b&gt;&lt;/ big&gt;&lt;br&gt;Κάντε κλικ για να συνεχίσετε το παιχνίδι.</translation>
     </message>
     <message>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
-        <translation>&lt;big&gt;&lt;b&gt;Einde Spel!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klik om een nieuw spel te starten.</translation>
+        <translation>&lt;big&gt;&lt;b&gt; Το παιχνίδι τελείωσε!&lt;/ b&gt;&lt;/big&gt;&lt;br&gt;Κάντε κλικ για να ξεκινήσετε ένα νέο παιχνίδι.</translation>
     </message>
 </context>
 <context>
     <name>LocaleDialog</name>
     <message>
         <source>Select application language:</source>
-        <translation>Selecteer taal:</translation>
+        <translation>Επιλέξτε την γλώσσα εφαρμογής:</translation>
     </message>
     <message>
         <source>&lt;System Language&gt;</source>
-        <translation>&lt;Systeem taal&gt;</translation>
+        <translation>&lt;Γλώσσα συστήματος&gt;</translation>
     </message>
     <message>
         <source>Note</source>
-        <translation>Notitie</translation>
+        <translation>Σημείωση</translation>
     </message>
     <message>
         <source>Please restart this application for the change in language to take effect.</source>
-        <translation>Herstart de applicatie om de taalverandering te activeren</translation>
+        <translation>Παρακαλούμε κάντε επανεκκίνηση αυτής της εφαρμογής για να τεθεί σε ισχύ η αλλαγή της γλώσσας.</translation>
     </message>
 </context>
 <context>
     <name>ScoreBoard</name>
     <message>
         <source>Gottet Scores</source>
-        <translation>Gottet Scores</translation>
+        <translation>Gottet Βαθμολογία</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>Niveau</translation>
+        <translation>Επίπεδο</translation>
     </message>
     <message>
         <source>Lines</source>
-        <translation>Lijnen</translation>
+        <translation>Γραμμές</translation>
     </message>
     <message>
         <source>Score</source>
-        <translation>Score</translation>
+        <translation>Βαθμολογία</translation>
     </message>
     <message>
         <source>OK</source>
@@ -70,87 +70,87 @@
     </message>
     <message>
         <source>Click to start a new game.</source>
-        <translation>Klik om een nieuw spel te starten</translation>
+        <translation>Κάντε κλικ για να ξεκινήσετε ένα νέο παιχνίδι.</translation>
     </message>
     <message>
         <source>&amp;Game</source>
-        <translation>&amp;Spel</translation>
+        <translation>&amp;Παιχνίδι</translation>
     </message>
     <message>
         <source>&amp;New</source>
-        <translation>&amp;Nieuw</translation>
+        <translation>&amp;Νεο</translation>
     </message>
     <message>
         <source>&amp;Pause</source>
-        <translation>&amp;Pauze</translation>
+        <translation>&amp;Παύση</translation>
     </message>
     <message>
         <source>P</source>
-        <translation>P</translation>
+        <translation>Π</translation>
     </message>
     <message>
         <source>&amp;Resume</source>
-        <translation>&amp;Hervatten</translation>
+        <translation>&amp;Συνέχεια</translation>
     </message>
     <message>
         <source>&amp;Scores</source>
-        <translation>&amp;Scores</translation>
+        <translation>&amp;Βαθμολογίες</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation>&amp;Stop</translation>
+        <translation>&amp;Έξοδος</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation>&amp;Instellingen</translation>
+        <translation>&amp;Ρυθμίσεις</translation>
     </message>
     <message>
         <source>Application &amp;Language...</source>
-        <translation>Taal van de applicatie</translation>
+        <translation>Γλώσσα &amp;εφαρμογής...</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;Help</translation>
+        <translation>&amp;Βοήθεια</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;Over</translation>
+        <translation>&amp;Σχετικά </translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
-        <translation>Over &amp;Qt</translation>
+        <translation>Σχετικά με το &amp;Qt</translation>
     </message>
     <message>
         <source>Next Piece</source>
-        <translation>Volgende stuk</translation>
+        <translation>Επόμενο κομμάτι</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>Niveau</translation>
+        <translation>Επίπεδο</translation>
     </message>
     <message>
         <source>Removed Lines</source>
-        <translation>Verwijder lijnen</translation>
+        <translation>Κατάργηση γραμμών</translation>
     </message>
     <message>
         <source>Score</source>
-        <translation>Score</translation>
+        <translation>Βαθμολογία</translation>
     </message>
     <message>
         <source>About</source>
-        <translation>Over</translation>
+        <translation>Σχετικά</translation>
     </message>
     <message>
         <source>A tetris clone I made for my wife</source>
-        <translation>Een tetris kloon voor mijn vrouw</translation>
+        <translation>Ένας κλώνος του tetris που έκανα για τη γυναίκα μου</translation>
     </message>
     <message>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
-        <translation>Copyright &amp;copy; 2008-%1 Graeme Gott.</translation>
+        <translation>Πνευματική ιδιοκτησία &amp;copy; 2008-%1 Graeme Gott.</translation>
     </message>
     <message>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
-        <translation>Gepubliseerd onder de &lt;a href=%1&gt;GPL 3&lt;/a&gt; licentie</translation>
+        <translation>Διατίθεται βάσει της &lt;a href=%1&gt;GPL 3&lt;/a&gt; άδειας χρήσης</translation>
     </message>
 </context>
 </TS>

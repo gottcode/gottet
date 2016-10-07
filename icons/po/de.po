@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Wasilis Mandratzis-Walz, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: German (http://www.transifex.com/projects/p/gottet/language/"
+"PO-Revision-Date: 2015-04-16 13:59+0000\n"
+"Last-Translator: Wasilis Mandratzis-Walz\n"
+"Language-Team: German (http://www.transifex.com/gottcode/gottet/language/"
 "de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +25,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Räum das Spielfeld von fallenden Blöcken"
 
 #: ../gottet.appdata.xml.in.h:3
 msgid ""
@@ -34,6 +35,11 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet ist ein Spiel der fallenden Steine. Teile fallen vom oberen Rand des "
+"Spielbereichs und man kann sie sowohl horizontal bewegen als auch drehen, "
+"bevor sie den Boden des Spielbereichs erreichen. Das Ziel ist, volle Linien "
+"der Stücke, die dann entfernt werden, zu erstellen. Das Spiel ist beendet, "
+"wenn der Stapel von Teilen die Spitze des Spielbereichs erreicht hat."
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"

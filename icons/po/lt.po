@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Moo, 2014
+# Moo, 2014,2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-17 10:58+0000\n"
+"PO-Revision-Date: 2016-04-15 21:39+0000\n"
 "Last-Translator: Moo\n"
-"Language-Team: Lithuanian (http://www.transifex.com/projects/p/gottet/"
-"language/lt/)\n"
+"Language-Team: Lithuanian (http://www.transifex.com/gottcode/gottet/language/"
+"lt/)\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,4 +44,4 @@ msgstr ""
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
-msgstr "Krentančių Blokų Žaidimas"
+msgstr "Krentančių blokų žaidimas"

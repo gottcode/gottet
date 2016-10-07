@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# GenghisKhan <genghiskhan@gmx.ca>, 2014
+# GenghisKhan <genghiskhan@gmx.ca>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-26 13:56+0000\n"
+"PO-Revision-Date: 2015-09-14 14:13+0000\n"
 "Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/gottet/language/"
+"Language-Team: Hebrew (http://www.transifex.com/gottcode/gottet/language/"
 "he/)\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -35,10 +35,10 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
-"Gottet הינו משחק לבנים נופלות. חתיכות נופלות משיא אזור המשחק וביכולתך להזיזן "
-"במאוזן וכן גם לסובב אותן טרם הן מגיעות אל התחתית של אזור המשחק. המטרה היא "
-"ליצור שורות מלאות של חתיכות, אשר אז מוסרות. המשחק נגמר כאשר ערימה של חתיכות "
-"מגיעה אל שיא אזור המשחק."
+"Gottet הינו משחק לבנים נופלות. חתיכות נופלות מראש אזור המשחק ובאפשרותך "
+"להזיזן במאוזן וכן גם לסובב אותן טרם הן מגיעות אל התחתית של אזור המשחק. המטרה "
+"היא ליצור שורות מלאות של חתיכות, אשר אז מוסרות. המשחק נגמר כאשר ערימה של "
+"חתיכות מגיעה אל ראש אזור המשחק."
 
 #: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"

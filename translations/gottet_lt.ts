@@ -17,7 +17,7 @@
     </message>
     <message>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
-        <translation>&lt;big&gt;&lt;b&gt;Žaidimas Baigtas!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Spustelėkite, norėdami pradėti naują žaidimą.</translation>
+        <translation>&lt;big&gt;&lt;b&gt;Žaidimas baigtas!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Spustelėkite, norėdami pradėti naują žaidimą.</translation>
     </message>
 </context>
 <context>
@@ -28,7 +28,7 @@
     </message>
     <message>
         <source>&lt;System Language&gt;</source>
-        <translation>&lt;Sistemos Kalba&gt;</translation>
+        <translation>&lt;Sistemos kalba&gt;</translation>
     </message>
     <message>
         <source>Note</source>
@@ -43,7 +43,7 @@
     <name>ScoreBoard</name>
     <message>
         <source>Gottet Scores</source>
-        <translation>Gottet Surinkti Taškai</translation>
+        <translation>Gottet surinkti taškai</translation>
     </message>
     <message>
         <source>Level</source>
@@ -94,7 +94,7 @@
     </message>
     <message>
         <source>&amp;Scores</source>
-        <translation>&amp;Surinkti Taškai</translation>
+        <translation>&amp;Surinkti taškai</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
@@ -106,7 +106,7 @@
     </message>
     <message>
         <source>Application &amp;Language...</source>
-        <translation>Programos &amp;Kalba</translation>
+        <translation>Programos &amp;kalba</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -122,7 +122,7 @@
     </message>
     <message>
         <source>Next Piece</source>
-        <translation>Kita Figūra</translation>
+        <translation>Kita figūra</translation>
     </message>
     <message>
         <source>Level</source>
@@ -130,7 +130,7 @@
     </message>
     <message>
         <source>Removed Lines</source>
-        <translation>Pašalinta Eilučių</translation>
+        <translation>Pašalinta eilučių</translation>
     </message>
     <message>
         <source>Score</source>
@@ -146,7 +146,7 @@
     </message>
     <message>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
-        <translation>Autorinės Teisės &amp;copy; 2008-%1 Graeme Gott.</translation>
+        <translation>Autorių Teisės &amp;copy; 2008-%1 Graeme Gott.</translation>
     </message>
     <message>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
