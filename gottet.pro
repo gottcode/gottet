@@ -78,6 +78,7 @@ macx {
 
 	qm.files = translations/*.qm
 	qm.path = $$PREFIX/share/gottet/translations
+	qm.CONFIG += no_check_exist
 
 	man.files = doc/gottet.6
 	man.path = $$PREFIX/share/man/man6
