@@ -80,7 +80,7 @@ macx {
 	appdata.files = icons/gottet.appdata.xml
 	appdata.path = $$PREFIX/share/metainfo/
 
-	qm.files = translations/*.qm
+	qm.files = $$replace(TRANSLATIONS, .ts, .qm)
 	qm.path = $$PREFIX/share/gottet/translations
 	qm.CONFIG += no_check_exist
 
