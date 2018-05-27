@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Graeme Gott
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# 高垚鑫, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Gottet\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-14 20:46+0000\n"
+"PO-Revision-Date: 2018-03-24 06:20+0000\n"
+"Last-Translator: 高垚鑫\n"
+"Language-Team: Chinese (http://www.transifex.com/gottcode/gottet/language/"
+"zh/)\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "Gottet"
+
+#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
+msgid "Clear the board of falling blocks"
+msgstr "清空游戏盘中下落的方块"
+
+#: ../gottet.appdata.xml.in.h:3
+msgid ""
+"Gottet is a falling blocks game. Pieces fall from the top of the play area "
+"and you can move them horizontally as well as rotate them before they reach "
+"the bottom of the play area. The goal is to create full lines of pieces, "
+"which are then removed. The game is over when the stack of pieces reaches "
+"the top of the play area."
+msgstr ""
+"Gottet 是一个下落方块游戏。方块从游戏区域上方下落，你可以在方块到达底部前左右"
+"移动或翻转它们。游戏的目标是制造一整行方块，然后这行方块会被消除。当方块堆叠"
+"到游戏区域顶端时，游戏结束。"
+
+#: ../gottet.desktop.in.h:2
+msgid "Falling Blocks Game"
+msgstr "下落方块游戏"
