@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2015-12-05 14:53+0000\n"
+"PO-Revision-Date: 2017-09-23 21:04+0000\n"
 "Last-Translator: George Ioakeimidis <geomint@mail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/gottcode/gottet/language/"
 "el/)\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
 msgid "Gottet"
 msgstr "Gottet"
 
-#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
+#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
 msgstr "Εκκαθάριση της περιοχής παιχνιδιού απο τετράγωνα"
 
-#: ../gottet.appdata.xml.in.h:3
+#: ../gottet.appdata.xml.in:10
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
@@ -43,6 +43,6 @@ msgstr ""
 "τεμαχίων, τα οποία στη συνέχεια απομακρύνεται. Το παιχνίδι τελειώνει όταν η "
 "στοίβα των κομματιών φτάνει στην κορυφή της περιοχής παιχνιδιου."
 
-#: ../gottet.desktop.in.h:2
+#: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
 msgstr "Παιχνίδι Τουβλάκια"

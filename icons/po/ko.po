@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>, 2014
+# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 19:25+0000\n"
-"Last-Translator: 박정규(Jung Kyu Park) <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/projects/p/gottet/language/"
+"PO-Revision-Date: 2017-09-23 20:29+0000\n"
+"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
+"Language-Team: Korean (http://www.transifex.com/gottcode/gottet/language/"
 "ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
 msgid "Gottet"
 msgstr "고테트"
 
-#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
+#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
 msgstr "벽돌이 떨어지는 판을 청소합니다"
 
-#: ../gottet.appdata.xml.in.h:3
+#: ../gottet.appdata.xml.in:10
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
@@ -40,6 +40,6 @@ msgstr ""
 "요, 온전한 벽돌 한 줄이 만들어지면 사라집니다. 벽돌 조각이 화면 위까지 꽉차"
 "면 게임 오버입니다."
 
-#: ../gottet.desktop.in.h:2
+#: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
 msgstr "벽돌 떨구기 게임"

@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
 msgid "Gottet"
 msgstr "Gottet"
 
-#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
+#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
 msgstr "清空游戏盘中下落的方块"
 
-#: ../gottet.appdata.xml.in.h:3
+#: ../gottet.appdata.xml.in:10
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
@@ -39,6 +39,6 @@ msgstr ""
 "移动或翻转它们。游戏的目标是制造一整行方块，然后这行方块会被消除。当方块堆叠"
 "到游戏区域顶端时，游戏结束。"
 
-#: ../gottet.desktop.in.h:2
+#: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
 msgstr "下落方块游戏"

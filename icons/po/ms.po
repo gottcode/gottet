@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-12-29 01:46+0000\n"
+"PO-Revision-Date: 2017-09-21 13:52+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (Malaysia) (http://www.transifex.com/projects/p/gottet/"
+"Language-Team: Malay (Malaysia) (http://www.transifex.com/gottcode/gottet/"
 "language/ms_MY/)\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
 msgid "Gottet"
 msgstr "Gottet"
 
-#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
+#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
 msgstr "Koosngkan papan yang mengandungi blok-blok yang turun"
 
-#: ../gottet.appdata.xml.in.h:3
+#: ../gottet.appdata.xml.in:10
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
@@ -42,6 +42,6 @@ msgstr ""
 "dari kawasan permainan jika terbentuk. Permainan tamat bila tindanan cebisan "
 "mencapai bahagian teratas kawasan permainan."
 
-#: ../gottet.desktop.in.h:2
+#: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
 msgstr "Permainan Jatuhan Blok"

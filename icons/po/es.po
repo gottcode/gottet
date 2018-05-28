@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/gottet/language/"
+"PO-Revision-Date: 2018-05-28 15:26+0000\n"
+"Last-Translator: Graeme Gott <graeme@gottcode.org>\n"
+"Language-Team: Spanish (http://www.transifex.com/gottcode/gottet/language/"
 "es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:1
+#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
 msgid "Gottet"
 msgstr "Gottet"
 
-#: ../gottet.appdata.xml.in.h:2 ../gottet.desktop.in.h:3
+#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
 msgstr ""
 
-#: ../gottet.appdata.xml.in.h:3
+#: ../gottet.appdata.xml.in:10
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
@@ -35,6 +35,6 @@ msgid ""
 "the top of the play area."
 msgstr ""
 
-#: ../gottet.desktop.in.h:2
+#: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
 msgstr "Juego de bloques que caen"
