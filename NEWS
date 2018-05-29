@@ -1,3 +1,11 @@
+1.1.6
+-----
+* Extra warnings only shown in debug build.
+* Improved Linux deployment.
+* Improved macOS deployment.
+* Improved Windows deployment.
+* Translation updates: Chinese, Portuguese.
+
 1.1.5
 -----
 * FIXED: Could not compile with Qt 5.10.

@@ -102,10 +102,14 @@
   </content_rating>
 
   <releases>
-    <release version="1.1.5" date="2017-12-26">
+    <release version="1.1.6" date="2018-05-29">
       <description>
         <ul>
-          <li>FIXED: Could not compile with Qt 5.10</li>
+          <li>Extra warnings only shown in debug build</li>
+          <li>Improved Linux deployment</li>
+          <li>Improved macOS deployment</li>
+          <li>Improved Windows deployment</li>
+          <li>Translation updates: Chinese, Portuguese</li>
         </ul>
       </description>
     </release>
