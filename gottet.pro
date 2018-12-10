@@ -61,7 +61,9 @@ QMAKE_EXTRA_COMPILERS += updateqm
 macx {
 	ICON = icons/gottet.icns
 } else:win32 {
-	RC_FILE = icons/icon.rc
+	RC_ICONS = icons/gottet.ico
+	QMAKE_TARGET_DESCRIPTION = "Falling blocks game"
+	QMAKE_TARGET_COPYRIGHT = "Copyright (C) 2018 Graeme Gott"
 } else:unix {
 	RESOURCES = icons/icon.qrc
 
