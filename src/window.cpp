@@ -126,7 +126,7 @@ Window::Window(QWidget *parent, Qt::WindowFlags wf)
 
 	// Layout window
 	QGridLayout* layout = new QGridLayout(contents);
-	layout->setMargin(12);
+	layout->setContentsMargins(12, 12, 12, 12);
 	layout->setSpacing(0);
 	layout->setColumnStretch(0, 1);
 	layout->setColumnMinimumWidth(1, 12);
