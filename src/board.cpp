@@ -219,15 +219,19 @@ void Board::keyPressEvent(QKeyEvent* event)
 
 	switch (event->key()) {
 	case Qt::Key_Left:
+	case Qt::Key_J:
 		m_piece->moveLeft();
 		break;
 	case Qt::Key_Right:
+	case Qt::Key_L:
 		m_piece->moveRight();
 		break;
 	case Qt::Key_Up:
+	case Qt::Key_K:
 		m_piece->rotate();
 		break;
 	case Qt::Key_Down:
+	case Qt::Key_Space:
 		m_piece->drop();
 		landPiece();
 		break;
