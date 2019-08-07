@@ -3,7 +3,7 @@
 @ECHO OFF
 
 SET APP=Gottet
-SET VERSION=1.1.7
+SET VERSION=1.1.8
 
 ECHO Copying executable
 MKDIR %APP%
