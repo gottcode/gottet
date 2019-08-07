@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Doryan R, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2014-11-13 18:45+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2019-03-17 08:41+0000\n"
+"Last-Translator: Doryan R\n"
 "Language-Team: French (http://www.transifex.com/gottcode/gottet/language/"
 "fr/)\n"
 "Language: fr\n"
@@ -20,11 +21,11 @@ msgstr ""
 
 #: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
 msgid "Gottet"
-msgstr ""
+msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Dégagez le plateau des blocs qui tombent"
 
 #: ../gottet.appdata.xml.in:10
 msgid ""
@@ -34,7 +35,12 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet est un jeu de blocs qui tombe. Des morceaux tombent du haut de la "
+"zone de jeu. Vous pouvez les déplacer horizontalement et les faire pivoter "
+"avant d’atteindre le bas de la zone de jeu. Le but est de créer des lignes "
+"complètes de pièces, qui sont ensuite supprimées. Le jeu est terminé lorsque "
+"la pile de pièces atteint le haut de l'aire de jeu."
 
 #: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
-msgstr ""
+msgstr "Falling Blocks Game"
