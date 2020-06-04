@@ -36,8 +36,8 @@
 
 /*****************************************************************************/
 
-Window::Window(QWidget *parent, Qt::WindowFlags wf)
-:	QMainWindow(parent, wf)
+Window::Window(QWidget *parent)
+:	QMainWindow(parent)
 {
 	QWidget* contents = new QWidget(this);
 	setCentralWidget(contents);
@@ -172,7 +172,11 @@ void Window::pauseAvailable(bool available)
 	} else {
 		m_resume_action->setVisible(true);
 		m_pause_action->setVisible(false);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
+		preview = m_preview->pixmap(Qt::ReturnByValue);
+#else
 		preview = *m_preview->pixmap();
+#endif
 		m_preview->clear();
 	}
 }

@@ -39,10 +39,18 @@ ScoreBoard::ScoreBoard(QWidget* parent)
 	m_scores->setRootIsDecorated(false);
 
 	// Load scores
-	QStringList scores = QSettings().value("Scores").toString().split(";", QString::SkipEmptyParts);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+	const QStringList scores = QSettings().value("Scores").toString().split(";", Qt::SkipEmptyParts);
+#else
+	const QStringList scores = QSettings().value("Scores").toString().split(";", QString::SkipEmptyParts);
+#endif
 	QStringList values;
 	for (const QString& score : scores) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+		values = score.split(",", Qt::SkipEmptyParts);
+#else
 		values = score.split(",", QString::SkipEmptyParts);
+#endif
 		if (values.count() != 3)
 			continue;
 		m_scores->addTopLevelItem( createItem(values[0].toInt(), values[1].toInt(), values[2].toInt()) );
