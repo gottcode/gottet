@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2007, 2008, 2012, 2013, 2014, 2015, 2018, 2019 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2007-2020 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@
 
 int main(int argc, char** argv)
 {
+#if (QT_VERSION < QT_VERSION_CHECK(6,0,0))
 #if !defined(Q_OS_MAC)
 	if (!qEnvironmentVariableIsSet("QT_DEVICE_PIXEL_RATIO")
 			&& !qEnvironmentVariableIsSet("QT_AUTO_SCREEN_SCALE_FACTOR")
@@ -31,6 +32,8 @@ int main(int argc, char** argv)
 			&& !qEnvironmentVariableIsSet("QT_SCREEN_SCALE_FACTORS")) {
 		QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 	}
+#endif
+	QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 	QApplication app(argc, argv);
 	app.setApplicationName("Gottet");
@@ -42,7 +45,6 @@ int main(int argc, char** argv)
 	app.setWindowIcon(QIcon::fromTheme("gottet", QIcon(":/gottet.png")));
 	app.setDesktopFileName("gottet");
 #endif
-	app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
 	LocaleDialog::loadTranslator("gottet_");
 
