@@ -1,6 +1,6 @@
 /***********************************************************************
  *
- * Copyright (C) 2008, 2012 Graeme Gott <graeme@gottcode.org>
+ * Copyright (C) 2008-2021 Graeme Gott <graeme@gottcode.org>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,6 @@
 class QAction;
 class QLabel;
 class Board;
-class ScoreBoard;
 
 class Window : public QMainWindow
 {
@@ -38,8 +37,9 @@ protected:
 private slots:
 	void pauseAvailable(bool available);
 	void scoreUpdated(int score);
+	void showScores();
 	void newGame();
-	void gameOver();
+	void gameOver(int level, int lines, int score);
 	void about();
 	void setLocale();
 
@@ -51,7 +51,6 @@ private:
 	QLabel* m_level;
 	QLabel* m_lines;
 	QLabel* m_score;
-	ScoreBoard* m_score_board;
 };
 
 #endif // WINDOW_H

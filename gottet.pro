@@ -33,14 +33,14 @@ unix: !macx {
 HEADERS = src/board.h \
 	src/locale_dialog.h \
 	src/piece.h \
-	src/score_board.h \
+	src/scores_dialog.h \
 	src/window.h
 
 SOURCES = src/board.cpp \
 	src/locale_dialog.cpp \
 	src/main.cpp \
 	src/piece.cpp \
-	src/score_board.cpp \
+	src/scores_dialog.cpp \
 	src/window.cpp
 
 # Generate translations

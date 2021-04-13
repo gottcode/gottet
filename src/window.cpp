@@ -21,7 +21,7 @@
 
 #include "board.h"
 #include "locale_dialog.h"
-#include "score_board.h"
+#include "scores_dialog.h"
 
 #include <QAction>
 #include <QApplication>
@@ -70,9 +70,6 @@ Window::Window(QWidget *parent)
 	m_score->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
 	m_score->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
 
-	// Create scoreboard
-	m_score_board = new ScoreBoard(this);
-
 	// Create board
 	m_board = new Board(contents);
 	connect(m_board, &Board::pauseAvailable, this, &Window::pauseAvailable);
@@ -80,8 +77,7 @@ Window::Window(QWidget *parent)
 	connect(m_board, &Board::levelUpdated, m_level, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 	connect(m_board, &Board::linesRemovedUpdated, m_lines, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
 	connect(m_board, &Board::scoreUpdated, this, &Window::scoreUpdated);
-	connect(m_board, static_cast<void (Board::*)(int,int,int)>(&Board::gameOver), m_score_board, &ScoreBoard::addHighScore);
-	connect(m_board, static_cast<void (Board::*)(int,int,int)>(&Board::gameOver), this, &Window::gameOver);
+	connect(m_board, QOverload<int,int,int>::of(&Board::gameOver), this, &Window::gameOver);
 	connect(m_board, &Board::gameStarted, this, &Window::newGame);
 
 	// Create overlay message
@@ -110,7 +106,7 @@ Window::Window(QWidget *parent)
 	m_resume_action = menu->addAction(tr("&Resume"), m_board, SLOT(resumeGame()), tr("P"));
 	m_resume_action->setVisible(false);
 	menu->addSeparator();
-	menu->addAction(tr("&Scores"), m_score_board, SLOT(show()));
+	menu->addAction(tr("&Scores"), this, &Window::showScores, tr("Ctrl+H"));
 	menu->addSeparator();
 	QAction* action = menu->addAction(tr("&Quit"), this, SLOT(close()), QKeySequence::Quit);
 	action->setMenuRole(QAction::QuitRole);
@@ -187,14 +183,29 @@ void Window::scoreUpdated(int score)
 {
 	m_score->setText(QString("%L1").arg(score));
 
-	int position = m_score_board->highScorePosition(score);
-	QPalette palette = m_score->palette();
-	if (position == 0) {
-		palette.setColor(m_preview->foregroundRole(), Qt::red);
-	} else if (position < 10) {
-		palette.setColor(m_preview->foregroundRole(), Qt::blue);
+	QFont f = font();
+	QPalette p = palette();
+	switch (ScoresDialog::isHighScore(score)) {
+	case 2:
+		f.setBold(true);
+		p.setColor(m_score->foregroundRole(), Qt::blue);
+		break;
+	case 1:
+		f.setBold(true);
+		break;
+	default:
+		break;
 	}
-	m_score->setPalette(palette);
+	m_score->setFont(f);
+	m_score->setPalette(p);
+}
+
+/*****************************************************************************/
+
+void Window::showScores()
+{
+	ScoresDialog scores(this);
+	scores.exec();
 }
 
 /*****************************************************************************/
@@ -210,9 +221,14 @@ void Window::newGame()
 
 /*****************************************************************************/
 
-void Window::gameOver()
+void Window::gameOver(int level, int lines, int score)
 {
 	m_pause_action->setEnabled(false);
+
+	ScoresDialog scores(this);
+	if (scores.addScore(level, lines, score)) {
+		scores.exec();
+	}
 }
 
 /*****************************************************************************/
