@@ -247,7 +247,7 @@ void Window::about()
 {
 	QMessageBox::about(this, tr("About"), QString("<p align='center'><big><b>%1 %2</b></big><br/>%3<br/><small>%4<br/>%5</small></p>")
 		.arg(tr("Gottet"), QApplication::applicationVersion(),
-			tr("A tetris clone I made for my wife"),
+			tr("A simple falling blocks game"),
 			tr("Copyright &copy; 2008-%1 Graeme Gott.").arg("2021"),
 			tr("Released under the <a href=%1>GPL 3</a> license").arg("\"http://www.gnu.org/licenses/gpl.html\""))
 	);
