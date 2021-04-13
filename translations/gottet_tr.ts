@@ -40,11 +40,7 @@
     </message>
 </context>
 <context>
-    <name>ScoreBoard</name>
-    <message>
-        <source>Gottet Scores</source>
-        <translation>Gottet Skorları</translation>
-    </message>
+    <name>ScoresDialog</name>
     <message>
         <source>Level</source>
         <translation>Seviye</translation>
@@ -58,8 +54,36 @@
         <translation>Skor</translation>
     </message>
     <message>
-        <source>OK</source>
-        <translation>Tamam</translation>
+        <source>High Scores</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>#%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Congratulations!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You beat your top score!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Well done!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have a new high score!</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -87,10 +111,6 @@
     <message>
         <source>P</source>
         <translation>P</translation>
-    </message>
-    <message>
-        <source>&amp;Resume</source>
-        <translation>Devam &amp;Ettir</translation>
     </message>
     <message>
         <source>&amp;Scores</source>
@@ -141,16 +161,20 @@
         <translation>Hakkında</translation>
     </message>
     <message>
-        <source>A tetris clone I made for my wife</source>
-        <translation>Karım için yaptığım bir Tetris klonu</translation>
-    </message>
-    <message>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
         <translation>Telif hakları saklıdır &amp;copy; 2008-%1 Graeme Gott</translation>
     </message>
     <message>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
         <translation>&lt;a href=%1&gt;GPL 3&lt;/a&gt; lisansı altında yayınlanmıştır</translation>
+    </message>
+    <message>
+        <source>Ctrl+H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple falling blocks game</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -40,11 +40,7 @@
     </message>
 </context>
 <context>
-    <name>ScoreBoard</name>
-    <message>
-        <source>Gottet Scores</source>
-        <translation type="unfinished"></translation>
-    </message>
+    <name>ScoresDialog</name>
     <message>
         <source>Level</source>
         <translation type="unfinished"></translation>
@@ -58,7 +54,35 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OK</source>
+        <source>High Scores</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rank</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>#%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Congratulations!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You beat your top score!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Well done!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You have a new high score!</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -86,10 +110,6 @@
     </message>
     <message>
         <source>P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Resume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -141,15 +161,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A tetris clone I made for my wife</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Copyright &amp;copy; 2008-%1 Graeme Gott.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A simple falling blocks game</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
