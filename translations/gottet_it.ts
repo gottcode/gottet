@@ -24,7 +24,7 @@
     <name>LocaleDialog</name>
     <message>
         <source>Select application language:</source>
-        <translation>Seleziona la lingua dell'&apos;applicazione:</translation>
+        <translation>Seleziona la lingua dell&apos;&apos;applicazione:</translation>
     </message>
     <message>
         <source>&lt;System Language&gt;</source>

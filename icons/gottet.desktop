@@ -51,6 +51,7 @@ Comment[nl]=Maak het vallende blokken bord schoon
 Comment[pl]=Oczyść planszę ze spadających klocków
 Comment[pt]=Limpe o tabuleiro de blocos a cair
 Comment[ro]=Curăţaţi tabela de piesele căzătoare
+Comment[tr]=Düşen blokların panosunu temizle
 Comment[zh]=清空游戏盘中下落的方块
 Comment[zh_TW]=清除不斷在版面上落下的方塊
 Exec=gottet

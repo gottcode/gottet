@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# abc Def <hdogan1974@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2018-05-28 15:27+0000\n"
-"Last-Translator: Graeme Gott <graeme@gottcode.org>\n"
+"PO-Revision-Date: 2020-05-04 02:44+0000\n"
+"Last-Translator: abc Def <hdogan1974@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/gottcode/gottet/language/"
 "tr/)\n"
 "Language: tr\n"
@@ -24,7 +25,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
-msgstr ""
+msgstr "Düşen blokların panosunu temizle"
 
 #: ../gottet.appdata.xml.in:10
 msgid ""
@@ -34,6 +35,11 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
+"Gottet bir düşen blok oyunudur. Parçalar oyun alanının üstünden düşer ve "
+"onları yatay olarak hareket ettirebilir ve oyun alanının altına ulaşmadan "
+"önce döndürebilirsiniz. Amaç, daha sonra kaldırılacak tam satırların "
+"parçalarını oluşturmaktır. Parça yığını oyun alanının en üstüne ulaştığında "
+"oyun sona erer."
 
 #: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
