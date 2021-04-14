@@ -9,7 +9,7 @@
 
 struct Cell
 {
-	Cell(int x1 = -1, int y1 = -1)
+	explicit Cell(int x1 = -1, int y1 = -1)
 		: x(x1)
 		, y(y1)
 	{

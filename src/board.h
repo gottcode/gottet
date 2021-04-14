@@ -19,7 +19,7 @@ class Board : public QWidget
 	Q_OBJECT
 
 public:
-	Board(QWidget* parent = nullptr);
+	explicit Board(QWidget* parent = nullptr);
 
 	bool cell(int x, int y) const
 	{
