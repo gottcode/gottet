@@ -23,8 +23,8 @@
 struct Cell
 {
 	Cell(int x1 = -1, int y1 = -1)
-	:	x(x1),
-		y(y1)
+		: x(x1)
+		, y(y1)
 	{
 	}
 
@@ -78,6 +78,7 @@ private:
 	bool move(int x, int y);
 	bool updatePosition(const Cell* cells);
 
+private:
 	int m_type;
 	Cell m_cells[4];
 	Cell m_pivot;

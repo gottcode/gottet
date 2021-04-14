@@ -21,7 +21,7 @@
 
 #include "board.h"
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 static const Cell types[][4] = {
 	{ Cell(0,0), Cell(0,1), Cell(0,2), Cell(0,3) },
@@ -33,26 +33,28 @@ static const Cell types[][4] = {
 	{ Cell(0,0), Cell(1,0), Cell(0,1), Cell(1,1) }
 };
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 Piece::Piece(int type, Board* board)
-:	m_type(type),
-	m_pivot(4,1),
-	m_valid(false),
-	m_board(board)
+	: m_type(type)
+	, m_pivot(4,1)
+	, m_valid(false)
+	, m_board(board)
 {
 	Q_ASSERT(type > 0 && type < 8);
 
 	Cell position[4];
 	cells(position, type);
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		position[i].x += 4;
+	}
 
-	if (updatePosition(position))
+	if (updatePosition(position)) {
 		m_valid = true;
+	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 bool Piece::rotate()
 {
@@ -72,15 +74,16 @@ bool Piece::rotate()
 	return updatePosition(rotated);
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Piece::drop()
 {
-	for (int i = 0; i < 20; ++i)
+	for (int i = 0; i < 20; ++i) {
 		moveDown();
+	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Piece::cells(Cell* cells, int type)
 {
@@ -88,11 +91,12 @@ void Piece::cells(Cell* cells, int type)
 	Q_ASSERT(type > 0 && type < 8);
 
 	const Cell* values = types[type - 1];
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		cells[i] = values[i];
+	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 bool Piece::move(int x, int y)
 {
@@ -101,8 +105,9 @@ bool Piece::move(int x, int y)
 	for (int i = 0; i < 4; ++i) {
 		moved[i].x = m_cells[i].x + x;
 		moved[i].y = m_cells[i].y + y;
-		if (moved[i].x > 9 || moved[i].x < 0 || moved[i].y > 19 || moved[i].y < 0)
+		if (moved[i].x > 9 || moved[i].x < 0 || moved[i].y > 19 || moved[i].y < 0) {
 			return false;
+		}
 	}
 
 	bool success = updatePosition(moved);
@@ -113,7 +118,7 @@ bool Piece::move(int x, int y)
 	return success;
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 bool Piece::updatePosition(const Cell* cells)
 {
@@ -134,4 +139,4 @@ bool Piece::updatePosition(const Cell* cells)
 	return true;
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------

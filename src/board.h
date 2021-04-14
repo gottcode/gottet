@@ -30,10 +30,17 @@ class Piece;
 class Board : public QWidget
 {
 	Q_OBJECT
+
 public:
 	Board(QWidget* parent = 0);
 
-	bool cell(int x, int y) const;
+	bool cell(int x, int y) const
+	{
+		Q_ASSERT(x >= 0 && x < 10);
+		Q_ASSERT(y >= 0 && y < 20);
+		return m_cells[x][y] != 0;
+	}
+
 	bool endGame();
 	void findFullLines();
 
@@ -71,7 +78,12 @@ private:
 	void removeCell(int x, int y);
 	void createPiece();
 	void landPiece();
-	int nextPiece();
+
+	int nextPiece()
+	{
+		return m_random_distribution(m_random_generator);
+	}
+
 	QPixmap renderPiece(int type) const;
 
 private:
@@ -95,17 +107,5 @@ private:
 	std::mt19937 m_random_generator;
 	std::uniform_int_distribution<int> m_random_distribution;
 };
-
-inline bool Board::cell(int x, int y) const
-{
-	Q_ASSERT(x >= 0 && x < 10);
-	Q_ASSERT(y >= 0 && y < 20);
-	return m_cells[x][y] != 0;
-}
-
-inline int Board::nextPiece()
-{
-	return m_random_distribution(m_random_generator);
-}
 
 #endif // BOARD_H

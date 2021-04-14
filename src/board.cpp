@@ -30,7 +30,7 @@
 #include <algorithm>
 #include <ctime>
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 static QColor colors[] = {
 	QColor("#0057ae"),
@@ -42,21 +42,21 @@ static QColor colors[] = {
 	QColor("#644a9b")
 };
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 Board::Board(QWidget* parent)
-:	QWidget(parent),
-	m_removed_lines(0),
-	m_level(1),
-	m_score(0),
-	m_piece(0),
-	m_next_piece(1),
-	m_flash_frame(-1),
-	m_piece_size(0),
-	m_started(false),
-	m_done(false),
-	m_paused(false),
-	m_random_distribution(1, 7)
+	: QWidget(parent)
+	, m_removed_lines(0)
+	, m_level(1)
+	, m_score(0)
+	, m_piece(0)
+	, m_next_piece(1)
+	, m_flash_frame(-1)
+	, m_piece_size(0)
+	, m_started(false)
+	, m_done(false)
+	, m_paused(false)
+	, m_random_distribution(1, 7)
 {
 	setMinimumSize(201, 401);
 	setFocusPolicy(Qt::StrongFocus);
@@ -92,7 +92,7 @@ Board::Board(QWidget* parent)
 	m_next_piece = nextPiece();
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 bool Board::endGame()
 {
@@ -108,13 +108,14 @@ bool Board::endGame()
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::findFullLines()
 {
 	// Empty list of full lines
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		m_full_lines[i] = -1;
+	}
 	int pos = 0;
 
 	// Find full lines
@@ -122,8 +123,9 @@ void Board::findFullLines()
 	for (int row = 0; row < 20; ++row) {
 		full = true;
 		for (int col = 0; col < 10; ++col) {
-			if (m_cells[col][row] == 0)
+			if (m_cells[col][row] == 0) {
 				full = false;
+			}
 		}
 		if (full) {
 			m_full_lines[pos] = row;
@@ -132,7 +134,7 @@ void Board::findFullLines()
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::newGame()
 {
@@ -155,8 +157,9 @@ void Board::newGame()
 	m_shift_timer->setInterval(500);
 	m_next_piece = nextPiece();
 
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		m_full_lines[i] = -1;
+	}
 
 	for (int col = 0; col < 10; ++col) {
 		for (int row = 0; row < 20; ++row) {
@@ -174,7 +177,7 @@ void Board::newGame()
 	createPiece();
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::pauseGame()
 {
@@ -192,7 +195,7 @@ void Board::pauseGame()
 	emit pauseAvailable(false);
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::resumeGame()
 {
@@ -210,12 +213,13 @@ void Board::resumeGame()
 	emit pauseAvailable(true);
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::keyPressEvent(QKeyEvent* event)
 {
-	if (!m_piece || m_paused)
+	if (!m_piece || m_paused) {
 		return;
+	}
 
 	switch (event->key()) {
 	case Qt::Key_Left:
@@ -238,7 +242,7 @@ void Board::keyPressEvent(QKeyEvent* event)
 	update();
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::mousePressEvent(QMouseEvent* event)
 {
@@ -250,7 +254,7 @@ void Board::mousePressEvent(QMouseEvent* event)
 	QWidget::mousePressEvent(event);
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::paintEvent(QPaintEvent*)
 {
@@ -282,15 +286,16 @@ void Board::paintEvent(QPaintEvent*)
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::focusOutEvent(QFocusEvent*)
 {
-	if (m_piece && !m_done && !m_paused)
+	if (m_piece && !m_done && !m_paused) {
 		pauseGame();
+	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::resizeEvent(QResizeEvent* event)
 {
@@ -318,7 +323,7 @@ void Board::resizeEvent(QResizeEvent* event)
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::shiftPiece()
 {
@@ -332,7 +337,7 @@ void Board::shiftPiece()
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::flashLines()
 {
@@ -359,7 +364,7 @@ void Board::flashLines()
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::removeLines()
 {
@@ -368,8 +373,9 @@ void Board::removeLines()
 	// Loop through full lines
 	for (int i = 0; i < 4; ++i) {
 		int row = m_full_lines[i];
-		if (row == -1)
+		if (row == -1) {
 			break;
+		}
 
 		// Remove line
 		for (int col = 0; col < 10; ++col) {
@@ -401,14 +407,15 @@ void Board::removeLines()
 	emit scoreUpdated(m_score);
 
 	// Empty list of full lines
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; ++i) {
 		m_full_lines[i] = -1;
+	}
 
 	// Add new piece
 	createPiece();
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::gameOver()
 {
@@ -420,7 +427,7 @@ void Board::gameOver()
 	emit gameOver(m_level, m_removed_lines, m_score);
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::addCell(int x, int y, int type)
 {
@@ -432,7 +439,7 @@ void Board::addCell(int x, int y, int type)
 	m_cells[x][y] = type;
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::removeCell(int x, int y)
 {
@@ -442,7 +449,7 @@ void Board::removeCell(int x, int y)
 	m_cells[x][y] = 0;
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::createPiece()
 {
@@ -459,7 +466,7 @@ void Board::createPiece()
 	update();
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 void Board::landPiece()
 {
@@ -481,7 +488,7 @@ void Board::landPiece()
 	}
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
 
 QPixmap Board::renderPiece(int type) const
 {
@@ -515,4 +522,4 @@ QPixmap Board::renderPiece(int type) const
 	return result;
 }
 
-/*****************************************************************************/
+//-----------------------------------------------------------------------------
