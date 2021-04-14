@@ -30,8 +30,8 @@ QString LocaleDialog::m_appname;
 
 //-----------------------------------------------------------------------------
 
-LocaleDialog::LocaleDialog(QWidget* parent) :
-	QDialog(parent, Qt::WindowTitleHint | Qt::MSWindowsFixedSizeDialogHint | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint)
+LocaleDialog::LocaleDialog(QWidget* parent)
+	: QDialog(parent, Qt::WindowTitleHint | Qt::MSWindowsFixedSizeDialogHint | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint)
 {
 	QString title = parent ? parent->window()->windowTitle() : QString();
 	setWindowTitle(!title.isEmpty() ? title : QCoreApplication::applicationName());
@@ -40,7 +40,7 @@ LocaleDialog::LocaleDialog(QWidget* parent) :
 
 	m_translations = new QComboBox(this);
 	m_translations->addItem(tr("<System Language>"));
-	QStringList translations = findTranslations();
+	const QStringList translations = findTranslations();
 	for (QString translation : translations) {
 		if (translation.startsWith("qt")) {
 			continue;
