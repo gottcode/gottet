@@ -17,8 +17,8 @@
  *
  ***********************************************************************/
 
-#ifndef PIECE_H
-#define PIECE_H
+#ifndef GOTTET_PIECE_H
+#define GOTTET_PIECE_H
 
 struct Cell
 {
@@ -86,4 +86,4 @@ private:
 	Board* m_board;
 };
 
-#endif // PIECE_H
+#endif // GOTTET_PIECE_H

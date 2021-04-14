@@ -17,8 +17,8 @@
  *
  ***********************************************************************/
 
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef GOTTET_BOARD_H
+#define GOTTET_BOARD_H
 
 #include <QWidget>
 class QPixmap;
@@ -108,4 +108,4 @@ private:
 	std::uniform_int_distribution<int> m_random_distribution;
 };
 
-#endif // BOARD_H
+#endif // GOTTET_BOARD_H
