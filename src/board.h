@@ -48,11 +48,11 @@ signals:
 	void showMessage(const QString& message);
 
 protected:
-	virtual void keyPressEvent(QKeyEvent* event);
-	virtual void mousePressEvent(QMouseEvent* event);
-	virtual void paintEvent(QPaintEvent*);
-	virtual void focusOutEvent(QFocusEvent* event);
-	virtual void resizeEvent(QResizeEvent* event);
+	void keyPressEvent(QKeyEvent* event) override;
+	void mousePressEvent(QMouseEvent* event) override;
+	void paintEvent(QPaintEvent*) override;
+	void focusOutEvent(QFocusEvent* event) override;
+	void resizeEvent(QResizeEvent* event) override;
 
 private slots:
 	void shiftPiece();

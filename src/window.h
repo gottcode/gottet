@@ -20,7 +20,7 @@ public:
 	Window(QWidget *parent = nullptr);
 
 protected:
-	virtual void closeEvent(QCloseEvent* event);
+	void closeEvent(QCloseEvent* event) override;
 
 private slots:
 	void pauseAvailable(bool available);
