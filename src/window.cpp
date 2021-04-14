@@ -61,10 +61,10 @@ Window::Window(QWidget *parent)
 	m_board = new Board(contents);
 	connect(m_board, &Board::pauseAvailable, this, &Window::pauseAvailable);
 	connect(m_board, &Board::nextPieceAvailable, m_preview, &QLabel::setPixmap);
-	connect(m_board, &Board::levelUpdated, m_level, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
-	connect(m_board, &Board::linesRemovedUpdated, m_lines, static_cast<void (QLabel::*)(int)>(&QLabel::setNum));
+	connect(m_board, &Board::levelUpdated, m_level, qOverload<int>(&QLabel::setNum));
+	connect(m_board, &Board::linesRemovedUpdated, m_lines, qOverload<int>(&QLabel::setNum));
 	connect(m_board, &Board::scoreUpdated, this, &Window::scoreUpdated);
-	connect(m_board, QOverload<int,int,int>::of(&Board::gameOver), this, &Window::gameOver);
+	connect(m_board, qOverload<int,int,int>(&Board::gameOver), this, &Window::gameOver);
 	connect(m_board, &Board::gameStarted, this, &Window::newGame);
 
 	// Create overlay message
@@ -87,7 +87,7 @@ Window::Window(QWidget *parent)
 
 	// Create menus
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
-	menu->addAction(tr("&New"), m_board, SLOT(newGame()), QKeySequence::New);
+	menu->addAction(tr("&New"), m_board, &Board::newGame, QKeySequence::New);
 	m_pause_action = menu->addAction(tr("&Pause"));
 	m_pause_action->setCheckable(true);
 	m_pause_action->setEnabled(false);
@@ -96,16 +96,16 @@ Window::Window(QWidget *parent)
 	menu->addSeparator();
 	menu->addAction(tr("&Scores"), this, &Window::showScores, tr("Ctrl+H"));
 	menu->addSeparator();
-	QAction* action = menu->addAction(tr("&Quit"), this, SLOT(close()), QKeySequence::Quit);
+	QAction* action = menu->addAction(tr("&Quit"), this, &Window::close, QKeySequence::Quit);
 	action->setMenuRole(QAction::QuitRole);
 
 	menu = menuBar()->addMenu(tr("&Settings"));
-	menu->addAction(tr("Application &Language..."), this, SLOT(setLocale()));
+	menu->addAction(tr("Application &Language..."), this, &Window::setLocale);
 
 	menu = menuBar()->addMenu(tr("&Help"));
-	action = menu->addAction(tr("&About"), this, SLOT(about()));
+	action = menu->addAction(tr("&About"), this, &Window::about);
 	action->setMenuRole(QAction::AboutRole);
-	action = menu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
+	action = menu->addAction(tr("About &Qt"), qApp, &QApplication::aboutQt);
 	action->setMenuRole(QAction::AboutQtRole);
 
 	// Layout window
