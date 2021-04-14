@@ -9,11 +9,10 @@
 
 class Piece;
 
+#include <QRandomGenerator>
 #include <QWidget>
 class QPixmap;
 class QTimer;
-
-#include <random>
 
 class Board : public QWidget
 {
@@ -69,7 +68,7 @@ private:
 
 	int nextPiece()
 	{
-		return m_random_distribution(m_random_generator);
+		return m_random_generator.bounded(1, 8);
 	}
 
 	QPixmap renderPiece(int type) const;
@@ -92,8 +91,7 @@ private:
 	bool m_done;
 	bool m_paused;
 
-	std::mt19937 m_random_generator;
-	std::uniform_int_distribution<int> m_random_distribution;
+	QRandomGenerator m_random_generator;
 };
 
 #endif // GOTTET_BOARD_H

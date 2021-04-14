@@ -15,7 +15,6 @@
 #include <QTimer>
 
 #include <algorithm>
-#include <ctime>
 
 //-----------------------------------------------------------------------------
 
@@ -43,7 +42,7 @@ Board::Board(QWidget* parent)
 	, m_started(false)
 	, m_done(false)
 	, m_paused(false)
-	, m_random_distribution(1, 7)
+	, m_random_generator(QRandomGenerator::securelySeeded())
 {
 	setMinimumSize(201, 401);
 	setFocusPolicy(Qt::StrongFocus);
@@ -68,14 +67,6 @@ Board::Board(QWidget* parent)
 		}
 	}
 
-#ifndef Q_OS_WIN
-	std::random_device rd;
-	m_random_generator.seed(rd());
-#else
-	std::mt19937 gen(time(0));
-	std::uniform_int_distribution<unsigned int> dist;
-	m_random_generator.seed(dist(gen));
-#endif
 	m_next_piece = nextPiece();
 }
 
