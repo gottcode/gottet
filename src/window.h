@@ -7,10 +7,11 @@
 #ifndef GOTTET_WINDOW_H
 #define GOTTET_WINDOW_H
 
+class Board;
+
 #include <QMainWindow>
 class QAction;
 class QLabel;
-class Board;
 
 class Window : public QMainWindow
 {

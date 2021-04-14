@@ -7,10 +7,11 @@
 #ifndef GOTTET_BOARD_H
 #define GOTTET_BOARD_H
 
+class Piece;
+
 #include <QWidget>
 class QPixmap;
 class QTimer;
-class Piece;
 
 #include <random>
 
