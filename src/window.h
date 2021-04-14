@@ -17,7 +17,7 @@ class Window : public QMainWindow
 	Q_OBJECT
 
 public:
-	Window(QWidget *parent = 0);
+	Window(QWidget *parent = nullptr);
 
 protected:
 	virtual void closeEvent(QCloseEvent* event);

@@ -74,7 +74,7 @@ void Piece::drop()
 
 void Piece::cells(Cell* cells, int type)
 {
-	Q_ASSERT(cells != 0);
+	Q_ASSERT(cells);
 	Q_ASSERT(type > 0 && type < 8);
 
 	const Cell* values = types[type - 1];
@@ -110,7 +110,7 @@ bool Piece::move(int x, int y)
 bool Piece::updatePosition(const Cell* cells)
 {
 	// Check for collision of cells
-	const Cell* cell = 0;
+	const Cell* cell = nullptr;
 	for (int i = 0; i < 4; ++i) {
 		cell = &cells[i];
 		if (m_board->cell(cell->x, cell->y)) {

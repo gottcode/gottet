@@ -36,7 +36,7 @@ Board::Board(QWidget* parent)
 	, m_removed_lines(0)
 	, m_level(1)
 	, m_score(0)
-	, m_piece(0)
+	, m_piece(nullptr)
 	, m_next_piece(1)
 	, m_flash_frame(-1)
 	, m_piece_size(0)
@@ -132,7 +132,7 @@ void Board::newGame()
 	m_flash_timer->stop();
 	m_shift_timer->stop();
 	delete m_piece;
-	m_piece = 0;
+	m_piece = nullptr;
 
 	emit hideMessage();
 	m_started = true;
@@ -314,7 +314,7 @@ void Board::resizeEvent(QResizeEvent* event)
 
 void Board::shiftPiece()
 {
-	Q_ASSERT(m_piece != 0);
+	Q_ASSERT(m_piece);
 
 	if (m_piece->moveDown()) {
 		update();
@@ -407,7 +407,7 @@ void Board::removeLines()
 void Board::gameOver()
 {
 	delete m_piece;
-	m_piece = 0;
+	m_piece = nullptr;
 	m_done = true;
 	unsetCursor();
 	emit showMessage(tr("<big><b>Game Over!</b></big><br>Click to start a new game."));
@@ -440,7 +440,7 @@ void Board::removeCell(int x, int y)
 
 void Board::createPiece()
 {
-	Q_ASSERT(m_piece == 0);
+	Q_ASSERT(!m_piece);
 
 	m_piece = new Piece(m_next_piece, this);
 	if (m_piece->isValid()) {
@@ -465,7 +465,7 @@ void Board::landPiece()
 		addCell(cells[i].x, cells[i].y, type);
 	}
 	delete m_piece;
-	m_piece = 0;
+	m_piece = nullptr;
 
 	findFullLines();
 	if (m_full_lines[0] != -1) {
