@@ -9,6 +9,7 @@
 #include "window.h"
 
 #include <QApplication>
+#include <QCommandLineParser>
 
 int main(int argc, char** argv)
 {
@@ -37,6 +38,12 @@ int main(int argc, char** argv)
 	LocaleDialog::loadTranslator("gottet_");
 
 	ScoresDialog::migrate();
+
+	QCommandLineParser parser;
+	parser.setApplicationDescription(Window::tr("A simple falling blocks game"));
+	parser.addHelpOption();
+	parser.addVersionOption();
+	parser.process(app);
 
 	Window window;
 	window.show();
