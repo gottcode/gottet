@@ -55,35 +55,35 @@
     </message>
     <message>
         <source>High Scores</source>
-        <translation type="unfinished"></translation>
+        <translation>Cele mai mari scoruri</translation>
     </message>
     <message>
         <source>Rank</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nume</translation>
     </message>
     <message>
         <source>#%1</source>
-        <translation type="unfinished"></translation>
+        <translation>#%1</translation>
     </message>
     <message>
         <source>Congratulations!</source>
-        <translation type="unfinished"></translation>
+        <translation>Felicitări!</translation>
     </message>
     <message>
         <source>You beat your top score!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ţi-ai învins cel mai bun scor!</translation>
     </message>
     <message>
         <source>Well done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bravo!</translation>
     </message>
     <message>
         <source>You have a new high score!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ai un nou scor mare!</translation>
     </message>
 </context>
 <context>
@@ -170,11 +170,11 @@
     </message>
     <message>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <source>A simple falling blocks game</source>
-        <translation type="unfinished"></translation>
+        <translation>Un joc simplu de blocuri care cad</translation>
     </message>
 </context>
 </TS>
