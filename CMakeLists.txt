@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16.0)
 
 # Configure project
-project(gottet VERSION 1.1.9 LANGUAGES CXX)
+project(gottet VERSION 1.2.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

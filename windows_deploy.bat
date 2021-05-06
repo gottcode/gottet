@@ -4,7 +4,7 @@
 
 SET SRCDIR=..\gottet
 SET APP=Gottet
-SET VERSION=1.1.9
+SET VERSION=1.2.0
 
 ECHO Copying executable
 MKDIR %SRCDIR%\%APP%

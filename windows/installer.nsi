@@ -3,8 +3,8 @@
 
 !define APPNAME "Gottet"
 !define VERSIONMAJOR 1
-!define VERSIONMINOR 1
-!define VERSIONPATCH 9
+!define VERSIONMINOR 2
+!define VERSIONPATCH 0
 !define APPVERSION "${VERSIONMAJOR}.${VERSIONMINOR}.${VERSIONPATCH}"
 !define ABOUTURL "https://gottcode.org/gottet/"
 
@@ -70,7 +70,7 @@ Var StartMenuFolder
 ;Pages
 
 !insertmacro MUI_PAGE_WELCOME
-!insertmacro MUI_PAGE_LICENSE "..\LICENSES\GPL-3.0-or-later.txt"
+!insertmacro MUI_PAGE_LICENSE "..\COPYING"
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
 !insertmacro MUI_PAGE_INSTFILES
