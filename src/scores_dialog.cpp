@@ -81,7 +81,7 @@ ScoresDialog::ScoresDialog(QWidget* parent)
 	divider->setFrameStyle(QFrame::HLine | QFrame::Sunken);
 	m_scores_layout->addWidget(divider, 2, 0, 1, TotalColumns);
 
-	QVector<Qt::Alignment> alignments(TotalColumns, Qt::AlignTrailing);
+	QList<Qt::Alignment> alignments(TotalColumns, Qt::AlignTrailing);
 	alignments[NameColumn] = Qt::AlignLeading;
 	for (int r = 0; r < 10; ++r) {
 		m_score_labels[r][0] = new QLabel(tr("#%1").arg(r + 1), this);
