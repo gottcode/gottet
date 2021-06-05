@@ -152,11 +152,7 @@ void Window::pauseAvailable(bool available)
 	if (available) {
 		m_preview->setPixmap(preview);
 	} else {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
 		preview = m_preview->pixmap(Qt::ReturnByValue);
-#else
-		preview = *m_preview->pixmap();
-#endif
 		m_preview->clear();
 	}
 

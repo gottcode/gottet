@@ -165,11 +165,7 @@ void ScoresDialog::migrate()
 		return;
 	}
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
 	const QStringList scores = QSettings().value("Scores").toString().split(";", Qt::SkipEmptyParts);
-#else
-	const QStringList scores = QSettings().value("Scores").toString().split(";", QString::SkipEmptyParts);
-#endif
 	settings.remove("Scores");
 	settings.remove("ScoresSize");
 
@@ -180,11 +176,7 @@ void ScoresDialog::migrate()
 	settings.beginWriteArray("Scores_Gottet");
 	int index = 0;
 	for (const QString& score : scores) {
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
 		const QStringList values = score.split(",", Qt::SkipEmptyParts);
-#else
-		const QStringList values = score.split(",", QString::SkipEmptyParts);
-#endif
 		if (values.size() != 3) {
 			continue;
 		}
