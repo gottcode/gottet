@@ -54,6 +54,7 @@ Comment[ro]=Curăţaţi tabela de piesele căzătoare
 Comment[tr]=Düşen blokların panosunu temizle
 Comment[zh]=清空游戏盘中下落的方块
 Comment[zh_TW]=清除不斷在版面上落下的方塊
+TryExec=gottet
 Exec=gottet
 Icon=gottet
 Terminal=false
