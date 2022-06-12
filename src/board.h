@@ -31,12 +31,12 @@ public:
 	bool endGame();
 	void findFullLines();
 
-public slots:
+public Q_SLOTS:
 	void newGame();
 	void pauseGame();
 	void resumeGame();
 
-signals:
+Q_SIGNALS:
 	void pauseAvailable(bool available);
 	void nextPieceAvailable(QPixmap piece);
 	void levelUpdated(int level);
@@ -54,7 +54,7 @@ protected:
 	void focusOutEvent(QFocusEvent* event) override;
 	void resizeEvent(QResizeEvent* event) override;
 
-private slots:
+private Q_SLOTS:
 	void shiftPiece();
 	void flashLines();
 	void removeLines();

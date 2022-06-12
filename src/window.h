@@ -23,7 +23,7 @@ public:
 protected:
 	void closeEvent(QCloseEvent* event) override;
 
-private slots:
+private Q_SLOTS:
 	void pauseAvailable(bool available);
 	void togglePaused(bool paused);
 	void scoreUpdated(int score);

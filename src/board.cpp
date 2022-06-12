@@ -125,7 +125,7 @@ void Board::newGame()
 	delete m_piece;
 	m_piece = nullptr;
 
-	emit hideMessage();
+	Q_EMIT hideMessage();
 	m_started = true;
 	m_done = false;
 	m_paused = false;
@@ -145,11 +145,11 @@ void Board::newGame()
 		}
 	}
 
-	emit pauseAvailable(true);
-	emit levelUpdated(m_level);
-	emit linesRemovedUpdated(m_removed_lines);
-	emit scoreUpdated(m_score);
-	emit gameStarted();
+	Q_EMIT pauseAvailable(true);
+	Q_EMIT levelUpdated(m_level);
+	Q_EMIT linesRemovedUpdated(m_removed_lines);
+	Q_EMIT scoreUpdated(m_score);
+	Q_EMIT gameStarted();
 
 	setCursor(Qt::BlankCursor);
 	createPiece();
@@ -167,10 +167,10 @@ void Board::pauseGame()
 	}
 
 	update();
-	emit showMessage(tr("<big><b>Paused</b></big><br>Click to resume playing."));
+	Q_EMIT showMessage(tr("<big><b>Paused</b></big><br>Click to resume playing."));
 
 	unsetCursor();
-	emit pauseAvailable(false);
+	Q_EMIT pauseAvailable(false);
 }
 
 //-----------------------------------------------------------------------------
@@ -184,11 +184,11 @@ void Board::resumeGame()
 		m_shift_timer->start();
 	}
 
-	emit hideMessage();
+	Q_EMIT hideMessage();
 	update();
 
 	setCursor(Qt::BlankCursor);
-	emit pauseAvailable(true);
+	Q_EMIT pauseAvailable(true);
 }
 
 //-----------------------------------------------------------------------------
@@ -380,9 +380,9 @@ void Board::removeLines()
 	m_level = (m_removed_lines / 10) + 1;
 	m_shift_timer->setInterval(10000 / (m_removed_lines + 20));
 	m_score += score;
-	emit levelUpdated(m_level);
-	emit linesRemovedUpdated(m_removed_lines);
-	emit scoreUpdated(m_score);
+	Q_EMIT levelUpdated(m_level);
+	Q_EMIT linesRemovedUpdated(m_removed_lines);
+	Q_EMIT scoreUpdated(m_score);
 
 	// Empty list of full lines
 	for (int i = 0; i < 4; ++i) {
@@ -401,8 +401,8 @@ void Board::gameOver()
 	m_piece = nullptr;
 	m_done = true;
 	unsetCursor();
-	emit showMessage(tr("<big><b>Game Over!</b></big><br>Click to start a new game."));
-	emit gameOver(m_level, m_removed_lines, m_score);
+	Q_EMIT showMessage(tr("<big><b>Game Over!</b></big><br>Click to start a new game."));
+	Q_EMIT gameOver(m_level, m_removed_lines, m_score);
 }
 
 //-----------------------------------------------------------------------------
@@ -436,7 +436,7 @@ void Board::createPiece()
 	m_piece = new Piece(m_next_piece, this);
 	if (m_piece->isValid()) {
 		m_next_piece = nextPiece();
-		emit nextPieceAvailable(renderPiece(m_next_piece));
+		Q_EMIT nextPieceAvailable(renderPiece(m_next_piece));
 		m_shift_timer->start();
 	} else {
 		gameOver();
