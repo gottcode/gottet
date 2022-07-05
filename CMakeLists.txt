@@ -76,6 +76,8 @@ endif()
 
 # Install
 if(UNIX AND NOT APPLE)
+	target_compile_definitions(gottet PRIVATE DATADIR="${CMAKE_INSTALL_FULL_DATADIR}/gottet")
+
 	target_sources(gottet PRIVATE icons/icon.qrc)
 
 	install(TARGETS gottet RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
