@@ -10,6 +10,8 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QFileInfo>
+#include <QSettings>
 
 int main(int argc, char** argv)
 {
@@ -24,6 +26,7 @@ int main(int argc, char** argv)
 	app.setDesktopFileName("gottet");
 #endif
 
+	// Find application data
 	const QString appdir = app.applicationDirPath();
 	const QStringList datadirs{
 #if defined(Q_OS_MAC)
@@ -36,16 +39,31 @@ int main(int argc, char** argv)
 #endif
 	};
 
+	// Handle portability
+#ifdef Q_OS_MAC
+	const QFileInfo portable(appdir + "/../../../Data");
+#else
+	const QFileInfo portable(appdir + "/Data");
+#endif
+	if (portable.exists() && portable.isWritable()) {
+		QSettings::setDefaultFormat(QSettings::IniFormat);
+		QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, portable.absoluteFilePath() + "/Settings");
+	}
+
+	// Load application language
 	LocaleDialog::loadTranslator("gottet_", datadirs);
 
-	ScoresDialog::migrate();
-
+	// Handle commandline
 	QCommandLineParser parser;
 	parser.setApplicationDescription(Window::tr("A simple falling blocks game"));
 	parser.addHelpOption();
 	parser.addVersionOption();
 	parser.process(app);
 
+	// Convert old scores to new format
+	ScoresDialog::migrate();
+
+	// Create main window
 	Window window;
 	window.show();
 
