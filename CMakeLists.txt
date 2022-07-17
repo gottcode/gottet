@@ -76,7 +76,7 @@ endif()
 
 # Install
 if(UNIX AND NOT APPLE)
-	target_compile_definitions(gottet PRIVATE DATADIR="${CMAKE_INSTALL_FULL_DATADIR}/gottet")
+	file(RELATIVE_PATH datadir ${CMAKE_INSTALL_FULL_BINDIR} ${CMAKE_INSTALL_FULL_DATADIR}/gottet)
 
 	target_sources(gottet PRIVATE icons/icon.qrc)
 
@@ -87,6 +87,8 @@ if(UNIX AND NOT APPLE)
 	install(FILES icons/gottet.appdata.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo)
 	install(FILES icons/gottet.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
 elseif(WIN32)
+	set(datadir ".")
+
 	# Use Qt6 macro until CMake provides something
 	# https://bugreports.qt.io/browse/QTBUG-87618
 	set_target_properties(gottet PROPERTIES
@@ -100,3 +102,5 @@ elseif(WIN32)
 	)
 	_qt_internal_generate_win32_rc_file(gottet)
 endif()
+
+set_property(SOURCE src/main.cpp APPEND PROPERTY COMPILE_DEFINITIONS GOTTET_DATADIR="${datadir}")

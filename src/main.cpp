@@ -10,6 +10,7 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QDir>
 #include <QFileInfo>
 #include <QSettings>
 
@@ -28,16 +29,7 @@ int main(int argc, char** argv)
 
 	// Find application data
 	const QString appdir = app.applicationDirPath();
-	const QStringList datadirs{
-#if defined(Q_OS_MAC)
-		appdir + "/../Resources"
-#elif defined(Q_OS_UNIX)
-		DATADIR,
-		appdir + "/../share/gottet"
-#else
-		appdir
-#endif
-	};
+	const QString datadir = QDir::cleanPath(appdir + "/" + GOTTET_DATADIR);
 
 	// Handle portability
 #ifdef Q_OS_MAC
@@ -51,7 +43,7 @@ int main(int argc, char** argv)
 	}
 
 	// Load application language
-	LocaleDialog::loadTranslator("gottet_", datadirs);
+	LocaleDialog::loadTranslator("gottet_", datadir);
 
 	// Handle commandline
 	QCommandLineParser parser;
