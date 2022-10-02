@@ -87,16 +87,19 @@ Window::Window(QWidget *parent)
 
 	// Create menus
 	QMenu* menu = menuBar()->addMenu(tr("&Game"));
-	menu->addAction(tr("&New"), m_board, &Board::newGame, QKeySequence::New);
+	QAction* action = menu->addAction(tr("&New"), m_board, &Board::newGame);
+	action->setShortcut(QKeySequence::New);
 	m_pause_action = menu->addAction(tr("&Pause"));
 	m_pause_action->setCheckable(true);
 	m_pause_action->setEnabled(false);
 	m_pause_action->setShortcut(tr("P"));
 	connect(m_pause_action, &QAction::triggered, this, &Window::togglePaused);
 	menu->addSeparator();
-	menu->addAction(tr("&Scores"), this, &Window::showScores, tr("Ctrl+H"));
+	action = menu->addAction(tr("&Scores"), this, &Window::showScores);
+	action->setShortcut(tr("Ctrl+H"));
 	menu->addSeparator();
-	QAction* action = menu->addAction(tr("&Quit"), this, &Window::close, QKeySequence::Quit);
+	action = menu->addAction(tr("&Quit"), this, &Window::close);
+	action->setShortcut(QKeySequence::Quit);
 	action->setMenuRole(QAction::QuitRole);
 
 	menu = menuBar()->addMenu(tr("&Settings"));
