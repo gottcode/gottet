@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
+# Heimen Stoffels <vistausss@fastmail.com>, 2022
 # RobertBorst <webmaster@fam-borst.nl>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-21 13:52+0000\n"
-"Last-Translator: RobertBorst <webmaster@fam-borst.nl>\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/gottcode/gottet/"
 "language/nl_NL/)\n"
 "Language: nl\n"
@@ -25,7 +26,7 @@ msgstr "Gottet"
 
 #: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
 msgid "Clear the board of falling blocks"
-msgstr "Maak het vallende blokken bord schoon"
+msgstr "Maak het vallendeblokkenbord schoon"
 
 #: ../gottet.appdata.xml.in:10
 msgid ""
@@ -35,11 +36,11 @@ msgid ""
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
 msgstr ""
-"Gottet is een vallende blokken spel. Blokken vallen van de top van het "
-"scherm waarbij je ze zowel horizontaal kan bewegen als roteren totdat ze de "
-"bodem raken. Het doel is om, door volle lijnen te maken, het bord leeg te "
-"spelen. Het spel is af als de stapen blokken de top van het bord bereiken."
+"Gottet is een vallendeblokkenspel. Blokken vallen vanaf de bovenkant van het "
+"scherm. Je kunt ze zowel horizontaal verplaatsen als draaien totdat ze de "
+"bodem raken. Het doel is om lijnen te maken en zo het bord leeg te maken. "
+"Het spel is voorbij als de stapel blokken de bovenkant van het bord bereikt."
 
 #: ../gottet.desktop.in:4
 msgid "Falling Blocks Game"
-msgstr "Vallende blokken spel"
+msgstr "Vallendeblokkenspel"

@@ -9,22 +9,22 @@
     </message>
     <message>
         <source>End the current game?</source>
-        <translation>Stop het huidige spel</translation>
+        <translation>Wil je het huidige spel beëindigen?</translation>
     </message>
     <message>
         <source>&lt;big&gt;&lt;b&gt;Paused&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to resume playing.</source>
-        <translation>&lt;big&gt;&lt;b&gt;Gepauzeerd&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klik om door te gaan met spelen.</translation>
+        <translation>&lt;big&gt;&lt;/b&gt;Onderbroken&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klik om het spel voort te zetten.</translation>
     </message>
     <message>
         <source>&lt;big&gt;&lt;b&gt;Game Over!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Click to start a new game.</source>
-        <translation>&lt;big&gt;&lt;b&gt;Einde Spel!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klik om een nieuw spel te starten.</translation>
+        <translation>&lt;big&gt;&lt;b&gt;Het spel is voorbij!&lt;/b&gt;&lt;/big&gt;&lt;br&gt;Klik om een nieuw spel te starten.</translation>
     </message>
 </context>
 <context>
     <name>LocaleDialog</name>
     <message>
         <source>Select application language:</source>
-        <translation>Selecteer taal:</translation>
+        <translation>Kies de programmataal:</translation>
     </message>
     <message>
         <source>&lt;System Language&gt;</source>
@@ -32,11 +32,11 @@
     </message>
     <message>
         <source>Note</source>
-        <translation>Notitie</translation>
+        <translation>Opmerking</translation>
     </message>
     <message>
         <source>Please restart this application for the change in language to take effect.</source>
-        <translation>Herstart de applicatie om de taalverandering te activeren</translation>
+        <translation>Herstart het programma om de taalwijziging door te voeren</translation>
     </message>
 </context>
 <context>
@@ -47,7 +47,7 @@
     </message>
     <message>
         <source>Lines</source>
-        <translation>Lijnen</translation>
+        <translation>Aantal lijnen</translation>
     </message>
     <message>
         <source>Score</source>
@@ -55,35 +55,35 @@
     </message>
     <message>
         <source>High Scores</source>
-        <translation type="unfinished"></translation>
+        <translation>Topscores</translation>
     </message>
     <message>
         <source>Rank</source>
-        <translation type="unfinished"></translation>
+        <translation>Rang</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <source>#%1</source>
-        <translation type="unfinished"></translation>
+        <translation>#%1</translation>
     </message>
     <message>
         <source>Congratulations!</source>
-        <translation type="unfinished"></translation>
+        <translation>Gefeliciteerd!</translation>
     </message>
     <message>
         <source>You beat your top score!</source>
-        <translation type="unfinished"></translation>
+        <translation>Je hebt je topscore verbroken!</translation>
     </message>
     <message>
         <source>Well done!</source>
-        <translation type="unfinished"></translation>
+        <translation>Goed gedaan!</translation>
     </message>
     <message>
         <source>You have a new high score!</source>
-        <translation type="unfinished"></translation>
+        <translation>Je hebt een nieuwe topscore neergezet!</translation>
     </message>
 </context>
 <context>
@@ -106,7 +106,7 @@
     </message>
     <message>
         <source>&amp;Pause</source>
-        <translation>&amp;Pauze</translation>
+        <translation>&amp;Onderbreken</translation>
     </message>
     <message>
         <source>P</source>
@@ -118,19 +118,19 @@
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation>&amp;Stop</translation>
+        <translation>&amp;Afsluiten</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation>&amp;Instellingen</translation>
+        <translation>In&amp;stellingen</translation>
     </message>
     <message>
         <source>Application &amp;Language...</source>
-        <translation>Taal van de applicatie</translation>
+        <translation>Programmataal…</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;Help</translation>
+        <translation>&amp;Hulp</translation>
     </message>
     <message>
         <source>&amp;About</source>
@@ -142,7 +142,7 @@
     </message>
     <message>
         <source>Next Piece</source>
-        <translation>Volgende stuk</translation>
+        <translation>Volgend blokje</translation>
     </message>
     <message>
         <source>Level</source>
@@ -150,7 +150,7 @@
     </message>
     <message>
         <source>Removed Lines</source>
-        <translation>Verwijder lijnen</translation>
+        <translation>Weggespeelde lijnen</translation>
     </message>
     <message>
         <source>Score</source>
@@ -166,15 +166,15 @@
     </message>
     <message>
         <source>Released under the &lt;a href=%1&gt;GPL 3&lt;/a&gt; license</source>
-        <translation>Gepubliseerd onder de &lt;a href=%1&gt;GPL 3&lt;/a&gt; licentie</translation>
+        <translation>Uitgebracht onder de &lt;a href=%1&gt;GPL 3&lt;/a&gt;-licentie</translation>
     </message>
     <message>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <source>A simple falling blocks game</source>
-        <translation type="unfinished"></translation>
+        <translation>Een eenvoudig vallendeblokkenspel</translation>
     </message>
 </context>
 </TS>

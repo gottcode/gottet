@@ -31,7 +31,7 @@
   <summary xml:lang="ko">벽돌이 떨어지는 판을 청소합니다</summary>
   <summary xml:lang="lt">Išvalykite krentančių blokų plokštę</summary>
   <summary xml:lang="ms">Koosngkan papan yang mengandungi blok-blok yang turun</summary>
-  <summary xml:lang="nl">Maak het vallende blokken bord schoon</summary>
+  <summary xml:lang="nl">Maak het vallendeblokkenbord schoon</summary>
   <summary xml:lang="pl">Oczyść planszę ze spadających klocków</summary>
   <summary xml:lang="pt">Limpe o tabuleiro de blocos a cair</summary>
   <summary xml:lang="ro">Curăţaţi tabela de piesele căzătoare</summary>
@@ -49,7 +49,7 @@
     <p xml:lang="ko">고테트는 블록 게임 입니다. 위에서 떨어지는 벽돌들을 바닥에 닿기전에 회전시키는등  가로로 움직이는 게임입니다. 게임은 온전한 벽돌 한 줄을 만드는 것인데요, 온전한 벽돌 한 줄이 만들어지면 사라집니다. 벽돌 조각이 화면 위까지 꽉차면 게임 오버입니다.</p>
     <p xml:lang="lt">Gottet yra krentančių blokų žaidimas. Į žaidimo plotą iš viršaus krenta figūros. Prieš figūroms pasiekiant žaidimo ploto apačią, galite keisti horizontalią figūrų padėtį, o taip pat jas pasukti. Pagrindinis tikslas yra sukurti pilnas figūrų eilutes, kurios paskui pašalinamos. Žaidimas užbaigiamas, jeigu figūrų krūva pasiekia žaidimo ploto viršų.</p>
     <p xml:lang="ms">Gottet merupakan permainan jatuhan blok. Cebisan akan jatuh dari atas kawasan permainan dan anda boleh gerak ia secara mengufuk dan juga boleh memutar ia sebelum ia jatuh ke dasar kawasan permainan. Matlamat permainan adalah untuk membentuk satu barisan cebisan, yang mana ia akan dikeluarkan dari kawasan permainan jika terbentuk. Permainan tamat bila tindanan cebisan mencapai bahagian teratas kawasan permainan.</p>
-    <p xml:lang="nl">Gottet is een vallende blokken spel. Blokken vallen van de top van het scherm waarbij je ze zowel horizontaal kan bewegen als roteren totdat ze de bodem raken. Het doel is om, door volle lijnen te maken, het bord leeg te spelen. Het spel is af als de stapen blokken de top van het bord bereiken.</p>
+    <p xml:lang="nl">Gottet is een vallendeblokkenspel. Blokken vallen vanaf de bovenkant van het scherm. Je kunt ze zowel horizontaal verplaatsen als draaien totdat ze de bodem raken. Het doel is om lijnen te maken en zo het bord leeg te maken. Het spel is voorbij als de stapel blokken de bovenkant van het bord bereikt.</p>
     <p xml:lang="pl">Gottet to gra w spadające klocki. Klocki spadają z góry na obszar gry i możesz je przesunąć w poziomie, jak i również obracać, zanim dotrą do dna obszaru gry. Celem gry jest tworzenie pełnych linii, które następnie są usuwane. Gra kończy się, gdy stos klocków osiągnie szczyt obszaru gry.</p>
     <p xml:lang="pt">O Gottet é um jogo de blocos a cair. As peças caem do topo da área de jogo e pode movê-las horizontalmente assim como rodá-las antes destas atingirem o fundo da área de jogo. O objetivo é criar linhas completas de peças que são depois removidas. O jogo termina quando a pilha de peças atinge o topo da área de jogo.</p>
     <p xml:lang="ro">Gottet este un joc de blocuri căzătoare. Piesele cad din partea de sus a zonei de joc şi le puteţi muta pe orizontală cît şi roti înainte de a ajunge în partea de jos a zonei de joc. Scopul este de a crea linii complete de piese, care sînt apoi eliminate. Jocul se termină cînd stiva de piese ajunge la partea de sus a zonei joc.</p>
