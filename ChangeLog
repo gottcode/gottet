@@ -1,3 +1,10 @@
+1.2.2
+-----
+* Added portable mode.
+* Improved Linux deployment.
+* Replaced deprecated code.
+* Translation updates: Dutch, German.
+
 1.2.1
 -----
 * Switched to Qt 6.
