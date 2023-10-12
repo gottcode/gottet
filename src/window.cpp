@@ -155,7 +155,7 @@ void Window::pauseAvailable(bool available)
 	if (available) {
 		m_preview->setPixmap(preview);
 	} else {
-		preview = m_preview->pixmap(Qt::ReturnByValue);
+		preview = m_preview->pixmap();
 		m_preview->clear();
 	}
 
