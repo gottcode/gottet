@@ -368,10 +368,8 @@ void Board::removeLines()
 				m_cells[col][row] = m_cells[col][row - 1];
 			}
 		}
-	}
 
-	// Remove top line
-	if (m_full_lines[0] != -1) {
+		// Remove top line
 		for (int col = 0; col < 10; ++col) {
 			removeCell(col, 0);
 		}
