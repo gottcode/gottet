@@ -9,6 +9,7 @@
   <name xml:lang="de">Gottet</name>
   <name xml:lang="el">Gottet</name>
   <name xml:lang="es">Gottet</name>
+  <name xml:lang="et">Gottet</name>
   <name xml:lang="fr">Gottet</name>
   <name xml:lang="ko">고테트</name>
   <name xml:lang="lt">Gottet</name>
@@ -26,6 +27,7 @@
   <summary xml:lang="cs">Vyprázdněte desku od padajících kostek</summary>
   <summary xml:lang="de">Räum das Spielfeld von fallenden Blöcken</summary>
   <summary xml:lang="el">Εκκαθάριση της περιοχής παιχνιδιού απο τετράγωνα</summary>
+  <summary xml:lang="et">Eemalda mänguväljalt kõik kukuvad klotsid</summary>
   <summary xml:lang="fr">Dégagez le plateau des blocs qui tombent</summary>
   <summary xml:lang="he">טהר את הלוח של לבנים נופלות</summary>
   <summary xml:lang="ko">벽돌이 떨어지는 판을 청소합니다</summary>
@@ -44,6 +46,7 @@
     <p xml:lang="cs">Gottet je hra s padajícími kostkami. Kousky padají s horní části herní oblasti a vy jimi můžete pohybovat vodorovně a také je můžete otáčet, než dosáhnou dna v dolní části herní oblasti. Cílem je z kousků vytvořit úplné řádky, které jsou potom odstraněny. Hra končí, když sloupec kousků dosáhne stropu herní oblasti.</p>
     <p xml:lang="de">Gottet ist ein Spiel der fallenden Steine. Teile fallen vom oberen Rand des Spielbereichs und man kann sie sowohl horizontal bewegen als auch drehen, bevor sie den Boden des Spielbereichs erreichen. Das Ziel ist, volle Linien der Stücke, die dann entfernt werden, zu erstellen. Das Spiel ist beendet, wenn der Stapel von Teilen die Spitze des Spielbereichs erreicht hat.</p>
     <p xml:lang="el">Το Gottet είναι ένα παιχνίδι με κυβάκια που πέφτουν. Τα κομμάτια πέφτουν από την κορυφή της περιοχής του παιχνιδιού και μπορείτε να τα μετακινήσετε οριζόντια καθώς και να τα περιστρέψτε πριν φτάσουν στο κάτω μέρος της περιοχής παιχνιδιού. Ο στόχος είναι να δημιουργήσετε πλήρεις γραμμές των τεμαχίων, τα οποία στη συνέχεια απομακρύνεται. Το παιχνίδι τελειώνει όταν η στοίβα των κομματιών φτάνει στην κορυφή της περιοχής παιχνιδιου.</p>
+    <p xml:lang="et">Gottet on klassikaline kukkuvate klotside mäng. Klotsid kukuvad ülevalt mänguväljale ning enne alla jõudmist saad sa neid külgsuunas liigutada ning pöörata. Sinu eesmärgiks on klotsidest luua pidevjooni, mis mänguväljalt eemalduvad. Mäng lõppeb, kui klotside pinu kasvab mänguvälja ülemise ääreni.</p>
     <p xml:lang="fr">Gottet est un jeu de blocs qui tombe. Des morceaux tombent du haut de la zone de jeu. Vous pouvez les déplacer horizontalement et les faire pivoter avant d’atteindre le bas de la zone de jeu. Le but est de créer des lignes complètes de pièces, qui sont ensuite supprimées. Le jeu est terminé lorsque la pile de pièces atteint le haut de l'aire de jeu.</p>
     <p xml:lang="he">Gottet הינו משחק לבנים נופלות. חתיכות נופלות מראש אזור המשחק ובאפשרותך להזיזן במאוזן וכן גם לסובב אותן טרם הן מגיעות אל התחתית של אזור המשחק. המטרה היא ליצור שורות מלאות של חתיכות, אשר אז מוסרות. המשחק נגמר כאשר ערימה של חתיכות מגיעה אל ראש אזור המשחק.</p>
     <p xml:lang="ko">고테트는 블록 게임 입니다. 위에서 떨어지는 벽돌들을 바닥에 닿기전에 회전시키는등  가로로 움직이는 게임입니다. 게임은 온전한 벽돌 한 줄을 만드는 것인데요, 온전한 벽돌 한 줄이 만들어지면 사라집니다. 벽돌 조각이 화면 위까지 꽉차면 게임 오버입니다.</p>
