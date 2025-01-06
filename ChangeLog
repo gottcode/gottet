@@ -1,3 +1,8 @@
+1.2.5
+-----
+* Improved deployment.
+* Translation updates: Estonian.
+
 1.2.4
 -----
 * FIXED: Top row was duplicated when removing multiple rows.
