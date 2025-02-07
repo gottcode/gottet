@@ -1,5 +1,5 @@
 /*
-	SPDX-FileCopyrightText: 2008-2021 Graeme Gott <graeme@gottcode.org>
+	SPDX-FileCopyrightText: 2008-2025 Graeme Gott <graeme@gottcode.org>
 
 	SPDX-License-Identifier: GPL-3.0-or-later
 */
@@ -41,6 +41,31 @@ class ScoresDialog : public QDialog
 		int level; /**< what level the player was on */
 		int lines; /**< how many total lines the player cleared */
 		int score; /**< the value of the score */
+
+		/**
+		 * Constructs a score.
+		 * @param n the player's name
+		 * @param lvl what level the player was on
+		 * @param ln how many total lines the player cleared
+		 * @param sc the value of the score
+		 */
+		Score(const QString& n = QString(), int lvl = 0, int ln = 0, int sc = 0)
+			: level(lvl)
+			, lines(ln)
+			, score(sc)
+		{
+			setName(n);
+		}
+
+		/**
+		 * Sets the player name for the score.
+		 * @param text the player name
+		 */
+		void setName(const QString& text)
+		{
+			name = text.simplified();
+			name.remove('\0');
+		}
 	};
 
 public:
