@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>gottet.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+
+  <name>Gottet</name>
+  <summary>Clear the board of falling blocks</summary>
+  <description>
+    <p>Gottet is a falling blocks game. Pieces fall from the top of the play area and you can move them horizontally as well as rotate them before they reach the bottom of the play area. The goal is to create full lines of pieces, which are then removed. The game is over when the stack of pieces reaches the top of the play area.</p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://gottcode.org/gottet/screenshots/appdata.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://gottcode.org/gottet/</url>
+  <url type="bugtracker">https://gottcode.org/gottet/bugs/</url>
+  <url type="donation">https://gottcode.org/tip/</url>
+  <url type="translate">https://www.transifex.com/gottcode/gottet/</url>
+
+  <developer id="org.gottcode">
+    <name translatable="no">Graeme Gott</name>
+  </developer>
+  <update_contact>graeme@gottcode.org</update_contact>
+
+  <translation type="qt">gottet</translation>
+
+  <provides>
+    <binary>gottet</binary>
+  </provides>
+  <launchable type="desktop-id">gottet.desktop</launchable>
+  <icon type="stock">gottet</icon>
+
+  <categories>
+    <category>Game</category>
+    <category>ArcadeGame</category>
+  </categories>
+
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+  </kudos>
+
+  <content_rating type="oars-1.1"/>
+
+  <releases>
+    <release version="1.2.5" date="2025-01-06">
+      <description>
+        <ul>
+          <li>Improved deployment</li>
+          <li>Translation updates: Estonian</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.4" date="2024-04-16">
+      <description>
+        <ul>
+          <li>FIXED: Top row was duplicated when removing multiple rows</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.3" date="2024-01-16">
+      <description>
+        <ul>
+          <li>Replaced deprecated code</li>
+          <li>Translation updates: Dutch</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.2" date="2023-01-10">
+      <description>
+        <ul>
+          <li>Added portable mode</li>
+          <li>Improved Linux deployment</li>
+          <li>Replaced deprecated code</li>
+          <li>Translation updates: Dutch, German</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.1" date="2022-05-03">
+      <description>
+        <ul>
+          <li>Switched to Qt 6</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.2.0" date="2021-05-06">
+      <description>
+        <ul>
+          <li>Added support for Qt 6</li>
+          <li>Improved high scores dialog</li>
+          <li>Refactored code</li>
+          <li>Removed XPM icon</li>
+          <li>Translation updates: Chinese (Taiwan), Lithuanian, Romanian</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.9" date="2020-04-20">
+      <description>
+        <ul>
+          <li>FIXED: Did not load locales with underscores</li>
+          <li>Improved Windows deployment</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.8" date="2019-08-07">
+      <description>
+        <ul>
+          <li>FIXED: Window icon didn't work in Wayland</li>
+          <li>Improved loading locales</li>
+          <li>Improved Windows deployment</li>
+          <li>Replaced deprecated code</li>
+          <li>Translation updates: French</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.7" date="2018-07-20">
+      <description>
+        <ul>
+          <li>FIXED: Automatic high DPI support</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.6" date="2018-05-29">
+      <description>
+        <ul>
+          <li>Extra warnings only shown in debug build</li>
+          <li>Improved Linux deployment</li>
+          <li>Improved macOS deployment</li>
+          <li>Improved Windows deployment</li>
+          <li>Translation updates: Chinese, Portuguese</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>

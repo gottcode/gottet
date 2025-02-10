@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Gottet
+GenericName=Falling Blocks Game
+Comment=Clear the board of falling blocks
+TryExec=gottet
+Exec=gottet
+Icon=gottet
+Terminal=false
+Type=Application
+Categories=Qt;Game;ArcadeGame;
+Keywords=game;arcade;

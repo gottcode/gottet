@@ -118,8 +118,9 @@ else()
 	install(FILES ${translations_QM} DESTINATION ${CMAKE_INSTALL_DATADIR}/gottet/translations)
 	install(FILES doc/gottet.6 DESTINATION ${CMAKE_INSTALL_MANDIR}/man6 COMPONENT doc)
 	install(DIRECTORY icons/hicolor DESTINATION ${CMAKE_INSTALL_DATADIR}/icons)
-	install(FILES icons/gottet.appdata.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo)
-	install(FILES icons/gottet.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+
+	include(cmake/TranslateMetainfo.cmake)
+	process_and_install_metainfo(Gottet ${CMAKE_SOURCE_DIR}/icons/po)
 endif()
 
 set_property(SOURCE src/main.cpp APPEND PROPERTY COMPILE_DEFINITIONS GOTTET_DATADIR="${datadir}")
