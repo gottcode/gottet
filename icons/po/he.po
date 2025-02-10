@@ -1,45 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Graeme Gott
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# GenghisKhan <genghiskhan@gmx.ca>, 2014-2015
+# gk <genghiskhan@gmx.ca>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-23 20:29+0000\n"
-"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
-"Language-Team: Hebrew (http://www.transifex.com/gottcode/gottet/language/"
-"he/)\n"
-"Language: he\n"
+"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: gk <genghiskhan@gmx.ca>, 2014-2015\n"
+"Language-Team: Hebrew (http://app.transifex.com/gottcode/gottet/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: he\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
-#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
-msgid "Gottet"
-msgstr ""
-
-#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr "טהר את הלוח של לבנים נופלות"
 
-#: ../gottet.appdata.xml.in:10
+#: ../gottet.appdata.xml.in.h:2
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
 "the bottom of the play area. The goal is to create full lines of pieces, "
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
-msgstr ""
-"Gottet הינו משחק לבנים נופלות. חתיכות נופלות מראש אזור המשחק ובאפשרותך "
-"להזיזן במאוזן וכן גם לסובב אותן טרם הן מגיעות אל התחתית של אזור המשחק. המטרה "
-"היא ליצור שורות מלאות של חתיכות, אשר אז מוסרות. המשחק נגמר כאשר ערימה של "
-"חתיכות מגיעה אל ראש אזור המשחק."
+msgstr "Gottet הינו משחק לבנים נופלות. חתיכות נופלות מראש אזור המשחק ובאפשרותך להזיזן במאוזן וכן גם לסובב אותן טרם הן מגיעות אל התחתית של אזור המשחק. המטרה היא ליצור שורות מלאות של חתיכות, אשר אז מוסרות. המשחק נגמר כאשר ערימה של חתיכות מגיעה אל ראש אזור המשחק."
 
-#: ../gottet.desktop.in:4
+#: ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr ""
+
+#: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
 msgstr "משחק לבנים נופלות"

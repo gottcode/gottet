@@ -1,45 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Graeme Gott
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2014
+# 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-23 20:29+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean (http://www.transifex.com/gottcode/gottet/language/"
-"ko/)\n"
-"Language: ko\n"
+"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2014\n"
+"Language-Team: Korean (http://app.transifex.com/gottcode/gottet/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
-msgid "Gottet"
-msgstr "고테트"
-
-#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr "벽돌이 떨어지는 판을 청소합니다"
 
-#: ../gottet.appdata.xml.in:10
+#: ../gottet.appdata.xml.in.h:2
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
 "the bottom of the play area. The goal is to create full lines of pieces, "
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
-msgstr ""
-"고테트는 블록 게임 입니다. 위에서 떨어지는 벽돌들을 바닥에 닿기전에 회전시키"
-"는등  가로로 움직이는 게임입니다. 게임은 온전한 벽돌 한 줄을 만드는 것인데"
-"요, 온전한 벽돌 한 줄이 만들어지면 사라집니다. 벽돌 조각이 화면 위까지 꽉차"
-"면 게임 오버입니다."
+msgstr "고테트는 블록 게임 입니다. 위에서 떨어지는 벽돌들을 바닥에 닿기전에 회전시키는등  가로로 움직이는 게임입니다. 게임은 온전한 벽돌 한 줄을 만드는 것인데요, 온전한 벽돌 한 줄이 만들어지면 사라집니다. 벽돌 조각이 화면 위까지 꽉차면 게임 오버입니다."
 
-#: ../gottet.desktop.in:4
+#: ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "고테트"
+
+#: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
 msgstr "벽돌 떨구기 게임"

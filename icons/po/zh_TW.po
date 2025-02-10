@@ -1,44 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Graeme Gott
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Jeff Huang <s8321414@gmail.com>, 2014
+# 黃柏諺 <s8321414@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-21 13:52+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Chinese (Taiwan) (http://www.transifex.com/gottcode/gottet/"
-"language/zh_TW/)\n"
-"Language: zh_TW\n"
+"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>, 2014\n"
+"Language-Team: Chinese (Taiwan) (http://app.transifex.com/gottcode/gottet/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
-msgid "Gottet"
-msgstr "Gottet"
-
-#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr "清除不斷在版面上落下的方塊"
 
-#: ../gottet.appdata.xml.in:10
+#: ../gottet.appdata.xml.in.h:2
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
 "the bottom of the play area. The goal is to create full lines of pieces, "
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
-msgstr ""
-"Gottet 是一個不斷掉落方塊的遊戲。許多方塊不停的從頂部掉進遊戲區域內，而您只能"
-"在它們掉到遊戲區域的底部前水平移動以及旋轉那些方塊。您的目標是完成一行完整的"
-"方塊，這樣它們就會被消除。遊戲在方塊堆疊到遊戲區域頂部時結束。"
+msgstr "Gottet 是一個不斷掉落方塊的遊戲。許多方塊不停的從頂部掉進遊戲區域內，而您只能在它們掉到遊戲區域的底部前水平移動以及旋轉那些方塊。您的目標是完成一行完整的方塊，這樣它們就會被消除。遊戲在方塊堆疊到遊戲區域頂部時結束。"
 
-#: ../gottet.desktop.in:4
+#: ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "Gottet"
+
+#: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
 msgstr "不斷掉落方塊的遊戲"

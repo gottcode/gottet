@@ -1,46 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Graeme Gott
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Wasilis Mandratzis-Walz, 2015
+# 79353a696ad19dc202b261b3067b7640_bec941e, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-21 13:52+0000\n"
-"Last-Translator: Wasilis Mandratzis-Walz\n"
-"Language-Team: German (http://www.transifex.com/gottcode/gottet/language/"
-"de/)\n"
-"Language: de\n"
+"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: 79353a696ad19dc202b261b3067b7640_bec941e, 2015\n"
+"Language-Team: German (http://app.transifex.com/gottcode/gottet/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
-msgid "Gottet"
-msgstr "Gottet"
-
-#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr "Räum das Spielfeld von fallenden Blöcken"
 
-#: ../gottet.appdata.xml.in:10
+#: ../gottet.appdata.xml.in.h:2
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
 "the bottom of the play area. The goal is to create full lines of pieces, "
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
-msgstr ""
-"Gottet ist ein Spiel der fallenden Steine. Teile fallen vom oberen Rand des "
-"Spielbereichs und man kann sie sowohl horizontal bewegen als auch drehen, "
-"bevor sie den Boden des Spielbereichs erreichen. Das Ziel ist, volle Linien "
-"der Stücke, die dann entfernt werden, zu erstellen. Das Spiel ist beendet, "
-"wenn der Stapel von Teilen die Spitze des Spielbereichs erreicht hat."
+msgstr "Gottet ist ein Spiel der fallenden Steine. Teile fallen vom oberen Rand des Spielbereichs und man kann sie sowohl horizontal bewegen als auch drehen, bevor sie den Boden des Spielbereichs erreichen. Das Ziel ist, volle Linien der Stücke, die dann entfernt werden, zu erstellen. Das Spiel ist beendet, wenn der Stapel von Teilen die Spitze des Spielbereichs erreicht hat."
 
-#: ../gottet.desktop.in:4
+#: ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "Gottet"
+
+#: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
 msgstr "Ein Spiel der fallenden Steine"

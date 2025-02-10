@@ -1,47 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Graeme Gott
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# M T <michtrz@gmail.com>, 2015
+# Michał Trzebiatowski <michtrz@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-21 13:52+0000\n"
-"Last-Translator: M T <michtrz@gmail.com>\n"
-"Language-Team: Polish (http://www.transifex.com/gottcode/gottet/language/"
-"pl/)\n"
-"Language: pl\n"
+"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: Michał Trzebiatowski <michtrz@gmail.com>, 2015\n"
+"Language-Team: Polish (http://app.transifex.com/gottcode/gottet/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
-msgid "Gottet"
-msgstr "Gottet"
-
-#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr "Oczyść planszę ze spadających klocków"
 
-#: ../gottet.appdata.xml.in:10
+#: ../gottet.appdata.xml.in.h:2
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
 "the bottom of the play area. The goal is to create full lines of pieces, "
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
-msgstr ""
-"Gottet to gra w spadające klocki. Klocki spadają z góry na obszar gry i "
-"możesz je przesunąć w poziomie, jak i również obracać, zanim dotrą do dna "
-"obszaru gry. Celem gry jest tworzenie pełnych linii, które następnie są "
-"usuwane. Gra kończy się, gdy stos klocków osiągnie szczyt obszaru gry."
+msgstr "Gottet to gra w spadające klocki. Klocki spadają z góry na obszar gry i możesz je przesunąć w poziomie, jak i również obracać, zanim dotrą do dna obszaru gry. Celem gry jest tworzenie pełnych linii, które następnie są usuwane. Gra kończy się, gdy stos klocków osiągnie szczyt obszaru gry."
 
-#: ../gottet.desktop.in:4
+#: ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "Gottet"
+
+#: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
 msgstr "Gra w spadające klocki"

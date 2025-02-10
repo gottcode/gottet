@@ -1,47 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Graeme Gott
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Oprea Nicolae <jaff2002@yahoo.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Gottet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-14 20:46+0000\n"
-"PO-Revision-Date: 2017-09-23 20:29+0000\n"
-"Last-Translator: Oprea Nicolae <jaff2002@yahoo.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/gottcode/gottet/language/"
-"ro/)\n"
-"Language: ro\n"
+"POT-Creation-Date: 2014-11-13 18:44+0000\n"
+"PO-Revision-Date: 2014-11-13 18:45+0000\n"
+"Last-Translator: Oprea Nicolae <jaff2002@yahoo.com>, 2014\n"
+"Language-Team: Romanian (http://app.transifex.com/gottcode/gottet/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1));\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../gottet.appdata.xml.in:6 ../gottet.desktop.in:3
-msgid "Gottet"
-msgstr "Gottet"
-
-#: ../gottet.appdata.xml.in:7 ../gottet.desktop.in:5
+#: ../gottet.appdata.xml.in.h:1 ../gottet.desktop.in.h:3
 msgid "Clear the board of falling blocks"
 msgstr "Curăţaţi tabela de piesele căzătoare"
 
-#: ../gottet.appdata.xml.in:10
+#: ../gottet.appdata.xml.in.h:2
 msgid ""
 "Gottet is a falling blocks game. Pieces fall from the top of the play area "
 "and you can move them horizontally as well as rotate them before they reach "
 "the bottom of the play area. The goal is to create full lines of pieces, "
 "which are then removed. The game is over when the stack of pieces reaches "
 "the top of the play area."
-msgstr ""
-"Gottet este un joc de blocuri căzătoare. Piesele cad din partea de sus a "
-"zonei de joc şi le puteţi muta pe orizontală cît şi roti înainte de a ajunge "
-"în partea de jos a zonei de joc. Scopul este de a crea linii complete de "
-"piese, care sînt apoi eliminate. Jocul se termină cînd stiva de piese ajunge "
-"la partea de sus a zonei joc."
+msgstr "Gottet este un joc de blocuri căzătoare. Piesele cad din partea de sus a zonei de joc şi le puteţi muta pe orizontală cît şi roti înainte de a ajunge în partea de jos a zonei de joc. Scopul este de a crea linii complete de piese, care sînt apoi eliminate. Jocul se termină cînd stiva de piese ajunge la partea de sus a zonei joc."
 
-#: ../gottet.desktop.in:4
+#: ../gottet.desktop.in.h:1
+msgid "Gottet"
+msgstr "Gottet"
+
+#: ../gottet.desktop.in.h:2
 msgid "Falling Blocks Game"
 msgstr "Joc de blocuri căzătoare"
