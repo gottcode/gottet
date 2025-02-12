@@ -32,12 +32,6 @@
     <binary>gottet</binary>
   </provides>
   <launchable type="desktop-id">gottet.desktop</launchable>
-  <icon type="stock">gottet</icon>
-
-  <categories>
-    <category>Game</category>
-    <category>ArcadeGame</category>
-  </categories>
 
   <kudos>
     <kudo>HiDpiIcon</kudo>
