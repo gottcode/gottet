@@ -1,3 +1,8 @@
+1.2.6
+-----
+* Improved code for building translations.
+* FIXED: High score name had NULL at end in Windows.
+
 1.2.5
 -----
 * Improved deployment.

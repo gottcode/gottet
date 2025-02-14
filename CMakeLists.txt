@@ -5,7 +5,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Configure project
-project(gottet VERSION 1.2.5 LANGUAGES CXX)
+project(gottet VERSION 1.2.6 LANGUAGES CXX)
 
 set(project_copyright "2008-2025 Graeme Gott")
 
