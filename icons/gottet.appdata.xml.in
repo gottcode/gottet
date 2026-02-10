@@ -41,6 +41,14 @@
   <content_rating type="oars-1.1"/>
 
   <releases>
+    <release version="1.2.7" date="2026-02-10">
+      <description>
+        <ul>
+          <li>Replaced shadowed variable names</li>
+          <li>Updated link to translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.6" date="2025-02-14">
       <description>
         <ul>
