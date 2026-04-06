@@ -28,6 +28,8 @@ static QColor colors[] = {
 	QColor("#644a9b")
 };
 
+static constexpr qreal PIECE_RADIUS = 25;
+
 //-----------------------------------------------------------------------------
 
 Board::Board(QWidget* parent)
@@ -244,12 +246,22 @@ void Board::paintEvent(QPaintEvent*)
 		return;
 	}
 
+	const QRectF cell_rect(1.5, 1.5, m_piece_size - 2, m_piece_size - 2);
+
+	painter.translate(m_background.x(), m_background.y());
+
 	// Draw board
 	for (int col = 0; col < 10; ++col) {
 		for (int row = 0; row < 20; ++row) {
 			int cell = m_cells[col][row] - 1;
 			if (cell >= 0) {
-				painter.drawPixmap(col * m_piece_size + m_background.x(), row * m_piece_size + m_background.y(), m_images[cell]);
+				painter.setBrush(colors[cell]);
+				painter.setPen(QPen(colors[cell].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+
+				painter.save();
+				painter.translate(col * m_piece_size, row * m_piece_size);
+				painter.drawRoundedRect(cell_rect, PIECE_RADIUS, PIECE_RADIUS, Qt::RelativeSize);
+				painter.restore();
 			}
 		}
 	}
@@ -257,9 +269,15 @@ void Board::paintEvent(QPaintEvent*)
 	// Draw piece
 	if (m_piece) {
 		int type = m_piece->type() - 1;
+		painter.setBrush(colors[type]);
+		painter.setPen(QPen(colors[type].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+
 		const Cell* cells = m_piece->cells();
 		for (int i = 0; i < 4; ++i) {
-			painter.drawPixmap(cells[i].x * m_piece_size + m_background.x(), cells[i].y * m_piece_size + m_background.y(), m_images[type]);
+			painter.save();
+			painter.translate(cells[i].x * m_piece_size, cells[i].y * m_piece_size);
+			painter.drawRoundedRect(cell_rect, PIECE_RADIUS, PIECE_RADIUS, Qt::RelativeSize);
+			painter.restore();
 		}
 	}
 }
@@ -281,24 +299,6 @@ void Board::resizeEvent(QResizeEvent* event)
 	int w = m_piece_size * 10 + 1;
 	int h = m_piece_size * 20 + 1;
 	m_background = QRect((width() - w) / 2, (height() - h) / 2, w, h);
-
-	QPainter painter;
-
-	const qreal ratio = devicePixelRatioF();
-	for (int i = 0; i < 7; ++i) {
-		QPixmap pixmap((m_piece_size + 1) * ratio, (m_piece_size + 1) * ratio);
-		pixmap.setDevicePixelRatio(ratio);
-		pixmap.fill(QColor(0, 0, 0, 0));
-
-		painter.begin(&pixmap);
-		painter.setRenderHint(QPainter::Antialiasing, true);
-		painter.setBrush(colors[i]);
-		painter.setPen(QPen(colors[i].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-		painter.drawRoundedRect(QRectF(1.5, 1.5, m_piece_size - 2, m_piece_size - 2), 25, 25, Qt::RelativeSize);
-		painter.end();
-
-		m_images[i] = pixmap;
-	}
 }
 
 //-----------------------------------------------------------------------------
@@ -491,7 +491,7 @@ QPixmap Board::renderPiece(int type) const
 		for (int i = 0; i < 4; ++i) {
 			painter.setBrush(colors[type - 1]);
 			painter.setPen(QPen(colors[type - 1].lighter(), 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-			painter.drawRoundedRect(QRectF(piece[i].x * 20 + 0.5, piece[i].y * 20 + 0.5, 18, 18), 25, 25, Qt::RelativeSize);
+			painter.drawRoundedRect(QRectF(piece[i].x * 20 + 0.5, piece[i].y * 20 + 0.5, 18, 18), PIECE_RADIUS, PIECE_RADIUS, Qt::RelativeSize);
 		}
 	}
 

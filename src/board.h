@@ -74,7 +74,6 @@ private:
 	QPixmap renderPiece(int type) const;
 
 private:
-	QPixmap m_images[7];
 	int m_cells[10][20];
 	int m_full_lines[4];
 	int m_removed_lines;
