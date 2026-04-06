@@ -284,7 +284,7 @@ void Board::resizeEvent(QResizeEvent* event)
 
 	QPainter painter;
 
-	int ratio = devicePixelRatio();
+	const qreal ratio = devicePixelRatioF();
 	for (int i = 0; i < 7; ++i) {
 		QPixmap pixmap((m_piece_size + 1) * ratio, (m_piece_size + 1) * ratio);
 		pixmap.setDevicePixelRatio(ratio);
@@ -473,7 +473,7 @@ QPixmap Board::renderPiece(int type) const
 	Cell piece[4];
 	Piece::cells(piece, type);
 
-	int ratio = devicePixelRatio();
+	const qreal ratio = devicePixelRatioF();
 	QPixmap result(80 * ratio, 100 * ratio);
 	result.setDevicePixelRatio(ratio);
 	result.fill(Qt::black);
