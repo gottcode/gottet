@@ -1,3 +1,10 @@
+1.2.8
+-----
+* FIXED: Did not render HiDPI until window was resized.
+* FIXED: Did not support fractional HiDPI scaling.
+* Document policy prohibiting the use of AI.
+* Use strict mode to disable unsafe Qt APIs.
+
 1.2.7
 -----
 * Replaced shadowed variable names.

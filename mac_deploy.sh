@@ -2,7 +2,7 @@
 
 APP='Gottet'
 BUNDLE="$APP.app"
-VERSION='1.2.7'
+VERSION='1.2.8'
 
 # Locate deployment script
 BIN_DIR=$(pwd)
