@@ -13,6 +13,7 @@
 #include <QLineEdit>
 #include <QLocale>
 #include <QPushButton>
+#include <QScrollArea>
 #include <QSettings>
 #include <QStyle>
 #include <QTime>
@@ -66,8 +67,9 @@ ScoresDialog::ScoresDialog(QWidget* parent)
 	connect(m_username, &QLineEdit::editingFinished, this, &ScoresDialog::editingFinished);
 
 	// Create score widgets
-	m_scores_layout = new QGridLayout(this);
-	m_scores_layout->setSizeConstraint(QLayout::SetFixedSize);
+	QWidget* contents = new QWidget(this);
+
+	m_scores_layout = new QGridLayout(contents);
 	m_scores_layout->setHorizontalSpacing(18);
 	m_scores_layout->setVerticalSpacing(6);
 	m_scores_layout->setColumnStretch(NameColumn, 1);
@@ -101,7 +103,17 @@ ScoresDialog::ScoresDialog(QWidget* parent)
 	m_buttons->button(QDialogButtonBox::Close)->setDefault(true);
 	m_buttons->button(QDialogButtonBox::Close)->setFocus();
 	connect(m_buttons, &QDialogButtonBox::rejected, this, &ScoresDialog::reject);
-	m_scores_layout->addWidget(m_buttons, 13, 0, 1, TotalColumns);
+
+	// Put content in scroll area to support small-width screens and to avoid dialog resizing
+	QScrollArea* scroll_area = new QScrollArea(this);
+	scroll_area->setFrameShape(QFrame::NoFrame);
+	scroll_area->setMinimumSize(300, 300);
+	scroll_area->setWidgetResizable(true);
+	scroll_area->setWidget(contents);
+
+	QVBoxLayout* layout = new QVBoxLayout(this);
+	layout->addWidget(scroll_area);
+	layout->addWidget(m_buttons);
 }
 
 //-----------------------------------------------------------------------------
