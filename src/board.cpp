@@ -499,3 +499,5 @@ QPixmap Board::renderPiece(int type) const
 }
 
 //-----------------------------------------------------------------------------
+
+#include "moc_board.cpp"
